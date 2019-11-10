@@ -24,6 +24,58 @@
         int price_50000 = 0;
         int price_100000 = 0;
 
+        public void UpdateData(int currency, int _amount, int _price)
+        {
+            // set data to variable
+            switch (currency)
+            {
+                case 10:
+                    amount_10 = _amount;
+                    price_10 = _price;
+                    break;
+                case 50:
+                    amount_50 = _amount;
+                    price_50 = _price;
+                    break;
+                case 100:
+                    amount_100 = _amount;
+                    price_100 = _price;
+                    break;
+                case 500:
+                    amount_500 = _amount;
+                    price_500 = _price;
+                    break;
+                case 1000:
+                    amount_1000 = _amount;
+                    price_1000 = _price;
+                    break;
+                case 5000:
+                    amount_5000 = _amount;
+                    price_5000 = _price;
+                    break;
+                case 10000:
+                    amount_10000 = _amount;
+                    price_10000 = _price;
+                    break;
+                case 50000:
+                    amount_50000 = _amount;
+                    price_50000 = _price;
+                    break;
+                case 100000:
+                    amount_100000 = _amount;
+                    price_100000 = _price;
+                    break;
+            }
+
+            // save data
+            SaveData();
+        }
+
+        void SaveData()
+        {
+
+        }
+
         public int GetAmountFromPrice(int currency, int _price)
         {
             int amount = 0;
@@ -66,31 +118,31 @@
             switch (currency)
             {
                 case 10:
-                    price = _amount % 10 == 0 ? _amount / 10 : -1;
+                    price = _amount * 10;
                     break;
                 case 50:
-                    price = _amount % 50 == 0 ? _amount / 50 : -1;
+                    price = _amount * 50;
                     break;
                 case 100:
-                    price = _amount % 100 == 0 ? _amount / 100 : -1;
+                    price = _amount * 100;
                     break;
                 case 500:
-                    price = _amount % 500 == 0 ? _amount / 500 : -1;
+                    price = _amount * 500;
                     break;
                 case 1000:
-                    price = _amount % 1000 == 0 ? _amount / 1000 : -1;
+                    price = _amount * 1000;
                     break;
                 case 5000:
-                    price = _amount % 5000 == 0 ? _amount / 5000 : -1;
+                    price = _amount * 5000;
                     break;
                 case 10000:
-                    price = _amount % 10000 == 0 ? _amount / 10000 : -1;
+                    price = _amount * 10000;
                     break;
                 case 50000:
-                    price = _amount % 50000 == 0 ? _amount / 50000 : -1;
+                    price = _amount * 50000;
                     break;
                 case 100000:
-                    price = _amount % 100000 == 0 ? _amount / 100000 : -1;
+                    price = _amount * 100000;
                     break;
             }
             return price;
