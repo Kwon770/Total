@@ -24,7 +24,11 @@ namespace Total
 {
     public partial class MainWindow : Window
     {
-        
+        int currentStep = 1;
+
+        Counter[] counters = new Counter[4];
+        Step1 Step1 = new Step1();
+        int currentCounter = 0;
 
         public MainWindow()
         {
