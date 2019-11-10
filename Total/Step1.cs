@@ -15,8 +15,8 @@ namespace Total
 
         string Calculate(string _input)
         {
+            // Regex Split (Pattern : seperator is + or -)
             string[] input = Regex.Split(_input.Replace(" ", ""), @"(\+|\-)");
-
 
             try
             {
