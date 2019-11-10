@@ -4,26 +4,27 @@
     {
         string name = string.Empty;
 
-        int amount_10 = 0;
-        int amount_50 = 0;
-        int amount_100 = 0;
-        int amount_500 = 0;
-        int amount_1000 = 0;
-        int amount_5000 = 0;
-        int amount_10000 = 0;
-        int amount_50000 = 0;
-        int amount_100000 = 0;
+        public int amount_10 = 0;
+        public int amount_50 = 0;
+        public int amount_100 = 0;
+        public int amount_500 = 0;
+        public int amount_1000 = 0;
+        public int amount_5000 = 0;
+        public int amount_10000 = 0;
+        public int amount_50000 = 0;
+        public int amount_100000 = 0;
 
-        int price_10 = 0;
-        int price_50 = 0;
-        int price_100 = 0;
-        int price_500 = 0;
-        int price_1000 = 0;
-        int price_5000 = 0;
-        int price_10000 = 0;
-        int price_50000 = 0;
-        int price_100000 = 0;
+        public int price_10 = 0;
+        public int price_50 = 0;
+        public int price_100 = 0;
+        public int price_500 = 0;
+        public int price_1000 = 0;
+        public int price_5000 = 0;
+        public int price_10000 = 0;
+        public int price_50000 = 0;
+        public int price_100000 = 0;
 
+        
         public void UpdateData(int currency, int _amount, int _price)
         {
             // set data to variable

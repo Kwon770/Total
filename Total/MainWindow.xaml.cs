@@ -27,6 +27,8 @@ namespace Total
         int cur_Step = 1;
 
         Counter[] counters = new Counter[4];
+        Rectangle[] counterPanels = new Rectangle[4];
+        TextBlock[] counterTexts = new TextBlock[4];
         Step1 Step1 = new Step1();
         int cur_Counter = 0;
 
@@ -34,7 +36,29 @@ namespace Total
         {
             InitializeComponent();
 
+            // Load Data
+            // Make Counter instance by data
+
+            // Make Counter instance Load data
+
+            // Set data of counters[0] (initial Counter) to TextBox
+            // Update_Step1_Textboxes(cur_Counter);
+
             counters[0] = new Counter();
+            // FOR TEST
+            counters[1] = new Counter();
+            counters[2] = new Counter();
+            counters[3] = new Counter();
+            //
+            counterPanels[0] = counter1_panel1;
+            counterPanels[1] = counter2_panel1;
+            counterPanels[2] = counter3_panel1;
+            counterPanels[3] = counter4_panel1;
+            counterTexts[0] = counter1_text;
+            counterTexts[1] = counter2_text;
+            counterTexts[2] = counter3_text;
+            counterTexts[3] = counter4_text;
+
         }
 
         private void AmountBox_10_KeyDown(object sender, KeyEventArgs e)
@@ -521,6 +545,84 @@ namespace Total
                 // Get and Set total price
                 total_text.Text = counters[cur_Counter].GetTotalPrice().ToString();
             }
+        }
+
+        private void Counter1_panel1_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            int prev_Counter = cur_Counter;
+            cur_Counter = 0;
+            // Animation
+            animate_Step1_Indexer(prev_Counter, cur_Counter);
+
+            // Load data to textBox
+            Update_Step1_Textboxes(cur_Counter);
+        }
+
+        private void Counter2_panel1_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            int prev_Counter = cur_Counter;
+            cur_Counter = 1;
+            // Animation
+            animate_Step1_Indexer(prev_Counter, cur_Counter);
+
+            // Load data to textBox
+            Update_Step1_Textboxes(cur_Counter);
+        }
+
+        private void Counter3_panel1_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            int prev_Counter = cur_Counter;
+            cur_Counter = 2;
+            // Animation
+            animate_Step1_Indexer(prev_Counter, cur_Counter);
+
+            // Load data to textBox
+            Update_Step1_Textboxes(cur_Counter);
+        }
+
+        private void Counter4_panel1_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            int prev_Counter = cur_Counter;
+            cur_Counter = 3;
+            // Animation
+            animate_Step1_Indexer(prev_Counter, cur_Counter);
+
+            // Load data to textBox
+            Update_Step1_Textboxes(cur_Counter);
+        }
+
+        private void animate_Step1_Indexer(int _prev, int _cur)
+        {
+            counterPanels[_prev].Fill = new SolidColorBrush(Color.FromRgb(1, 58, 64));
+            counterTexts[_prev].Foreground = new SolidColorBrush(Color.FromRgb(255, 255, 255));
+
+            counterPanels[_cur].Fill = new SolidColorBrush(Color.FromRgb(255, 255, 255));
+            counterTexts[_cur].Foreground = new SolidColorBrush(Color.FromRgb(0, 0, 0));
+        }
+
+        private void Update_Step1_Textboxes(int _cur)
+        {
+            amountBox_10.Text = counters[_cur].amount_10.ToString();
+            amountBox_50.Text = counters[_cur].amount_50.ToString();
+            amountBox_100.Text = counters[_cur].amount_100.ToString();
+            amountBox_500.Text = counters[_cur].amount_500.ToString();
+            amountBox_1000.Text = counters[_cur].amount_1000.ToString();
+            amountBox_5000.Text = counters[_cur].amount_5000.ToString();
+            amountBox_10000.Text = counters[_cur].amount_10000.ToString();
+            amountBox_50000.Text = counters[_cur].amount_50000.ToString();
+            amountBox_100000.Text = counters[_cur].amount_100000.ToString();
+
+            priceBox_10.Text = counters[_cur].price_10.ToString();
+            priceBox_50.Text = counters[_cur].price_50.ToString();
+            priceBox_100.Text = counters[_cur].price_100.ToString();
+            priceBox_500.Text = counters[_cur].price_500.ToString();
+            priceBox_1000.Text = counters[_cur].price_1000.ToString();
+            priceBox_5000.Text = counters[_cur].price_5000.ToString();
+            priceBox_10000.Text = counters[_cur].price_10000.ToString();
+            priceBox_50000.Text = counters[_cur].price_50000.ToString();
+            priceBox_100000.Text = counters[_cur].price_100000.ToString();
+
+            total_text.Text = counters[_cur].GetTotalPrice().ToString();
         }
     }
 }
