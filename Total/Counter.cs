@@ -24,7 +24,11 @@
         public int price_50000 = 0;
         public int price_100000 = 0;
 
-        
+        public void LoadData()
+        {
+            //
+        }
+
         public void UpdateData(int currency, int _amount, int _price)
         {
             // set data to variable
@@ -74,7 +78,7 @@
 
         void SaveData()
         {
-
+            //
         }
 
         public int GetAmountFromPrice(int currency, int _price)
