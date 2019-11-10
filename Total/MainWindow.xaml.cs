@@ -37,7 +37,20 @@ namespace Total
 
         private void AmountBox_10_KeyDown(object sender, KeyEventArgs e)
         {
-            
+            if (e.Key == Key.Return)
+            {
+                // Check if calculation should be done
+                string text;
+                text = Step1.CheckCalculation(amountBox_10.Text);
+                amountBox_10.Text = text;
+
+                // Move Cursor behind of text
+                amountBox_10.Select(amountBox_10.Text.Length, 0);
+
+                // Get and Set calculated price
+
+                // Get and Set total price
+            }
         }
 
         private void AmountBox_50_KeyDown(object sender, KeyEventArgs e)
