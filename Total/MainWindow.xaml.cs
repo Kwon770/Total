@@ -22,14 +22,58 @@ using System.Windows.Shapes;
 
 namespace Total
 {
-    /// <summary>
-    /// MainWindow.xaml에 대한 상호 작용 논리
-    /// </summary>
     public partial class MainWindow : Window
     {
+        
+
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void AmountBox_10_KeyDown(object sender, KeyEventArgs e)
+        {
+            
+        }
+
+        private void AmountBox_50_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void AmountBox_100_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void AmountBox_500_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void AmountBox_1000_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void AmountBox_5000_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void AmountBox_10000_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void AmountBox_50000_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void AmountBox_100000_KeyDown(object sender, KeyEventArgs e)
+        {
+
         }
     }
 }
