@@ -547,50 +547,6 @@ namespace Total
             }
         }
 
-        private void Counter1_panel1_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            int prev_Counter = cur_Counter;
-            cur_Counter = 0;
-            // Animation
-            animate_Step1_Indexer(prev_Counter, cur_Counter);
-
-            // Load data to textBox
-            Update_Step1_Textboxes(cur_Counter);
-        }
-
-        private void Counter2_panel1_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            int prev_Counter = cur_Counter;
-            cur_Counter = 1;
-            // Animation
-            animate_Step1_Indexer(prev_Counter, cur_Counter);
-
-            // Load data to textBox
-            Update_Step1_Textboxes(cur_Counter);
-        }
-
-        private void Counter3_panel1_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            int prev_Counter = cur_Counter;
-            cur_Counter = 2;
-            // Animation
-            animate_Step1_Indexer(prev_Counter, cur_Counter);
-
-            // Load data to textBox
-            Update_Step1_Textboxes(cur_Counter);
-        }
-
-        private void Counter4_panel1_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            int prev_Counter = cur_Counter;
-            cur_Counter = 3;
-            // Animation
-            animate_Step1_Indexer(prev_Counter, cur_Counter);
-
-            // Load data to textBox
-            Update_Step1_Textboxes(cur_Counter);
-        }
-
         private void animate_Step1_Indexer(int _prev, int _cur)
         {
             counterPanels[_prev].Fill = new SolidColorBrush(Color.FromRgb(1, 58, 64));
