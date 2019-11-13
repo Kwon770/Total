@@ -13,22 +13,13 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-// 1 step
-// ALWAYS -> counter1_panel1 / CONDITIONAL -> counter2_text, counter3_text, counter4_text, counter2_plusBtn, counter3_plusBtn, counter4_plusBtn
-// 2 step
-//
-// 3 step
-//
-
 namespace Total
 {
+
     public partial class MainWindow : Window
     {
-        Counter counter1 = new Counter();
-        Counter counter2 = new Counter();
-        Counter counter3 = new Counter();
-        Counter counter4 = new Counter();
         Counter[] counters = new Counter[4];
+
         Step1 Step1 = new Step1();
 
         public MainWindow()
@@ -44,12 +35,9 @@ namespace Total
             // Update_Step1_Textboxes(0);
 
             counters[0] = new Counter();
-            // FOR TEST
             counters[1] = new Counter();
             counters[2] = new Counter();
             counters[3] = new Counter();
-            //
-
         }
 
 
@@ -1271,7 +1259,7 @@ namespace Total
                 counter3_amountBox_100000.Text = amount;
 
                 // Move Cursor behind of text
-                counter3_amountBox_100000.Select(counter2_amountBox_100000.Text.Length, 0);
+                counter3_amountBox_100000.Select(counter3_amountBox_100000.Text.Length, 0);
 
                 // Get and Set calculated price
                 price = counters[2].GetPriceFromAmount(100000, int.Parse(amount)).ToString();
@@ -1298,7 +1286,7 @@ namespace Total
                 counter3_priceBox_10.Text = price;
 
                 // Move Cursor behind of text
-                counter3_priceBox_10.Select(counter2_priceBox_10.Text.Length, 0);
+                counter3_priceBox_10.Select(counter3_priceBox_10.Text.Length, 0);
 
                 // Get and Set calculated price
                 amount = counters[2].GetAmountFromPrice(10, int.Parse(price)).ToString();
@@ -1526,6 +1514,503 @@ namespace Total
                 // Get and Set total price
                 Update_total_textBoxes(2);
             }
+        }
+
+
+        /// 
+        /// COUNTER 4
+        /// 
+
+
+        private void counter4_amountBox_10_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return)
+            {
+                string amount = counter4_amountBox_10.Text;
+                string price;
+                if (string.IsNullOrWhiteSpace(amount)) amount = "0";
+
+                // Check if calculation should be done
+                amount = Step1.CheckCalculation(amount);
+                counter4_amountBox_10.Text = amount;
+
+                // Move Cursor behind of text
+                counter4_amountBox_10.Select(counter4_amountBox_10.Text.Length, 0);
+
+                // Get and Set calculated price
+                price = counters[3].GetPriceFromAmount(10, int.Parse(amount)).ToString();
+                counter4_priceBox_10.Text = price;
+
+                // Update and Save data
+                Update_Save_data(3, amount, price);
+
+                // Get and Set total price
+                Update_total_textBoxes(3);
+            }
+        }
+
+        private void counter4_amountBox_50_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return)
+            {
+                string amount = counter4_amountBox_50.Text;
+                string price;
+                if (string.IsNullOrWhiteSpace(amount)) amount = "0";
+
+                // Check if calculation should be done
+                amount = Step1.CheckCalculation(amount);
+                counter4_amountBox_50.Text = amount;
+
+                // Move Cursor behind of text
+                counter4_amountBox_50.Select(counter4_amountBox_50.Text.Length, 0);
+
+                // Get and Set calculated price
+                price = counters[3].GetPriceFromAmount(50, int.Parse(amount)).ToString();
+                counter4_priceBox_50.Text = price;
+
+                // Update and Save data
+                Update_Save_data(3, amount, price);
+
+                // Get and Set total price
+                Update_total_textBoxes(3);
+            }
+        }
+
+        private void counter4_amountBox_100_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return)
+            {
+                string amount = counter4_amountBox_100.Text;
+                string price;
+                if (string.IsNullOrWhiteSpace(amount)) amount = "0";
+
+                // Check if calculation should be done
+                amount = Step1.CheckCalculation(amount);
+                counter4_amountBox_100.Text = amount;
+
+                // Move Cursor behind of text
+                counter4_amountBox_100.Select(counter4_amountBox_100.Text.Length, 0);
+
+                // Get and Set calculated price
+                price = counters[3].GetPriceFromAmount(100, int.Parse(amount)).ToString();
+                counter4_amountBox_100.Text = price;
+
+                // Update and Save data
+                Update_Save_data(3, amount, price);
+
+                // Get and Set total price
+                Update_total_textBoxes(3);
+            }
+        }
+
+        private void counter4_amountBox_500_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return)
+            {
+                string amount = counter4_amountBox_500.Text;
+                string price;
+                if (string.IsNullOrWhiteSpace(amount)) amount = "0";
+
+                // Check if calculation should be done
+                amount = Step1.CheckCalculation(amount);
+                counter4_amountBox_500.Text = amount;
+
+                // Move Cursor behind of text
+                counter4_amountBox_500.Select(counter4_amountBox_500.Text.Length, 0);
+
+                // Get and Set calculated price
+                price = counters[3].GetPriceFromAmount(500, int.Parse(amount)).ToString();
+                counter4_priceBox_500.Text = price;
+
+                // Update and Save data
+                Update_Save_data(3, amount, price);
+
+                // Get and Set total price
+                Update_total_textBoxes(3);
+            }
+        }
+
+        private void counter4_amountBox_1000_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return)
+            {
+                string amount = counter4_amountBox_1000.Text;
+                string price;
+                if (string.IsNullOrWhiteSpace(amount)) amount = "0";
+
+                // Check if calculation should be done
+                amount = Step1.CheckCalculation(amount);
+                counter4_amountBox_1000.Text = amount;
+
+                // Move Cursor behind of text
+                counter4_amountBox_1000.Select(counter4_amountBox_1000.Text.Length, 0);
+
+                // Get and Set calculated price
+                price = counters[3].GetPriceFromAmount(1000, int.Parse(amount)).ToString();
+                counter4_priceBox_1000.Text = price;
+
+                // Update and Save data
+                Update_Save_data(3, amount, price);
+
+                // Get and Set total price
+                Update_total_textBoxes(3);
+            }
+        }
+
+        private void counter4_amountBox_5000_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return)
+            {
+                string amount = counter4_amountBox_5000.Text;
+                string price;
+                if (string.IsNullOrWhiteSpace(amount)) amount = "0";
+
+                // Check if calculation should be done
+                amount = Step1.CheckCalculation(amount);
+                counter4_amountBox_5000.Text = amount;
+
+                // Move Cursor behind of text
+                counter4_amountBox_5000.Select(counter4_amountBox_5000.Text.Length, 0);
+
+                // Get and Set calculated price
+                price = counters[3].GetPriceFromAmount(5000, int.Parse(amount)).ToString();
+                counter4_priceBox_5000.Text = price;
+
+                // Update and Save data
+                Update_Save_data(3, amount, price);
+
+                // Get and Set total price
+                Update_total_textBoxes(3);
+            }
+        }
+
+        private void counter4_amountBox_10000_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return)
+            {
+                string amount = counter4_amountBox_10000.Text;
+                string price;
+                if (string.IsNullOrWhiteSpace(amount)) amount = "0";
+
+                // Check if calculation should be done
+                amount = Step1.CheckCalculation(amount);
+                counter4_amountBox_10000.Text = amount;
+
+                // Move Cursor behind of text
+                counter4_amountBox_10000.Select(counter4_amountBox_10000.Text.Length, 0);
+
+                // Get and Set calculated price
+                price = counters[3].GetPriceFromAmount(10000, int.Parse(amount)).ToString();
+                counter4_priceBox_10000.Text = price;
+
+                // Update and Save data
+                Update_Save_data(3, amount, price);
+
+                // Get and Set total price
+                Update_total_textBoxes(3);
+            }
+        }
+
+        private void counter4_amountBox_50000_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return)
+            {
+                string amount = counter4_amountBox_50000.Text;
+                string price;
+                if (string.IsNullOrWhiteSpace(amount)) amount = "0";
+
+                // Check if calculation should be done
+                amount = Step1.CheckCalculation(amount);
+                counter4_amountBox_50000.Text = amount;
+
+                // Move Cursor behind of text
+                counter4_amountBox_50000.Select(counter4_amountBox_50000.Text.Length, 0);
+
+                // Get and Set calculated price
+                price = counters[3].GetPriceFromAmount(50000, int.Parse(amount)).ToString();
+                counter4_priceBox_50000.Text = price;
+
+                // Update and Save data
+                Update_Save_data(3, amount, price);
+
+                // Get and Set total price
+                Update_total_textBoxes(3);
+            }
+        }
+
+        private void counter4_amountBox_100000_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return)
+            {
+                string amount = counter4_amountBox_100000.Text;
+                string price;
+                if (string.IsNullOrWhiteSpace(amount)) amount = "0";
+
+                // Check if calculation should be done
+                amount = Step1.CheckCalculation(amount);
+                counter4_amountBox_100000.Text = amount;
+
+                // Move Cursor behind of text
+                counter4_amountBox_100000.Select(counter4_amountBox_100000.Text.Length, 0);
+
+                // Get and Set calculated price
+                price = counters[3].GetPriceFromAmount(100000, int.Parse(amount)).ToString();
+                counter4_priceBox_100000.Text = price;
+
+                // Update and Save data
+                Update_Save_data(3, amount, price);
+
+                // Get and Set total price
+                Update_total_textBoxes(3);
+            }
+        }
+
+        private void counter4_priceBox_10_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return)
+            {
+                string amount;
+                string price = counter4_priceBox_10.Text;
+                if (string.IsNullOrWhiteSpace(price)) price = "0";
+
+                // Check if calculation should be done
+                price = Step1.CheckCalculation(price);
+                counter4_priceBox_10.Text = price;
+
+                // Move Cursor behind of text
+                counter4_priceBox_10.Select(counter4_priceBox_10.Text.Length, 0);
+
+                // Get and Set calculated price
+                amount = counters[3].GetAmountFromPrice(10, int.Parse(price)).ToString();
+                counter4_amountBox_10.Text = amount;
+
+                // Update and Save data
+                Update_Save_data(3, amount, price);
+
+                // Get and Set total price
+                Update_total_textBoxes(3);
+            }
+        }
+
+        private void counter4_priceBox_50_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return)
+            {
+                string amount;
+                string price = counter4_priceBox_50.Text;
+                if (string.IsNullOrWhiteSpace(price)) price = "0";
+
+                // Check if calculation should be done
+                price = Step1.CheckCalculation(price);
+                counter4_priceBox_50.Text = price;
+
+                // Move Cursor behind of text
+                counter4_priceBox_50.Select(counter4_priceBox_50.Text.Length, 0);
+
+                // Get and Set calculated price
+                amount = counters[3].GetAmountFromPrice(50, int.Parse(price)).ToString();
+                counter4_amountBox_50.Text = amount;
+
+                // Update and Save data
+                Update_Save_data(3, amount, price);
+
+                // Get and Set total price
+                Update_total_textBoxes(3);
+            }
+        }
+
+        private void counter4_priceBox_100_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return)
+            {
+                string amount;
+                string price = counter4_priceBox_100.Text;
+                if (string.IsNullOrWhiteSpace(price)) price = "0";
+
+                // Check if calculation should be done
+                price = Step1.CheckCalculation(price);
+                counter4_priceBox_100.Text = price;
+
+                // Move Cursor behind of text
+                counter4_priceBox_100.Select(counter4_priceBox_100.Text.Length, 0);
+
+                // Get and Set calculated price
+                amount = counters[3].GetAmountFromPrice(100, int.Parse(price)).ToString();
+                counter4_amountBox_100.Text = amount;
+
+                // Update and Save data
+                Update_Save_data(3, amount, price);
+
+                // Get and Set total price
+                Update_total_textBoxes(3);
+            }
+        }
+
+        private void counter4_priceBox_500_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return)
+            {
+                string amount;
+                string price = counter4_priceBox_500.Text;
+                if (string.IsNullOrWhiteSpace(price)) price = "0";
+
+                // Check if calculation should be done
+                price = Step1.CheckCalculation(price);
+                counter4_priceBox_500.Text = price;
+
+                // Move Cursor behind of text
+                counter4_priceBox_500.Select(counter4_priceBox_500.Text.Length, 0);
+
+                // Get and Set calculated price
+                amount = counters[3].GetAmountFromPrice(500, int.Parse(price)).ToString();
+                counter4_amountBox_500.Text = amount;
+
+                // Update and Save data
+                Update_Save_data(3, amount, price);
+
+                // Get and Set total price
+                Update_total_textBoxes(3);
+            }
+        }
+
+        private void counter4_priceBox_1000_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return)
+            {
+                string amount;
+                string price = counter4_priceBox_1000.Text;
+                if (string.IsNullOrWhiteSpace(price)) price = "0";
+
+                // Check if calculation should be done
+                price = Step1.CheckCalculation(price);
+                counter4_priceBox_1000.Text = price;
+
+                // Move Cursor behind of text
+                counter4_priceBox_1000.Select(counter4_priceBox_1000.Text.Length, 0);
+
+                // Get and Set calculated price
+                amount = counters[3].GetAmountFromPrice(1000, int.Parse(price)).ToString();
+                counter4_amountBox_1000.Text = amount;
+
+                // Update and Save data
+                Update_Save_data(3, amount, price);
+
+                // Get and Set total price
+                Update_total_textBoxes(3);
+            }
+        }
+
+        private void counter4_priceBox_5000_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return)
+            {
+                string amount;
+                string price = counter4_priceBox_5000.Text;
+                if (string.IsNullOrWhiteSpace(price)) price = "0";
+
+                // Check if calculation should be done
+                price = Step1.CheckCalculation(price);
+                counter4_priceBox_5000.Text = price;
+
+                // Move Cursor behind of text
+                counter4_priceBox_5000.Select(counter4_priceBox_5000.Text.Length, 0);
+
+                // Get and Set calculated price
+                amount = counters[3].GetAmountFromPrice(5000, int.Parse(price)).ToString();
+                counter4_amountBox_5000.Text = amount;
+
+                // Update and Save data
+                Update_Save_data(3, amount, price);
+
+                // Get and Set total price
+                Update_total_textBoxes(3);
+            }
+        }
+
+        private void counter4_priceBox_10000_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return)
+            {
+                string amount;
+                string price = counter4_priceBox_10000.Text;
+                if (string.IsNullOrWhiteSpace(price)) price = "0";
+
+                // Check if calculation should be done
+                price = Step1.CheckCalculation(price);
+                counter4_priceBox_10000.Text = price;
+
+                // Move Cursor behind of text
+                counter4_priceBox_10000.Select(counter4_priceBox_10000.Text.Length, 0);
+
+                // Get and Set calculated price
+                amount = counters[3].GetAmountFromPrice(10000, int.Parse(price)).ToString();
+                counter4_amountBox_10000.Text = amount;
+
+                // Update and Save data
+                Update_Save_data(3, amount, price);
+
+                // Get and Set total price
+                Update_total_textBoxes(3);
+            }
+        }
+
+        private void counter4_priceBox_50000_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return)
+            {
+                string amount;
+                string price = counter4_priceBox_50000.Text;
+                if (string.IsNullOrWhiteSpace(price)) price = "0";
+
+                // Check if calculation should be done
+                price = Step1.CheckCalculation(price);
+                counter4_priceBox_50000.Text = price;
+
+                // Move Cursor behind of text
+                counter4_priceBox_50000.Select(counter4_priceBox_50000.Text.Length, 0);
+
+                // Get and Set calculated price
+                amount = counters[3].GetAmountFromPrice(50000, int.Parse(price)).ToString();
+                counter4_amountBox_50000.Text = amount;
+
+                // Update and Save data
+                Update_Save_data(3, amount, price);
+
+                // Get and Set total price
+                Update_total_textBoxes(3);
+            }
+        }
+
+        private void counter4_priceBox_100000_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return)
+            {
+                string amount;
+                string price = counter4_priceBox_100000.Text;
+                if (string.IsNullOrWhiteSpace(price)) price = "0";
+
+                // Check if calculation should be done
+                price = Step1.CheckCalculation(price);
+                counter4_priceBox_100000.Text = price;
+
+                // Move Cursor behind of text
+                counter4_priceBox_100000.Select(counter4_priceBox_100000.Text.Length, 0);
+
+                // Get and Set calculated price
+                amount = counters[3].GetAmountFromPrice(100000, int.Parse(price)).ToString();
+                counter4_amountBox_100000.Text = amount;
+
+                // Update and Save data
+                Update_Save_data(3, amount, price);
+
+                // Get and Set total price
+                Update_total_textBoxes(3);
+            }
+        }
+
+        private void originalPriceBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            
         }
 
         private void Update_counter1_textBlocks(int _counter)
