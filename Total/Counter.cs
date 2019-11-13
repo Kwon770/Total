@@ -1,28 +1,36 @@
-﻿namespace Total
+﻿using System.Collections.Generic;
+
+namespace Total
 {
     class Counter
     {
         string name = string.Empty;
 
-        public int amount_10 = 0;
-        public int amount_50 = 0;
-        public int amount_100 = 0;
-        public int amount_500 = 0;
-        public int amount_1000 = 0;
-        public int amount_5000 = 0;
-        public int amount_10000 = 0;
-        public int amount_50000 = 0;
-        public int amount_100000 = 0;
+        public Dictionary<string, int> amount = new Dictionary<string, int>()
+        {
+            {"10", 0 },
+            {"50", 0 },
+            {"100", 0 },
+            {"500", 0 },
+            {"1000", 0 },
+            {"5000", 0 },
+            {"10000", 0 },
+            {"50000", 0 },
+            {"100000", 0 },
+        };
 
-        public int price_10 = 0;
-        public int price_50 = 0;
-        public int price_100 = 0;
-        public int price_500 = 0;
-        public int price_1000 = 0;
-        public int price_5000 = 0;
-        public int price_10000 = 0;
-        public int price_50000 = 0;
-        public int price_100000 = 0;
+        public Dictionary<string, int> price = new Dictionary<string, int>()
+        {
+            {"10", 0 },
+            {"50", 0 },
+            {"100", 0 },
+            {"500", 0 },
+            {"1000", 0 },
+            {"5000", 0 },
+            {"10000", 0 },
+            {"50000", 0 },
+            {"100000", 0 },
+        };
 
         public void LoadData()
         {
@@ -35,40 +43,40 @@
             switch (currency)
             {
                 case 10:
-                    amount_10 = _amount;
-                    price_10 = _price;
+                    amount["10"] = _amount;
+                    price["10"] = _price;
                     break;
                 case 50:
-                    amount_50 = _amount;
-                    price_50 = _price;
+                    amount["50"] = _amount;
+                    price["50"] = _price;
                     break;
                 case 100:
-                    amount_100 = _amount;
-                    price_100 = _price;
+                    amount["100"] = _amount;
+                    price["100"] = _price;
                     break;
                 case 500:
-                    amount_500 = _amount;
-                    price_500 = _price;
+                    amount["500"] = _amount;
+                    price["500"] = _price;
                     break;
                 case 1000:
-                    amount_1000 = _amount;
-                    price_1000 = _price;
+                    amount["1000"] = _amount;
+                    price["1000"] = _price;
                     break;
                 case 5000:
-                    amount_5000 = _amount;
-                    price_5000 = _price;
+                    amount["5000"] = _amount;
+                    price["5000"] = _price;
                     break;
                 case 10000:
-                    amount_10000 = _amount;
-                    price_10000 = _price;
+                    amount["10000"] = _amount;
+                    price["10000"] = _price;
                     break;
                 case 50000:
-                    amount_50000 = _amount;
-                    price_50000 = _price;
+                    amount["50000"] = _amount;
+                    price["50000"] = _price;
                     break;
                 case 100000:
-                    amount_100000 = _amount;
-                    price_100000 = _price;
+                    amount["100000"] = _amount;
+                    price["100000"] = _price;
                     break;
             }
 
@@ -155,7 +163,9 @@
 
         public int GetTotalPrice()
         {
-            return price_10 + price_50 + price_100 + price_500 + price_1000 + price_5000 + price_10000 + price_50000 + price_100000;
+            int total = 0;
+            foreach (var price in price.Values) total += price;
+            return total;
         }
     }
 }
