@@ -103,5 +103,14 @@
   <ItemGroup>
     <Resource Include="Resources\plus_small.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\help_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\close_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\minimize_icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
