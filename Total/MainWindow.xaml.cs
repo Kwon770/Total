@@ -22,6 +22,8 @@ namespace Total
 
         Step1 Step1 = new Step1();
 
+        string originalPrice = "0";
+
         public MainWindow()
         {
             InitializeComponent();
@@ -2226,7 +2228,24 @@ namespace Total
 
         private void originalPriceBox_KeyDown(object sender, KeyEventArgs e)
         {
-            
+            if (e.Key == Key.Return)
+            {
+                string price = originalPriceBox.Text;
+                if (string.IsNullOrWhiteSpace(price)) price = "0";
+
+                // Check if calculation should be done
+                price = Step1.CheckCalculation(price);
+                originalPriceBox.Text = price;
+
+                // Move Cursor behind of text
+                originalPriceBox.Select(counter4_priceBox_100000.Text.Length, 0);
+
+                // Set calculated price
+                originalPrice = price;
+
+                // Update result
+                Update_result();
+            }
         }
 
         private void Update_textBlocks(int _counter)
@@ -2345,6 +2364,24 @@ namespace Total
                     counter3_total_text2.Text = total;
                     break;
             }
+
+            Update_result();
+        }
+
+        private void Update_result()
+        {
+            int result = int.Parse(originalPrice) - int.Parse(counter1_total_text2.Text) - int.Parse(counter2_total_text2.Text) - int.Parse(counter3_total_text2.Text) - int.Parse(counter4_total_text2.Text);
+
+            if (result < 0)
+            {
+                result *= -1;
+                judge_text.Text = "남습니다";
+            }
+            else
+            {
+                judge_text.Text = "모자랍니다";
+            }
+            ResultPrice_text.Text = result.ToString();
         }
     }
 }
