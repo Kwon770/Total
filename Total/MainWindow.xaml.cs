@@ -66,9 +66,12 @@ namespace Total
                 counter1_priceBox_10.Text = price;
 
                 // Update and Save data
-                Update_Save_data(0, amount, price);
+                Update_Save_data(0, 10, amount, price);
 
-                // Get and Set total price
+                // Set saved price to textBlocks
+                Update_textBlocks(0);
+
+                // Get and Set saved total price to textBoxes
                 Update_total_textBoxes(0);
             }
         }
@@ -93,7 +96,10 @@ namespace Total
                 counter1_priceBox_50.Text = price;
 
                 // Update and Save data
-                Update_Save_data(0, amount, price);
+                Update_Save_data(0, 50, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(0);
 
                 // Get and Set total price
                 Update_total_textBoxes(0);
@@ -120,7 +126,10 @@ namespace Total
                 counter1_amountBox_100.Text = price;
 
                 // Update and Save data
-                Update_Save_data(0, amount, price);
+                Update_Save_data(0, 100, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(0);
 
                 // Get and Set total price
                 Update_total_textBoxes(0);
@@ -147,7 +156,10 @@ namespace Total
                 counter1_priceBox_500.Text = price;
 
                 // Update and Save data
-                Update_Save_data(0, amount, price);
+                Update_Save_data(0, 500, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(0);
 
                 // Get and Set total price
                 Update_total_textBoxes(0);
@@ -174,7 +186,10 @@ namespace Total
                 counter1_priceBox_1000.Text = price;
 
                 // Update and Save data
-                Update_Save_data(0, amount, price);
+                Update_Save_data(0, 1000, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(0);
 
                 // Get and Set total price
                 Update_total_textBoxes(0);
@@ -201,7 +216,10 @@ namespace Total
                 counter1_priceBox_5000.Text = price;
 
                 // Update and Save data
-                Update_Save_data(0, amount, price);
+                Update_Save_data(0, 5000, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(0);
 
                 // Get and Set total price
                 Update_total_textBoxes(0);
@@ -228,7 +246,10 @@ namespace Total
                 counter1_priceBox_10000.Text = price;
 
                 // Update and Save data
-                Update_Save_data(0, amount, price);
+                Update_Save_data(0, 10000, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(0);
 
                 // Get and Set total price
                 Update_total_textBoxes(0);
@@ -255,7 +276,10 @@ namespace Total
                 counter1_priceBox_50000.Text = price;
 
                 // Update and Save data
-                Update_Save_data(0, amount, price);
+                Update_Save_data(0, 50000, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(0);
 
                 // Get and Set total price
                 Update_total_textBoxes(0);
@@ -282,7 +306,10 @@ namespace Total
                 counter1_priceBox_100000.Text = price;
 
                 // Update and Save data
-                Update_Save_data(0, amount, price);
+                Update_Save_data(0, 100000, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(0);
 
                 // Get and Set total price
                 Update_total_textBoxes(0);
@@ -309,7 +336,10 @@ namespace Total
                 counter1_amountBox_10.Text = amount;
 
                 // Update and Save data
-                Update_Save_data(0, amount, price);
+                Update_Save_data(0, 10, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(0);
 
                 // Get and Set total price
                 Update_total_textBoxes(0);
@@ -336,7 +366,10 @@ namespace Total
                 counter1_amountBox_50.Text = amount;
 
                 // Update and Save data
-                Update_Save_data(0, amount, price);
+                Update_Save_data(0, 50, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(0);
 
                 // Get and Set total price
                 Update_total_textBoxes(0);
@@ -363,7 +396,10 @@ namespace Total
                 counter1_amountBox_100.Text = amount;
 
                 // Update and Save data
-                Update_Save_data(0, amount, price);
+                Update_Save_data(0, 100, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(0);
 
                 // Get and Set total price
                 Update_total_textBoxes(0);
@@ -390,7 +426,10 @@ namespace Total
                 counter1_amountBox_500.Text = amount;
 
                 // Update and Save data
-                Update_Save_data(0, amount, price);
+                Update_Save_data(0, 500, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(0);
 
                 // Get and Set total price
                 Update_total_textBoxes(0);
@@ -417,7 +456,10 @@ namespace Total
                 counter1_amountBox_1000.Text = amount;
 
                 // Update and Save data
-                Update_Save_data(0, amount, price);
+                Update_Save_data(0, 1000, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(0);
 
                 // Get and Set total price
                 Update_total_textBoxes(0);
@@ -444,7 +486,10 @@ namespace Total
                 counter1_amountBox_5000.Text = amount;
 
                 // Update and Save data
-                Update_Save_data(0, amount, price);
+                Update_Save_data(0, 5000, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(0);
 
                 // Get and Set total price
                 Update_total_textBoxes(0);
@@ -471,7 +516,10 @@ namespace Total
                 counter1_amountBox_10000.Text = amount;
 
                 // Update and Save data
-                Update_Save_data(0, amount, price);
+                Update_Save_data(0, 10000, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(0);
 
                 // Get and Set total price
                 Update_total_textBoxes(0);
@@ -498,7 +546,10 @@ namespace Total
                 counter1_amountBox_50000.Text = amount;
 
                 // Update and Save data
-                Update_Save_data(0, amount, price);
+                Update_Save_data(0, 50000, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(0);
 
                 // Get and Set total price
                 Update_total_textBoxes(0);
@@ -525,7 +576,10 @@ namespace Total
                 counter1_amountBox_100000.Text = amount;
 
                 // Update and Save data
-                Update_Save_data(0, amount, price);
+                Update_Save_data(0, 100000, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(0);
 
                 // Get and Set total price
                 Update_total_textBoxes(0);
@@ -558,7 +612,10 @@ namespace Total
                 counter2_priceBox_10.Text = price;
 
                 // Update and Save data
-                Update_Save_data(1, amount, price);
+                Update_Save_data(1, 10, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(1);
 
                 // Get and Set total price
                 Update_total_textBoxes(1);
@@ -585,7 +642,10 @@ namespace Total
                 counter2_priceBox_50.Text = price;
 
                 // Update and Save data
-                Update_Save_data(1, amount, price);
+                Update_Save_data(1, 50, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(1);
 
                 // Get and Set total price
                 Update_total_textBoxes(1);
@@ -612,7 +672,10 @@ namespace Total
                 counter2_amountBox_100.Text = price;
 
                 // Update and Save data
-                Update_Save_data(1, amount, price);
+                Update_Save_data(1, 100, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(1);
 
                 // Get and Set total price
                 Update_total_textBoxes(1);
@@ -639,7 +702,10 @@ namespace Total
                 counter2_priceBox_500.Text = price;
 
                 // Update and Save data
-                Update_Save_data(1, amount, price);
+                Update_Save_data(1, 500, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(1);
 
                 // Get and Set total price
                 Update_total_textBoxes(1);
@@ -666,7 +732,10 @@ namespace Total
                 counter2_priceBox_1000.Text = price;
 
                 // Update and Save data
-                Update_Save_data(1, amount, price);
+                Update_Save_data(1, 1000, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(1);
 
                 // Get and Set total price
                 Update_total_textBoxes(1);
@@ -693,7 +762,10 @@ namespace Total
                 counter2_priceBox_5000.Text = price;
 
                 // Update and Save data
-                Update_Save_data(1, amount, price);
+                Update_Save_data(1, 5000, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(1);
 
                 // Get and Set total price
                 Update_total_textBoxes(1);
@@ -720,7 +792,10 @@ namespace Total
                 counter2_priceBox_10000.Text = price;
 
                 // Update and Save data
-                Update_Save_data(1, amount, price);
+                Update_Save_data(1, 10000, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(1);
 
                 // Get and Set total price
                 Update_total_textBoxes(1);
@@ -747,7 +822,10 @@ namespace Total
                 counter2_priceBox_50000.Text = price;
 
                 // Update and Save data
-                Update_Save_data(1, amount, price);
+                Update_Save_data(1, 50000, amount, price);
+                // Set saved price to textBlocks
+                Update_textBlocks(1);
+
 
                 // Get and Set total price
                 Update_total_textBoxes(1);
@@ -774,7 +852,10 @@ namespace Total
                 counter2_priceBox_100000.Text = price;
 
                 // Update and Save data
-                Update_Save_data(1, amount, price);
+                Update_Save_data(1, 100000, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(1);
 
                 // Get and Set total price
                 Update_total_textBoxes(1);
@@ -801,7 +882,10 @@ namespace Total
                 counter2_amountBox_10.Text = amount;
 
                 // Update and Save data
-                Update_Save_data(1, amount, price);
+                Update_Save_data(1, 10, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(1);
 
                 // Get and Set total price
                 Update_total_textBoxes(1);
@@ -828,7 +912,10 @@ namespace Total
                 counter2_amountBox_50.Text = amount;
 
                 // Update and Save data
-                Update_Save_data(1, amount, price);
+                Update_Save_data(1, 50, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(1);
 
                 // Get and Set total price
                 Update_total_textBoxes(1);
@@ -855,7 +942,10 @@ namespace Total
                 counter2_amountBox_100.Text = amount;
 
                 // Update and Save data
-                Update_Save_data(1, amount, price);
+                Update_Save_data(1, 100, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(1);
 
                 // Get and Set total price
                 Update_total_textBoxes(1);
@@ -882,7 +972,10 @@ namespace Total
                 counter2_amountBox_500.Text = amount;
 
                 // Update and Save data
-                Update_Save_data(1, amount, price);
+                Update_Save_data(1, 500, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(1);
 
                 // Get and Set total price
                 Update_total_textBoxes(1);
@@ -909,7 +1002,10 @@ namespace Total
                 counter2_amountBox_1000.Text = amount;
 
                 // Update and Save data
-                Update_Save_data(1, amount, price);
+                Update_Save_data(1, 1000, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(1);
 
                 // Get and Set total price
                 Update_total_textBoxes(1);
@@ -936,7 +1032,10 @@ namespace Total
                 counter2_amountBox_5000.Text = amount;
 
                 // Update and Save data
-                Update_Save_data(1, amount, price);
+                Update_Save_data(1, 5000, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(1);
 
                 // Get and Set total price
                 Update_total_textBoxes(1);
@@ -963,7 +1062,10 @@ namespace Total
                 counter2_amountBox_10000.Text = amount;
 
                 // Update and Save data
-                Update_Save_data(1, amount, price);
+                Update_Save_data(1, 10000, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(1);
 
                 // Get and Set total price
                 Update_total_textBoxes(1);
@@ -990,7 +1092,10 @@ namespace Total
                 counter2_amountBox_50000.Text = amount;
 
                 // Update and Save data
-                Update_Save_data(1, amount, price);
+                Update_Save_data(1, 50000, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(1);
 
                 // Get and Set total price
                 Update_total_textBoxes(1);
@@ -1017,7 +1122,10 @@ namespace Total
                 counter2_amountBox_100000.Text = amount;
 
                 // Update and Save data
-                Update_Save_data(1, amount, price);
+                Update_Save_data(1, 100000, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(1);
 
                 // Get and Set total price
                 Update_total_textBoxes(1);
@@ -1050,7 +1158,10 @@ namespace Total
                 counter3_priceBox_10.Text = price;
 
                 // Update and Save data
-                Update_Save_data(2, amount, price);
+                Update_Save_data(2, 10, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(2);
 
                 // Get and Set total price
                 Update_total_textBoxes(2);
@@ -1077,7 +1188,10 @@ namespace Total
                 counter3_priceBox_50.Text = price;
 
                 // Update and Save data
-                Update_Save_data(2, amount, price);
+                Update_Save_data(2, 50, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(2);
 
                 // Get and Set total price
                 Update_total_textBoxes(2);
@@ -1104,7 +1218,10 @@ namespace Total
                 counter3_amountBox_100.Text = price;
 
                 // Update and Save data
-                Update_Save_data(2, amount, price);
+                Update_Save_data(2, 100, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(2);
 
                 // Get and Set total price
                 Update_total_textBoxes(2);
@@ -1131,7 +1248,10 @@ namespace Total
                 counter3_priceBox_500.Text = price;
 
                 // Update and Save data
-                Update_Save_data(2, amount, price);
+                Update_Save_data(2, 500, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(2);
 
                 // Get and Set total price
                 Update_total_textBoxes(2);
@@ -1158,7 +1278,10 @@ namespace Total
                 counter3_priceBox_1000.Text = price;
 
                 // Update and Save data
-                Update_Save_data(2, amount, price);
+                Update_Save_data(2, 1000, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(2);
 
                 // Get and Set total price
                 Update_total_textBoxes(2);
@@ -1185,7 +1308,10 @@ namespace Total
                 counter3_priceBox_5000.Text = price;
 
                 // Update and Save data
-                Update_Save_data(2, amount, price);
+                Update_Save_data(2, 5000, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(2);
 
                 // Get and Set total price
                 Update_total_textBoxes(2);
@@ -1212,7 +1338,10 @@ namespace Total
                 counter3_priceBox_10000.Text = price;
 
                 // Update and Save data
-                Update_Save_data(2, amount, price);
+                Update_Save_data(2, 10000, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(2);
 
                 // Get and Set total price
                 Update_total_textBoxes(2);
@@ -1239,7 +1368,10 @@ namespace Total
                 counter3_priceBox_50000.Text = price;
 
                 // Update and Save data
-                Update_Save_data(2, amount, price);
+                Update_Save_data(2, 50000, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(2);
 
                 // Get and Set total price
                 Update_total_textBoxes(2);
@@ -1266,7 +1398,10 @@ namespace Total
                 counter3_priceBox_100000.Text = price;
 
                 // Update and Save data
-                Update_Save_data(2, amount, price);
+                Update_Save_data(2, 100000, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(2);
 
                 // Get and Set total price
                 Update_total_textBoxes(2);
@@ -1293,7 +1428,10 @@ namespace Total
                 counter3_amountBox_10.Text = amount;
 
                 // Update and Save data
-                Update_Save_data(2, amount, price);
+                Update_Save_data(2, 10, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(2);
 
                 // Get and Set total price
                 Update_total_textBoxes(2);
@@ -1320,7 +1458,10 @@ namespace Total
                 counter3_amountBox_50.Text = amount;
 
                 // Update and Save data
-                Update_Save_data(2, amount, price);
+                Update_Save_data(2, 50, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(2);
 
                 // Get and Set total price
                 Update_total_textBoxes(2);
@@ -1347,7 +1488,10 @@ namespace Total
                 counter3_amountBox_100.Text = amount;
 
                 // Update and Save data
-                Update_Save_data(2, amount, price);
+                Update_Save_data(2, 100, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(2);
 
                 // Get and Set total price
                 Update_total_textBoxes(2);
@@ -1374,7 +1518,10 @@ namespace Total
                 counter3_amountBox_500.Text = amount;
 
                 // Update and Save data
-                Update_Save_data(2, amount, price);
+                Update_Save_data(2, 500, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(2);
 
                 // Get and Set total price
                 Update_total_textBoxes(2);
@@ -1401,7 +1548,10 @@ namespace Total
                 counter3_amountBox_1000.Text = amount;
 
                 // Update and Save data
-                Update_Save_data(2, amount, price);
+                Update_Save_data(2, 1000, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(2);
 
                 // Get and Set total price
                 Update_total_textBoxes(2);
@@ -1428,7 +1578,10 @@ namespace Total
                 counter3_amountBox_5000.Text = amount;
 
                 // Update and Save data
-                Update_Save_data(2, amount, price);
+                Update_Save_data(2, 5000, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(2);
 
                 // Get and Set total price
                 Update_total_textBoxes(2);
@@ -1455,7 +1608,10 @@ namespace Total
                 counter3_amountBox_10000.Text = amount;
 
                 // Update and Save data
-                Update_Save_data(2, amount, price);
+                Update_Save_data(2, 10000, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(2);
 
                 // Get and Set total price
                 Update_total_textBoxes(2);
@@ -1482,7 +1638,10 @@ namespace Total
                 counter3_amountBox_50000.Text = amount;
 
                 // Update and Save data
-                Update_Save_data(2, amount, price);
+                Update_Save_data(2, 50000, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(2);
 
                 // Get and Set total price
                 Update_total_textBoxes(2);
@@ -1509,7 +1668,10 @@ namespace Total
                 counter3_amountBox_100000.Text = amount;
 
                 // Update and Save data
-                Update_Save_data(2, amount, price);
+                Update_Save_data(2, 100000, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(2);
 
                 // Get and Set total price
                 Update_total_textBoxes(2);
@@ -1542,7 +1704,10 @@ namespace Total
                 counter4_priceBox_10.Text = price;
 
                 // Update and Save data
-                Update_Save_data(3, amount, price);
+                Update_Save_data(3, 10, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(3);
 
                 // Get and Set total price
                 Update_total_textBoxes(3);
@@ -1569,7 +1734,10 @@ namespace Total
                 counter4_priceBox_50.Text = price;
 
                 // Update and Save data
-                Update_Save_data(3, amount, price);
+                Update_Save_data(3, 50, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(3);
 
                 // Get and Set total price
                 Update_total_textBoxes(3);
@@ -1596,7 +1764,10 @@ namespace Total
                 counter4_amountBox_100.Text = price;
 
                 // Update and Save data
-                Update_Save_data(3, amount, price);
+                Update_Save_data(3, 100, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(3);
 
                 // Get and Set total price
                 Update_total_textBoxes(3);
@@ -1623,7 +1794,10 @@ namespace Total
                 counter4_priceBox_500.Text = price;
 
                 // Update and Save data
-                Update_Save_data(3, amount, price);
+                Update_Save_data(3, 500, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(3);
 
                 // Get and Set total price
                 Update_total_textBoxes(3);
@@ -1650,7 +1824,10 @@ namespace Total
                 counter4_priceBox_1000.Text = price;
 
                 // Update and Save data
-                Update_Save_data(3, amount, price);
+                Update_Save_data(3, 1000, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(3);
 
                 // Get and Set total price
                 Update_total_textBoxes(3);
@@ -1677,7 +1854,10 @@ namespace Total
                 counter4_priceBox_5000.Text = price;
 
                 // Update and Save data
-                Update_Save_data(3, amount, price);
+                Update_Save_data(3, 5000, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(3);
 
                 // Get and Set total price
                 Update_total_textBoxes(3);
@@ -1704,7 +1884,10 @@ namespace Total
                 counter4_priceBox_10000.Text = price;
 
                 // Update and Save data
-                Update_Save_data(3, amount, price);
+                Update_Save_data(3, 10000, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(3);
 
                 // Get and Set total price
                 Update_total_textBoxes(3);
@@ -1731,7 +1914,10 @@ namespace Total
                 counter4_priceBox_50000.Text = price;
 
                 // Update and Save data
-                Update_Save_data(3, amount, price);
+                Update_Save_data(3, 50000, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(3);
 
                 // Get and Set total price
                 Update_total_textBoxes(3);
@@ -1758,7 +1944,10 @@ namespace Total
                 counter4_priceBox_100000.Text = price;
 
                 // Update and Save data
-                Update_Save_data(3, amount, price);
+                Update_Save_data(3, 100000, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(3);
 
                 // Get and Set total price
                 Update_total_textBoxes(3);
@@ -1785,7 +1974,10 @@ namespace Total
                 counter4_amountBox_10.Text = amount;
 
                 // Update and Save data
-                Update_Save_data(3, amount, price);
+                Update_Save_data(3, 10, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(3);
 
                 // Get and Set total price
                 Update_total_textBoxes(3);
@@ -1812,7 +2004,10 @@ namespace Total
                 counter4_amountBox_50.Text = amount;
 
                 // Update and Save data
-                Update_Save_data(3, amount, price);
+                Update_Save_data(3, 50, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(3);
 
                 // Get and Set total price
                 Update_total_textBoxes(3);
@@ -1839,7 +2034,10 @@ namespace Total
                 counter4_amountBox_100.Text = amount;
 
                 // Update and Save data
-                Update_Save_data(3, amount, price);
+                Update_Save_data(3, 100, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(3);
 
                 // Get and Set total price
                 Update_total_textBoxes(3);
@@ -1866,7 +2064,10 @@ namespace Total
                 counter4_amountBox_500.Text = amount;
 
                 // Update and Save data
-                Update_Save_data(3, amount, price);
+                Update_Save_data(3, 500, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(3);
 
                 // Get and Set total price
                 Update_total_textBoxes(3);
@@ -1893,7 +2094,10 @@ namespace Total
                 counter4_amountBox_1000.Text = amount;
 
                 // Update and Save data
-                Update_Save_data(3, amount, price);
+                Update_Save_data(3, 1000, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(3);
 
                 // Get and Set total price
                 Update_total_textBoxes(3);
@@ -1920,7 +2124,10 @@ namespace Total
                 counter4_amountBox_5000.Text = amount;
 
                 // Update and Save data
-                Update_Save_data(3, amount, price);
+                Update_Save_data(3, 5000, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(3);
 
                 // Get and Set total price
                 Update_total_textBoxes(3);
@@ -1947,7 +2154,10 @@ namespace Total
                 counter4_amountBox_10000.Text = amount;
 
                 // Update and Save data
-                Update_Save_data(3, amount, price);
+                Update_Save_data(3, 10000, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(3);
 
                 // Get and Set total price
                 Update_total_textBoxes(3);
@@ -1974,7 +2184,10 @@ namespace Total
                 counter4_amountBox_50000.Text = amount;
 
                 // Update and Save data
-                Update_Save_data(3, amount, price);
+                Update_Save_data(3, 50000, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(3);
 
                 // Get and Set total price
                 Update_total_textBoxes(3);
@@ -2001,7 +2214,10 @@ namespace Total
                 counter4_amountBox_100000.Text = amount;
 
                 // Update and Save data
-                Update_Save_data(3, amount, price);
+                Update_Save_data(3, 100000, amount, price);
+
+                // Set saved price to textBlocks
+                Update_textBlocks(3);
 
                 // Get and Set total price
                 Update_total_textBoxes(3);
@@ -2013,32 +2229,101 @@ namespace Total
             
         }
 
-        private void Update_counter1_textBlocks(int _counter)
+        private void Update_textBlocks(int _counter)
         {
-            counter1_amountBox_10.Text = counters[_counter].amount["10"].ToString();
-            counter1_amountBox_50.Text = counters[_counter].amount["50"].ToString();
-            counter1_amountBox_100.Text = counters[_counter].amount["100"].ToString();
-            counter1_amountBox_500.Text = counters[_counter].amount["500"].ToString();
-            counter1_amountBox_1000.Text = counters[_counter].amount["1000"].ToString();
-            counter1_amountBox_5000.Text = counters[_counter].amount["5000"].ToString();
-            counter1_amountBox_10000.Text = counters[_counter].amount["10000"].ToString();
-            counter1_amountBox_50000.Text = counters[_counter].amount["50000"].ToString();
-            counter1_amountBox_100000.Text = counters[_counter].amount["100000"].ToString();
+            switch (_counter)
+            {
+                case 0:
+                    counter1_amountBox_10.Text = counters[0].amount["10"];
+                    counter1_amountBox_50.Text = counters[0].amount["50"];
+                    counter1_amountBox_100.Text = counters[0].amount["100"];
+                    counter1_amountBox_500.Text = counters[0].amount["500"];
+                    counter1_amountBox_1000.Text = counters[0].amount["1000"];
+                    counter1_amountBox_5000.Text = counters[0].amount["5000"];
+                    counter1_amountBox_10000.Text = counters[0].amount["10000"];
+                    counter1_amountBox_50000.Text = counters[0].amount["50000"];
+                    counter1_amountBox_100000.Text = counters[0].amount["100000"];
 
-            counter1_priceBox_10.Text = counters[_counter].price["10"].ToString();
-            counter1_priceBox_50.Text = counters[_counter].price["50"].ToString();
-            counter1_priceBox_100.Text = counters[_counter].price["100"].ToString();
-            counter1_priceBox_500.Text = counters[_counter].price["500"].ToString();
-            counter1_priceBox_1000.Text = counters[_counter].price["1000"].ToString();
-            counter1_priceBox_5000.Text = counters[_counter].price["5000"].ToString();
-            counter1_priceBox_10000.Text = counters[_counter].price["10000"].ToString();
-            counter1_priceBox_50000.Text = counters[_counter].price["50000"].ToString();
-            counter1_priceBox_100000.Text = counters[_counter].price["100000"].ToString();
+                    counter1_priceBox_10.Text = counters[0].price["10"];
+                    counter1_priceBox_50.Text = counters[0].price["50"];
+                    counter1_priceBox_100.Text = counters[0].price["100"];
+                    counter1_priceBox_500.Text = counters[0].price["500"];
+                    counter1_priceBox_1000.Text = counters[0].price["1000"];
+                    counter1_priceBox_5000.Text = counters[0].price["5000"];
+                    counter1_priceBox_10000.Text = counters[0].price["10000"];
+                    counter1_priceBox_50000.Text = counters[0].price["50000"];
+                    counter1_priceBox_100000.Text = counters[0].price["100000"];
+                    break;
+                case 1:
+                    counter2_amountBox_10.Text = counters[1].amount["10"];
+                    counter2_amountBox_50.Text = counters[1].amount["50"];
+                    counter2_amountBox_100.Text = counters[1].amount["100"];
+                    counter2_amountBox_500.Text = counters[1].amount["500"];
+                    counter2_amountBox_1000.Text = counters[1].amount["1000"];
+                    counter2_amountBox_5000.Text = counters[1].amount["5000"];
+                    counter2_amountBox_10000.Text = counters[1].amount["10000"];
+                    counter2_amountBox_50000.Text = counters[1].amount["50000"];
+                    counter2_amountBox_100000.Text = counters[1].amount["100000"];
+
+                    counter2_priceBox_10.Text = counters[1].price["10"];
+                    counter2_priceBox_50.Text = counters[1].price["50"];
+                    counter2_priceBox_100.Text = counters[1].price["100"];
+                    counter2_priceBox_500.Text = counters[1].price["500"];
+                    counter2_priceBox_1000.Text = counters[1].price["1000"];
+                    counter2_priceBox_5000.Text = counters[1].price["5000"];
+                    counter2_priceBox_10000.Text = counters[1].price["10000"];
+                    counter2_priceBox_50000.Text = counters[1].price["50000"];
+                    counter2_priceBox_100000.Text = counters[1].price["100000"];
+                    break;
+                case 2:
+                    counter3_amountBox_10.Text = counters[2].amount["10"];
+                    counter3_amountBox_50.Text = counters[2].amount["50"];
+                    counter3_amountBox_100.Text = counters[2].amount["100"];
+                    counter3_amountBox_500.Text = counters[2].amount["500"];
+                    counter3_amountBox_1000.Text = counters[2].amount["1000"];
+                    counter3_amountBox_5000.Text = counters[2].amount["5000"];
+                    counter3_amountBox_10000.Text = counters[2].amount["10000"];
+                    counter3_amountBox_50000.Text = counters[2].amount["50000"];
+                    counter3_amountBox_100000.Text = counters[2].amount["100000"];
+
+                    counter3_priceBox_10.Text = counters[2].price["10"];
+                    counter3_priceBox_50.Text = counters[2].price["50"];
+                    counter3_priceBox_100.Text = counters[2].price["100"];
+                    counter3_priceBox_500.Text = counters[2].price["500"];
+                    counter3_priceBox_1000.Text = counters[2].price["1000"];
+                    counter3_priceBox_5000.Text = counters[2].price["5000"];
+                    counter3_priceBox_10000.Text = counters[2].price["10000"];
+                    counter3_priceBox_50000.Text = counters[2].price["50000"];
+                    counter3_priceBox_100000.Text = counters[2].price["100000"];
+                    break;
+                case 3:
+                    counter4_amountBox_10.Text = counters[3].amount["10"];
+                    counter4_amountBox_50.Text = counters[3].amount["50"];
+                    counter4_amountBox_100.Text = counters[3].amount["100"];
+                    counter4_amountBox_500.Text = counters[3].amount["500"];
+                    counter4_amountBox_1000.Text = counters[3].amount["1000"];
+                    counter4_amountBox_5000.Text = counters[3].amount["5000"];
+                    counter4_amountBox_10000.Text = counters[3].amount["10000"];
+                    counter4_amountBox_50000.Text = counters[3].amount["50000"];
+                    counter4_amountBox_100000.Text = counters[3].amount["100000"];
+
+                    counter4_priceBox_10.Text = counters[3].price["10"];
+                    counter4_priceBox_50.Text = counters[3].price["50"];
+                    counter4_priceBox_100.Text = counters[3].price["100"];
+                    counter4_priceBox_500.Text = counters[3].price["500"];
+                    counter4_priceBox_1000.Text = counters[3].price["1000"];
+                    counter4_priceBox_5000.Text = counters[3].price["5000"];
+                    counter4_priceBox_10000.Text = counters[3].price["10000"];
+                    counter4_priceBox_50000.Text = counters[3].price["50000"];
+                    counter4_priceBox_100000.Text = counters[3].price["100000"];
+                    break;
+            }
         }
 
-        private void Update_Save_data(int _counter, string _amount, string _price)
+        private void Update_Save_data(int _counter, int _currency, string _amount, string _price)
         {
-            counters[_counter].UpdateData(10, int.Parse(_amount), int.Parse(_price));
+            counters[_counter].UpdateData(_currency, int.Parse(_amount), int.Parse(_price));
+            counters[_counter].SaveData();
         }
 
         private void Update_total_textBoxes(int _counter)

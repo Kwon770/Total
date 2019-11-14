@@ -6,30 +6,30 @@ namespace Total
     {
         string name = string.Empty;
 
-        public Dictionary<string, int> amount = new Dictionary<string, int>()
+        public Dictionary<string, string> amount = new Dictionary<string, string>()
         {
-            {"10", 0 },
-            {"50", 0 },
-            {"100", 0 },
-            {"500", 0 },
-            {"1000", 0 },
-            {"5000", 0 },
-            {"10000", 0 },
-            {"50000", 0 },
-            {"100000", 0 },
+            {"10", "0" },
+            {"50", "0" },
+            {"100", "0" },
+            {"500", "0" },
+            {"1000", "0" },
+            {"5000", "0" },
+            {"10000", "0" },
+            {"50000", "0" },
+            {"100000", "0" },
         };
 
-        public Dictionary<string, int> price = new Dictionary<string, int>()
+        public Dictionary<string, string> price = new Dictionary<string, string>()
         {
-            {"10", 0 },
-            {"50", 0 },
-            {"100", 0 },
-            {"500", 0 },
-            {"1000", 0 },
-            {"5000", 0 },
-            {"10000", 0 },
-            {"50000", 0 },
-            {"100000", 0 },
+            {"10", "0" },
+            {"50", "0" },
+            {"100", "0" },
+            {"500", "0" },
+            {"1000", "0" },
+            {"5000", "0" },
+            {"10000", "0" },
+            {"50000", "0" },
+            {"100000", "0" },
         };
 
         public void LoadData()
@@ -39,52 +39,51 @@ namespace Total
 
         public void UpdateData(int currency, int _amount, int _price)
         {
+            string t_amount = _amount.ToString();
+            string t_price = _price.ToString();
             // set data to variable
             switch (currency)
             {
                 case 10:
-                    amount["10"] = _amount;
-                    price["10"] = _price;
+                    amount["10"] = t_amount;
+                    price["10"] = t_price;
                     break;
                 case 50:
-                    amount["50"] = _amount;
-                    price["50"] = _price;
+                    amount["50"] = t_amount;
+                    price["50"] = t_price;
                     break;
                 case 100:
-                    amount["100"] = _amount;
-                    price["100"] = _price;
+                    amount["100"] = t_amount;
+                    price["100"] = t_price;
                     break;
                 case 500:
-                    amount["500"] = _amount;
-                    price["500"] = _price;
+                    amount["500"] = t_amount;
+                    price["500"] = t_price;
                     break;
                 case 1000:
-                    amount["1000"] = _amount;
-                    price["1000"] = _price;
+                    amount["1000"] = t_amount;
+                    price["1000"] = t_price;
                     break;
                 case 5000:
-                    amount["5000"] = _amount;
-                    price["5000"] = _price;
+                    amount["5000"] = t_amount;
+                    price["5000"] = t_price;
                     break;
                 case 10000:
-                    amount["10000"] = _amount;
-                    price["10000"] = _price;
+                    amount["10000"] = t_amount;
+                    price["10000"] = t_price;
                     break;
                 case 50000:
-                    amount["50000"] = _amount;
-                    price["50000"] = _price;
+                    amount["50000"] = t_amount;
+                    price["50000"] = t_price;
                     break;
                 case 100000:
-                    amount["100000"] = _amount;
-                    price["100000"] = _price;
+                    amount["100000"] = t_amount;
+                    price["100000"] = t_price;
                     break;
             }
-
-            // save data
-            SaveData();
         }
 
-        void SaveData()
+        public void SaveData()
         {
             //
         }
@@ -164,7 +163,7 @@ namespace Total
         public int GetTotalPrice()
         {
             int total = 0;
-            foreach (var price in price.Values) total += price;
+            foreach (var price in price.Values) total += int.Parse(price);
             return total;
         }
     }
