@@ -2219,8 +2219,7 @@ namespace Total
         }
 
 
-        /// 
-
+        /// Methods
 
         private void Update_counter_textBlocks(int _counter)
         {
@@ -2343,8 +2342,8 @@ namespace Total
         }
 
 
-        /// 
 
+        /// CASH EXPENDITURE
 
         private void CashNameBox_0_KeyDown(object sender, KeyEventArgs e)
         {
@@ -2767,18 +2766,16 @@ namespace Total
         }
 
 
-        ///
-
+        /// Methods
 
         private void Update_cash_total_textBoxes()
         {
             cashExpenditure_total_text1.Text = expenditure.Get_totalPrice().ToString();
-            cashExpenditure_total_text2.Text = expenditure.Get_totalPrice().ToString();
+            if(cashExpenditure_total_text2!=null) cashExpenditure_total_text2.Text = expenditure.Get_totalPrice().ToString();
         }
 
 
-        ///
-
+        /// RESULT 
 
         private void originalPriceBox_KeyDown(object sender, KeyEventArgs e)
         {
@@ -2820,9 +2817,8 @@ namespace Total
         }
 
 
-        ///
-
-
+        /// TOP BAR
+        
         private void TopBar_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.LeftButton == MouseButtonState.Pressed) DragMove();
