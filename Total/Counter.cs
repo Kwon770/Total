@@ -32,6 +32,8 @@ namespace Total
             {"100000", "0" },
         };
 
+        int totalPrice = 0;
+
         public void LoadData()
         {
             //
@@ -81,6 +83,9 @@ namespace Total
                     price["100000"] = t_price;
                     break;
             }
+
+            totalPrice = 0;
+            foreach (string price in price.Values) totalPrice += int.Parse(price);
         }
 
         public void SaveData()
@@ -160,11 +165,9 @@ namespace Total
             return price;
         }
 
-        public int GetTotalPrice()
+        public int Get_totalPrice()
         {
-            int total = 0;
-            foreach (var price in price.Values) total += int.Parse(price);
-            return total;
+            return totalPrice;
         }
     }
 }

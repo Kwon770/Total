@@ -55,7 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Expenditure.cs" />
     <Compile Include="Step1.cs" />
+    <Compile Include="Step2.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -98,10 +100,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\index_empty.png" />
-    <Resource Include="Resources\index_fill.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\plus_small.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\help_icon.png" />
@@ -111,6 +109,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\minimize_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\plus_icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
