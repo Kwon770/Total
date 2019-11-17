@@ -1,7 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Total
 {
+    [Serializable]
     class Counter
     {
         string name = string.Empty;
@@ -33,11 +35,6 @@ namespace Total
         };
 
         int totalPrice = 0;
-
-        public void LoadData()
-        {
-            //
-        }
 
         public void UpdateData(int currency, int _amount, int _price)
         {
@@ -86,11 +83,6 @@ namespace Total
 
             totalPrice = 0;
             foreach (string price in price.Values) totalPrice += int.Parse(price);
-        }
-
-        public void SaveData()
-        {
-            //
         }
 
         public int GetAmountFromPrice(int currency, int _price)

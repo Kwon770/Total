@@ -1,21 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using KeyEventArgs = System.Windows.Input.KeyEventArgs;
+using Application = System.Windows.Forms.Application;
 
 namespace Total
 {
-
     public partial class MainWindow : Window
     {
         Counter[] counters = new Counter[4];
@@ -24,22 +18,72 @@ namespace Total
         Step1 Step1 = new Step1();
         Step2 Step2 = new Step2();
 
-        int originalPrice = 0;
+        bool init = false;
 
         public MainWindow()
         {
             for (int i = 0; i < 4; i++) counters[i] = new Counter();
+
             InitializeComponent();
 
+            Load_data();
+            //Save_countersData();
+            //Save_expenditureData();
 
 
-            // Load Data
-            // Make Counter instance by data
+            // Load Ui with loaded data
+            for (int i = 0; i < 4; i++)
+            {
+                Update_counter_textBoxes(i);
 
-            // Make Counter instance Load data
+                Update_counter_total_textBlocks(i);
+            }
 
-            // Set data of counters[0] (initial Counter) to TextBox
-            // Update_Step1_Textboxes(0);
+            Update_cash_textBoxes();
+
+            Update_cash_total_textBlocks();
+
+            Update_result();
+
+            init = true;
+        }
+
+
+        /// 
+
+
+        private void Save_countersData()
+        {
+            if (!init) return;
+            IFormatter Formatter = new BinaryFormatter();
+            using (FileStream stream = new FileStream(Application.StartupPath + "\\" + "countersData.dat", FileMode.Create, FileAccess.Write, FileShare.None))
+            {
+                Formatter.Serialize(stream, counters);
+            }
+        }
+
+        private void Save_expenditureData()
+        {
+            if (!init) return;
+            IFormatter Formatter = new BinaryFormatter();
+            using (FileStream stream = new FileStream(Application.StartupPath + "\\" + "expenditureData.dat", FileMode.Create, FileAccess.Write, FileShare.None))
+            {
+                Formatter.Serialize(stream, expenditure);
+            }
+        }
+
+        private void Load_data()
+        {
+            BinaryFormatter Formatter = new BinaryFormatter();
+            FileStream stream = new FileStream(Application.StartupPath + "\\" + "countersData.dat", FileMode.Open, FileAccess.Read, FileShare.Read);
+            counters = (Counter[])Formatter.Deserialize(stream);
+
+            stream = new FileStream(Application.StartupPath + "\\" + "expenditureData.dat", FileMode.Open, FileAccess.Read, FileShare.Read);
+            expenditure = (Expenditure)Formatter.Deserialize(stream);
+
+            stream.Close();
+
+            for (int i = 0; i < 10; i++) Console.WriteLine("type : " + expenditure.Load_type(i) + " / price : " + expenditure.Load_price(i));
         }
 
 
@@ -69,10 +113,10 @@ namespace Total
                 Update_Save_counter_data(0, 10, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(0);
+                Update_counter_textBoxes(0);
 
                 // Get and Set saved total price to textBoxes
-                Update_counter_total_textBoxes(0);
+                Update_counter_total_textBlocks(0);
             }
         }
 
@@ -99,10 +143,10 @@ namespace Total
                 Update_Save_counter_data(0, 50, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(0);
+                Update_counter_textBoxes(0);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(0);
+                Update_counter_total_textBlocks(0);
             }
         }
 
@@ -129,10 +173,10 @@ namespace Total
                 Update_Save_counter_data(0, 100, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(0);
+                Update_counter_textBoxes(0);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(0);
+                Update_counter_total_textBlocks(0);
             }
         }
 
@@ -159,10 +203,10 @@ namespace Total
                 Update_Save_counter_data(0, 500, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(0);
+                Update_counter_textBoxes(0);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(0);
+                Update_counter_total_textBlocks(0);
             }
         }
 
@@ -189,10 +233,10 @@ namespace Total
                 Update_Save_counter_data(0, 1000, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(0);
+                Update_counter_textBoxes(0);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(0);
+                Update_counter_total_textBlocks(0);
             }
         }
 
@@ -219,10 +263,10 @@ namespace Total
                 Update_Save_counter_data(0, 5000, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(0);
+                Update_counter_textBoxes(0);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(0);
+                Update_counter_total_textBlocks(0);
             }
         }
 
@@ -249,10 +293,10 @@ namespace Total
                 Update_Save_counter_data(0, 10000, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(0);
+                Update_counter_textBoxes(0);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(0);
+                Update_counter_total_textBlocks(0);
             }
         }
 
@@ -279,10 +323,10 @@ namespace Total
                 Update_Save_counter_data(0, 50000, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(0);
+                Update_counter_textBoxes(0);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(0);
+                Update_counter_total_textBlocks(0);
             }
         }
 
@@ -309,10 +353,10 @@ namespace Total
                 Update_Save_counter_data(0, 100000, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(0);
+                Update_counter_textBoxes(0);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(0);
+                Update_counter_total_textBlocks(0);
             }
         }
 
@@ -339,10 +383,10 @@ namespace Total
                 Update_Save_counter_data(0, 10, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(0);
+                Update_counter_textBoxes(0);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(0);
+                Update_counter_total_textBlocks(0);
             }
         }
 
@@ -369,10 +413,10 @@ namespace Total
                 Update_Save_counter_data(0, 50, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(0);
+                Update_counter_textBoxes(0);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(0);
+                Update_counter_total_textBlocks(0);
             }
         }
 
@@ -399,10 +443,10 @@ namespace Total
                 Update_Save_counter_data(0, 100, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(0);
+                Update_counter_textBoxes(0);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(0);
+                Update_counter_total_textBlocks(0);
             }
         }
 
@@ -429,10 +473,10 @@ namespace Total
                 Update_Save_counter_data(0, 500, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(0);
+                Update_counter_textBoxes(0);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(0);
+                Update_counter_total_textBlocks(0);
             }
         }
 
@@ -459,10 +503,10 @@ namespace Total
                 Update_Save_counter_data(0, 1000, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(0);
+                Update_counter_textBoxes(0);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(0);
+                Update_counter_total_textBlocks(0);
             }
         }
 
@@ -489,10 +533,10 @@ namespace Total
                 Update_Save_counter_data(0, 5000, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(0);
+                Update_counter_textBoxes(0);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(0);
+                Update_counter_total_textBlocks(0);
             }
         }
 
@@ -519,10 +563,10 @@ namespace Total
                 Update_Save_counter_data(0, 10000, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(0);
+                Update_counter_textBoxes(0);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(0);
+                Update_counter_total_textBlocks(0);
             }
         }
 
@@ -549,10 +593,10 @@ namespace Total
                 Update_Save_counter_data(0, 50000, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(0);
+                Update_counter_textBoxes(0);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(0);
+                Update_counter_total_textBlocks(0);
             }
         }
 
@@ -579,10 +623,10 @@ namespace Total
                 Update_Save_counter_data(0, 100000, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(0);
+                Update_counter_textBoxes(0);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(0);
+                Update_counter_total_textBlocks(0);
             }
         }
 
@@ -613,10 +657,10 @@ namespace Total
                 Update_Save_counter_data(1, 10, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(1);
+                Update_counter_textBoxes(1);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(1);
+                Update_counter_total_textBlocks(1);
             }
         }
 
@@ -643,10 +687,10 @@ namespace Total
                 Update_Save_counter_data(1, 50, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(1);
+                Update_counter_textBoxes(1);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(1);
+                Update_counter_total_textBlocks(1);
             }
         }
 
@@ -673,10 +717,10 @@ namespace Total
                 Update_Save_counter_data(1, 100, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(1);
+                Update_counter_textBoxes(1);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(1);
+                Update_counter_total_textBlocks(1);
             }
         }
 
@@ -703,10 +747,10 @@ namespace Total
                 Update_Save_counter_data(1, 500, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(1);
+                Update_counter_textBoxes(1);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(1);
+                Update_counter_total_textBlocks(1);
             }
         }
 
@@ -733,10 +777,10 @@ namespace Total
                 Update_Save_counter_data(1, 1000, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(1);
+                Update_counter_textBoxes(1);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(1);
+                Update_counter_total_textBlocks(1);
             }
         }
 
@@ -763,10 +807,10 @@ namespace Total
                 Update_Save_counter_data(1, 5000, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(1);
+                Update_counter_textBoxes(1);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(1);
+                Update_counter_total_textBlocks(1);
             }
         }
 
@@ -793,10 +837,10 @@ namespace Total
                 Update_Save_counter_data(1, 10000, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(1);
+                Update_counter_textBoxes(1);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(1);
+                Update_counter_total_textBlocks(1);
             }
         }
 
@@ -822,11 +866,11 @@ namespace Total
                 // Update and Save data
                 Update_Save_counter_data(1, 50000, amount, price);
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(1);
+                Update_counter_textBoxes(1);
 
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(1);
+                Update_counter_total_textBlocks(1);
             }
         }
 
@@ -853,10 +897,10 @@ namespace Total
                 Update_Save_counter_data(1, 100000, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(1);
+                Update_counter_textBoxes(1);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(1);
+                Update_counter_total_textBlocks(1);
             }
         }
 
@@ -883,10 +927,10 @@ namespace Total
                 Update_Save_counter_data(1, 10, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(1);
+                Update_counter_textBoxes(1);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(1);
+                Update_counter_total_textBlocks(1);
             }
         }
 
@@ -913,10 +957,10 @@ namespace Total
                 Update_Save_counter_data(1, 50, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(1);
+                Update_counter_textBoxes(1);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(1);
+                Update_counter_total_textBlocks(1);
             }
         }
 
@@ -943,10 +987,10 @@ namespace Total
                 Update_Save_counter_data(1, 100, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(1);
+                Update_counter_textBoxes(1);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(1);
+                Update_counter_total_textBlocks(1);
             }
         }
 
@@ -973,10 +1017,10 @@ namespace Total
                 Update_Save_counter_data(1, 500, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(1);
+                Update_counter_textBoxes(1);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(1);
+                Update_counter_total_textBlocks(1);
             }
         }
 
@@ -1003,10 +1047,10 @@ namespace Total
                 Update_Save_counter_data(1, 1000, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(1);
+                Update_counter_textBoxes(1);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(1);
+                Update_counter_total_textBlocks(1);
             }
         }
 
@@ -1033,10 +1077,10 @@ namespace Total
                 Update_Save_counter_data(1, 5000, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(1);
+                Update_counter_textBoxes(1);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(1);
+                Update_counter_total_textBlocks(1);
             }
         }
 
@@ -1063,10 +1107,10 @@ namespace Total
                 Update_Save_counter_data(1, 10000, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(1);
+                Update_counter_textBoxes(1);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(1);
+                Update_counter_total_textBlocks(1);
             }
         }
 
@@ -1093,10 +1137,10 @@ namespace Total
                 Update_Save_counter_data(1, 50000, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(1);
+                Update_counter_textBoxes(1);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(1);
+                Update_counter_total_textBlocks(1);
             }
         }
 
@@ -1123,10 +1167,10 @@ namespace Total
                 Update_Save_counter_data(1, 100000, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(1);
+                Update_counter_textBoxes(1);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(1);
+                Update_counter_total_textBlocks(1);
             }
         }
 
@@ -1157,10 +1201,10 @@ namespace Total
                 Update_Save_counter_data(2, 10, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(2);
+                Update_counter_textBoxes(2);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(2);
+                Update_counter_total_textBlocks(2);
             }
         }
 
@@ -1187,10 +1231,10 @@ namespace Total
                 Update_Save_counter_data(2, 50, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(2);
+                Update_counter_textBoxes(2);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(2);
+                Update_counter_total_textBlocks(2);
             }
         }
 
@@ -1217,10 +1261,10 @@ namespace Total
                 Update_Save_counter_data(2, 100, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(2);
+                Update_counter_textBoxes(2);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(2);
+                Update_counter_total_textBlocks(2);
             }
         }
 
@@ -1247,10 +1291,10 @@ namespace Total
                 Update_Save_counter_data(2, 500, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(2);
+                Update_counter_textBoxes(2);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(2);
+                Update_counter_total_textBlocks(2);
             }
         }
 
@@ -1277,10 +1321,10 @@ namespace Total
                 Update_Save_counter_data(2, 1000, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(2);
+                Update_counter_textBoxes(2);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(2);
+                Update_counter_total_textBlocks(2);
             }
         }
 
@@ -1307,10 +1351,10 @@ namespace Total
                 Update_Save_counter_data(2, 5000, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(2);
+                Update_counter_textBoxes(2);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(2);
+                Update_counter_total_textBlocks(2);
             }
         }
 
@@ -1337,10 +1381,10 @@ namespace Total
                 Update_Save_counter_data(2, 10000, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(2);
+                Update_counter_textBoxes(2);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(2);
+                Update_counter_total_textBlocks(2);
             }
         }
 
@@ -1367,10 +1411,10 @@ namespace Total
                 Update_Save_counter_data(2, 50000, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(2);
+                Update_counter_textBoxes(2);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(2);
+                Update_counter_total_textBlocks(2);
             }
         }
 
@@ -1397,10 +1441,10 @@ namespace Total
                 Update_Save_counter_data(2, 100000, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(2);
+                Update_counter_textBoxes(2);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(2);
+                Update_counter_total_textBlocks(2);
             }
         }
 
@@ -1427,10 +1471,10 @@ namespace Total
                 Update_Save_counter_data(2, 10, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(2);
+                Update_counter_textBoxes(2);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(2);
+                Update_counter_total_textBlocks(2);
             }
         }
 
@@ -1457,10 +1501,10 @@ namespace Total
                 Update_Save_counter_data(2, 50, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(2);
+                Update_counter_textBoxes(2);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(2);
+                Update_counter_total_textBlocks(2);
             }
         }
 
@@ -1487,10 +1531,10 @@ namespace Total
                 Update_Save_counter_data(2, 100, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(2);
+                Update_counter_textBoxes(2);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(2);
+                Update_counter_total_textBlocks(2);
             }
         }
 
@@ -1517,10 +1561,10 @@ namespace Total
                 Update_Save_counter_data(2, 500, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(2);
+                Update_counter_textBoxes(2);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(2);
+                Update_counter_total_textBlocks(2);
             }
         }
 
@@ -1547,10 +1591,10 @@ namespace Total
                 Update_Save_counter_data(2, 1000, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(2);
+                Update_counter_textBoxes(2);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(2);
+                Update_counter_total_textBlocks(2);
             }
         }
 
@@ -1577,10 +1621,10 @@ namespace Total
                 Update_Save_counter_data(2, 5000, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(2);
+                Update_counter_textBoxes(2);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(2);
+                Update_counter_total_textBlocks(2);
             }
         }
 
@@ -1607,10 +1651,10 @@ namespace Total
                 Update_Save_counter_data(2, 10000, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(2);
+                Update_counter_textBoxes(2);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(2);
+                Update_counter_total_textBlocks(2);
             }
         }
 
@@ -1637,10 +1681,10 @@ namespace Total
                 Update_Save_counter_data(2, 50000, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(2);
+                Update_counter_textBoxes(2);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(2);
+                Update_counter_total_textBlocks(2);
             }
         }
 
@@ -1667,10 +1711,10 @@ namespace Total
                 Update_Save_counter_data(2, 100000, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(2);
+                Update_counter_textBoxes(2);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(2);
+                Update_counter_total_textBlocks(2);
             }
         }
 
@@ -1701,10 +1745,10 @@ namespace Total
                 Update_Save_counter_data(3, 10, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(3);
+                Update_counter_textBoxes(3);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(3);
+                Update_counter_total_textBlocks(3);
             }
         }
 
@@ -1731,10 +1775,10 @@ namespace Total
                 Update_Save_counter_data(3, 50, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(3);
+                Update_counter_textBoxes(3);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(3);
+                Update_counter_total_textBlocks(3);
             }
         }
 
@@ -1761,10 +1805,10 @@ namespace Total
                 Update_Save_counter_data(3, 100, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(3);
+                Update_counter_textBoxes(3);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(3);
+                Update_counter_total_textBlocks(3);
             }
         }
 
@@ -1791,10 +1835,10 @@ namespace Total
                 Update_Save_counter_data(3, 500, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(3);
+                Update_counter_textBoxes(3);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(3);
+                Update_counter_total_textBlocks(3);
             }
         }
 
@@ -1821,10 +1865,10 @@ namespace Total
                 Update_Save_counter_data(3, 1000, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(3);
+                Update_counter_textBoxes(3);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(3);
+                Update_counter_total_textBlocks(3);
             }
         }
 
@@ -1851,10 +1895,10 @@ namespace Total
                 Update_Save_counter_data(3, 5000, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(3);
+                Update_counter_textBoxes(3);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(3);
+                Update_counter_total_textBlocks(3);
             }
         }
 
@@ -1881,10 +1925,10 @@ namespace Total
                 Update_Save_counter_data(3, 10000, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(3);
+                Update_counter_textBoxes(3);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(3);
+                Update_counter_total_textBlocks(3);
             }
         }
 
@@ -1911,10 +1955,10 @@ namespace Total
                 Update_Save_counter_data(3, 50000, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(3);
+                Update_counter_textBoxes(3);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(3);
+                Update_counter_total_textBlocks(3);
             }
         }
 
@@ -1941,10 +1985,10 @@ namespace Total
                 Update_Save_counter_data(3, 100000, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(3);
+                Update_counter_textBoxes(3);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(3);
+                Update_counter_total_textBlocks(3);
             }
         }
 
@@ -1971,10 +2015,10 @@ namespace Total
                 Update_Save_counter_data(3, 10, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(3);
+                Update_counter_textBoxes(3);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(3);
+                Update_counter_total_textBlocks(3);
             }
         }
 
@@ -2001,10 +2045,10 @@ namespace Total
                 Update_Save_counter_data(3, 50, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(3);
+                Update_counter_textBoxes(3);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(3);
+                Update_counter_total_textBlocks(3);
             }
         }
 
@@ -2031,10 +2075,10 @@ namespace Total
                 Update_Save_counter_data(3, 100, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(3);
+                Update_counter_textBoxes(3);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(3);
+                Update_counter_total_textBlocks(3);
             }
         }
 
@@ -2061,10 +2105,10 @@ namespace Total
                 Update_Save_counter_data(3, 500, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(3);
+                Update_counter_textBoxes(3);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(3);
+                Update_counter_total_textBlocks(3);
             }
         }
 
@@ -2091,10 +2135,10 @@ namespace Total
                 Update_Save_counter_data(3, 1000, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(3);
+                Update_counter_textBoxes(3);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(3);
+                Update_counter_total_textBlocks(3);
             }
         }
 
@@ -2121,10 +2165,10 @@ namespace Total
                 Update_Save_counter_data(3, 5000, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(3);
+                Update_counter_textBoxes(3);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(3);
+                Update_counter_total_textBlocks(3);
             }
         }
 
@@ -2151,10 +2195,10 @@ namespace Total
                 Update_Save_counter_data(3, 10000, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(3);
+                Update_counter_textBoxes(3);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(3);
+                Update_counter_total_textBlocks(3);
             }
         }
 
@@ -2181,10 +2225,10 @@ namespace Total
                 Update_Save_counter_data(3, 50000, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(3);
+                Update_counter_textBoxes(3);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(3);
+                Update_counter_total_textBlocks(3);
             }
         }
 
@@ -2211,17 +2255,17 @@ namespace Total
                 Update_Save_counter_data(3, 100000, amount, price);
 
                 // Set saved price to textBlocks
-                Update_counter_textBlocks(3);
+                Update_counter_textBoxes(3);
 
                 // Get and Set total price
-                Update_counter_total_textBoxes(3);
+                Update_counter_total_textBlocks(3);
             }
         }
 
 
         /// Methods
 
-        private void Update_counter_textBlocks(int _counter)
+        private void Update_counter_textBoxes(int _counter)
         {
             switch (_counter)
             {
@@ -2315,10 +2359,10 @@ namespace Total
         private void Update_Save_counter_data(int _counter, int _currency, string _amount, string _price)
         {
             counters[_counter].UpdateData(_currency, int.Parse(_amount), int.Parse(_price));
-            counters[_counter].SaveData();
+            Save_countersData();
         }
 
-        private void Update_counter_total_textBoxes(int _counter)
+        private void Update_counter_total_textBlocks(int _counter)
         {
             string total = counters[_counter].Get_totalPrice().ToString();
 
@@ -2350,6 +2394,8 @@ namespace Total
             if (e.Key == Key.Return)
             {
                 expenditure.Save_name(0, cashNameBox_0.Text);
+
+                Save_expenditureData();
             }
         }
 
@@ -2358,6 +2404,8 @@ namespace Total
             if (e.Key == Key.Return)
             {
                 expenditure.Save_name(1, cashNameBox_1.Text);
+
+                Save_expenditureData();
             }
         }
 
@@ -2366,6 +2414,8 @@ namespace Total
             if (e.Key == Key.Return)
             {
                 expenditure.Save_name(2, cashNameBox_2.Text);
+
+                Save_expenditureData();
             }
         }
 
@@ -2374,6 +2424,8 @@ namespace Total
             if (e.Key == Key.Return)
             {
                 expenditure.Save_name(3, cashNameBox_3.Text);
+
+                Save_expenditureData();
             }
         }
 
@@ -2382,6 +2434,8 @@ namespace Total
             if (e.Key == Key.Return)
             {
                 expenditure.Save_name(4, cashNameBox_4.Text);
+
+                Save_expenditureData();
             }
         }
 
@@ -2390,6 +2444,8 @@ namespace Total
             if (e.Key == Key.Return)
             {
                 expenditure.Save_name(5, cashNameBox_5.Text);
+
+                Save_expenditureData();
             }
         }
 
@@ -2398,6 +2454,8 @@ namespace Total
             if (e.Key == Key.Return)
             {
                 expenditure.Save_name(6, cashNameBox_6.Text);
+
+                Save_expenditureData();
             }
         }
 
@@ -2406,6 +2464,8 @@ namespace Total
             if (e.Key == Key.Return)
             {
                 expenditure.Save_name(7, cashNameBox_7.Text);
+
+                Save_expenditureData();
             }
         }
 
@@ -2414,6 +2474,8 @@ namespace Total
             if (e.Key == Key.Return)
             {
                 expenditure.Save_name(8, cashNameBox_8.Text);
+
+                Save_expenditureData();
             }
         }
 
@@ -2422,6 +2484,8 @@ namespace Total
             if (e.Key == Key.Return)
             {
                 expenditure.Save_name(9, cashNameBox_9.Text);
+
+                Save_expenditureData();
             }
         }
 
@@ -2443,8 +2507,10 @@ namespace Total
                 expenditure.Save_price(0, price);
 
                 // Get and Set total price
-                Update_cash_total_textBoxes();
+                Update_cash_total_textBlocks();
                 Update_result();
+
+                Save_expenditureData();
             }
         }
 
@@ -2466,8 +2532,10 @@ namespace Total
                 expenditure.Save_price(1, price);
 
                 // Get and Set total price
-                Update_cash_total_textBoxes();
+                Update_cash_total_textBlocks();
                 Update_result();
+
+                Save_expenditureData();
             }
         }
 
@@ -2489,8 +2557,10 @@ namespace Total
                 expenditure.Save_price(2, price);
 
                 // Get and Set total price
-                Update_cash_total_textBoxes();
+                Update_cash_total_textBlocks();
                 Update_result();
+
+                Save_expenditureData();
             }
         }
 
@@ -2512,8 +2582,10 @@ namespace Total
                 expenditure.Save_price(3, price);
 
                 // Get and Set total price
-                Update_cash_total_textBoxes();
+                Update_cash_total_textBlocks();
                 Update_result();
+
+                Save_expenditureData();
             }
         }
 
@@ -2535,8 +2607,10 @@ namespace Total
                 expenditure.Save_price(4, price);
 
                 // Get and Set total price
-                Update_cash_total_textBoxes();
+                Update_cash_total_textBlocks();
                 Update_result();
+
+                Save_expenditureData();
             }
         }
 
@@ -2558,8 +2632,10 @@ namespace Total
                 expenditure.Save_price(5, price);
 
                 // Get and Set total price
-                Update_cash_total_textBoxes();
+                Update_cash_total_textBlocks();
                 Update_result();
+
+                Save_expenditureData();
             }
         }
 
@@ -2581,8 +2657,10 @@ namespace Total
                 expenditure.Save_price(6, price);
 
                 // Get and Set total price
-                Update_cash_total_textBoxes();
+                Update_cash_total_textBlocks();
                 Update_result();
+
+                Save_expenditureData();
             }
         }
 
@@ -2604,8 +2682,10 @@ namespace Total
                 expenditure.Save_price(7, price);
 
                 // Get and Set total price
-                Update_cash_total_textBoxes();
+                Update_cash_total_textBlocks();
                 Update_result();
+
+                Save_expenditureData();
             }
         }
 
@@ -2627,8 +2707,10 @@ namespace Total
                 expenditure.Save_price(8, price);
 
                 // Get and Set total price
-                Update_cash_total_textBoxes();
+                Update_cash_total_textBlocks();
                 Update_result();
+
+                Save_expenditureData();
             }
         }
 
@@ -2650,128 +2732,166 @@ namespace Total
                 expenditure.Save_price(9, price);
 
                 // Get and Set total price
-                Update_cash_total_textBoxes();
+                Update_cash_total_textBlocks();
                 Update_result();
+
+                Save_expenditureData();
             }
         }
 
         private void CashTypeBox_0_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            expenditure.Save_Type(0, cashTypeBox_0.SelectedIndex);
-
-            expenditure.Update_price();
+            expenditure.Save_type(0, cashTypeBox_0.SelectedIndex);     
 
             // Get and Set total price
-            Update_cash_total_textBoxes();
+            Update_cash_total_textBlocks();
             Update_result();
+
+            Save_expenditureData();
         }
 
         private void CashTypeBox_1_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            expenditure.Save_Type(1, cashTypeBox_1.SelectedIndex);
-
-            expenditure.Update_price();
+            expenditure.Save_type(1, cashTypeBox_1.SelectedIndex);           
 
             // Get and Set total price
-            Update_cash_total_textBoxes();
+            Update_cash_total_textBlocks();
             Update_result();
+
+            Save_expenditureData();
         }
 
         private void CashTypeBox_2_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            expenditure.Save_Type(2, cashTypeBox_2.SelectedIndex);
-
-            expenditure.Update_price();
+            expenditure.Save_type(2, cashTypeBox_2.SelectedIndex);       
 
             // Get and Set total price
-            Update_cash_total_textBoxes();
+            Update_cash_total_textBlocks();
             Update_result();
+
+            Save_expenditureData();
         }
 
         private void CashTypeBox_3_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            expenditure.Save_Type(3, cashTypeBox_3.SelectedIndex);
-
-            expenditure.Update_price();
+            expenditure.Save_type(3, cashTypeBox_3.SelectedIndex);
 
             // Get and Set total price
-            Update_cash_total_textBoxes();
+            Update_cash_total_textBlocks();
             Update_result();
+
+            Save_expenditureData();
         }
 
         private void CashTypeBox_4_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            expenditure.Save_Type(4, cashTypeBox_4.SelectedIndex);
-
-            expenditure.Update_price();
+            expenditure.Save_type(4, cashTypeBox_4.SelectedIndex);
 
             // Get and Set total price
-            Update_cash_total_textBoxes();
+            Update_cash_total_textBlocks();
             Update_result();
+
+            Save_expenditureData();
         }
 
         private void CashTypeBox_5_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            expenditure.Save_Type(5, cashTypeBox_5.SelectedIndex);
-
-            expenditure.Update_price();
+            expenditure.Save_type(5, cashTypeBox_5.SelectedIndex);
 
             // Get and Set total price
-            Update_cash_total_textBoxes();
+            Update_cash_total_textBlocks();
             Update_result();
+
+            Save_expenditureData();
         }
 
         private void CashTypeBox_6_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            expenditure.Save_Type(6, cashTypeBox_6.SelectedIndex);
-
-            expenditure.Update_price();
+            expenditure.Save_type(6, cashTypeBox_6.SelectedIndex);
 
             // Get and Set total price
-            Update_cash_total_textBoxes();
+            Update_cash_total_textBlocks();
             Update_result();
+
+            Save_expenditureData();
         }
 
         private void CashTypeBox_7_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            expenditure.Save_Type(7, cashTypeBox_7.SelectedIndex);
-
-            expenditure.Update_price();
+            expenditure.Save_type(7, cashTypeBox_7.SelectedIndex);
 
             // Get and Set total price
-            Update_cash_total_textBoxes();
+            Update_cash_total_textBlocks();
             Update_result();
+
+            Save_expenditureData();
         }
 
         private void CashTypeBox_8_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            expenditure.Save_Type(8, cashTypeBox_8.SelectedIndex);
-
-            expenditure.Update_price();
+            expenditure.Save_type(8, cashTypeBox_8.SelectedIndex);
 
             // Get and Set total price
-            Update_cash_total_textBoxes();
+            Update_cash_total_textBlocks();
             Update_result();
+
+            Save_expenditureData();
         }
 
         private void CashTypeBox_9_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            expenditure.Save_Type(9, cashTypeBox_9.SelectedIndex);
-
-            expenditure.Update_price();
+            expenditure.Save_type(9, cashTypeBox_9.SelectedIndex);
 
             // Get and Set total price
-            Update_cash_total_textBoxes();
+            Update_cash_total_textBlocks();
             Update_result();
+
+            Save_expenditureData();
         }
 
 
         /// Methods
 
-        private void Update_cash_total_textBoxes()
+        private void Update_cash_total_textBlocks()
         {
             cashExpenditure_total_text1.Text = expenditure.Get_totalPrice().ToString();
             if(cashExpenditure_total_text2!=null) cashExpenditure_total_text2.Text = expenditure.Get_totalPrice().ToString();
+        }
+
+        private void Update_cash_textBoxes()
+        {
+            cashNameBox_0.Text = expenditure.Load_name(0);
+            cashNameBox_1.Text = expenditure.Load_name(1);
+            cashNameBox_2.Text = expenditure.Load_name(2);
+            cashNameBox_3.Text = expenditure.Load_name(3);
+            cashNameBox_4.Text = expenditure.Load_name(4);
+            cashNameBox_5.Text = expenditure.Load_name(5);
+            cashNameBox_6.Text = expenditure.Load_name(6);
+            cashNameBox_7.Text = expenditure.Load_name(7);
+            cashNameBox_8.Text = expenditure.Load_name(8);
+            cashNameBox_9.Text = expenditure.Load_name(9);
+
+            cashPriceBox_0.Text = expenditure.Load_price(0);
+            cashPriceBox_1.Text = expenditure.Load_price(1);
+            cashPriceBox_2.Text = expenditure.Load_price(2);
+            cashPriceBox_3.Text = expenditure.Load_price(3);
+            cashPriceBox_4.Text = expenditure.Load_price(4);
+            cashPriceBox_5.Text = expenditure.Load_price(5);
+            cashPriceBox_6.Text = expenditure.Load_price(6);
+            cashPriceBox_7.Text = expenditure.Load_price(7);
+            cashPriceBox_8.Text = expenditure.Load_price(8);
+            cashPriceBox_9.Text = expenditure.Load_price(9);
+
+            cashTypeBox_0.SelectedIndex = expenditure.Load_type(0);
+            cashTypeBox_1.SelectedIndex = expenditure.Load_type(1);
+            cashTypeBox_2.SelectedIndex = expenditure.Load_type(2);
+            cashTypeBox_3.SelectedIndex = expenditure.Load_type(3);
+            cashTypeBox_4.SelectedIndex = expenditure.Load_type(4);
+            cashTypeBox_5.SelectedIndex = expenditure.Load_type(5);
+            cashTypeBox_6.SelectedIndex = expenditure.Load_type(6);
+            cashTypeBox_7.SelectedIndex = expenditure.Load_type(7);
+            cashTypeBox_8.SelectedIndex = expenditure.Load_type(8);
+            cashTypeBox_9.SelectedIndex = expenditure.Load_type(9);
         }
 
 
@@ -2792,26 +2912,33 @@ namespace Total
                 originalPriceBox.Select(counter4_priceBox_100000.Text.Length, 0);
 
                 // Set calculated price
-                originalPrice = int.Parse(price);
+                expenditure.Save_originalPrice(int.Parse(price));
 
                 // Update result
                 Update_result();
+
+                Save_expenditureData();
             }
         }
 
         private void Update_result()
         {
-            int result = originalPrice - counters[0].Get_totalPrice() - counters[1].Get_totalPrice() - counters[2].Get_totalPrice()
+            if(originalPriceBox != null) originalPriceBox.Text = expenditure.Load_originalPrice().ToString();
+
+            int result = expenditure.Load_originalPrice() - counters[0].Get_totalPrice() - counters[1].Get_totalPrice() - counters[2].Get_totalPrice()
                 - counters[3].Get_totalPrice() - expenditure.Get_totalPrice();
 
-            if (result < 0)
+            if (judge_text != null)
             {
-                result *= -1;
-                judge_text.Text = "남습니다";
-            }
-            else if (judge_text != null)
-            {
-                judge_text.Text = "모자랍니다";
+                if (result < 0)
+                {
+                    result *= -1;
+                    judge_text.Text = "남습니다";
+                }
+                else
+                {
+                    judge_text.Text = "모자랍니다";
+                }
             }
             if (resultPrice_text != null) resultPrice_text.Text = result.ToString();
         }
