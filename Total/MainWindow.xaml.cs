@@ -7,6 +7,7 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using KeyEventArgs = System.Windows.Input.KeyEventArgs;
 using Application = System.Windows.Forms.Application;
+using System.Windows.Media;
 
 namespace Total
 {
@@ -2945,10 +2946,108 @@ namespace Total
 
 
         /// TOP BAR
-        
+
+        private void Enter_closePanel()
+        {
+            close_panel1.Fill = new SolidColorBrush(Color.FromRgb(255, 173, 173));
+            close_panel2.Fill = new SolidColorBrush(Color.FromRgb(255, 173, 173));
+            close_panel3.Fill = new SolidColorBrush(Color.FromRgb(255, 173, 173));
+        }
+
+        private void Leave_closePanel()
+        {
+            close_panel1.Fill = new SolidColorBrush(Colors.White);
+            close_panel2.Fill = new SolidColorBrush(Colors.White);
+            close_panel3.Fill = new SolidColorBrush(Colors.White);
+        }
+
+
+        /// 
+
+
         private void TopBar_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.LeftButton == MouseButtonState.Pressed) DragMove();
+        }
+
+        private void Help_panel_MouseEnter(object sender, MouseEventArgs e)
+        {
+            help_panel.Fill = new SolidColorBrush(Color.FromRgb(222, 222, 222));
+        }
+
+        private void Help_panel_MouseLeave(object sender, MouseEventArgs e)
+        {
+            help_panel.Fill = new SolidColorBrush(Colors.White);
+        }
+
+        private void Help_btn_MouseEnter(object sender, MouseEventArgs e)
+        {
+            help_panel.Fill = new SolidColorBrush(Color.FromRgb(222, 222, 222));
+        }
+
+        private void Help_btn_MouseLeave(object sender, MouseEventArgs e)
+        {
+            help_panel.Fill = new SolidColorBrush(Colors.White);
+        }
+
+        private void Minimize_panel_MouseEnter(object sender, MouseEventArgs e)
+        {
+            minimize_panel.Fill = new SolidColorBrush(Color.FromRgb(222, 222, 222));
+        }
+
+        private void Minimize_panel_MouseLeave(object sender, MouseEventArgs e)
+        {
+            minimize_panel.Fill = new SolidColorBrush(Colors.White);
+        }
+
+        private void Minimize_btn_MouseEnter(object sender, MouseEventArgs e)
+        {
+            minimize_panel.Fill = new SolidColorBrush(Color.FromRgb(222, 222, 222));
+        }
+
+        private void Minimize_btn_MouseLeave(object sender, MouseEventArgs e)
+        {
+            minimize_panel.Fill = new SolidColorBrush(Colors.White);
+        }
+
+        private void Close_panel1_MouseEnter(object sender, MouseEventArgs e)
+        {
+            Enter_closePanel();
+        }
+
+        private void Close_panel1_MouseLeave(object sender, MouseEventArgs e)
+        {
+            Leave_closePanel();
+        }
+
+        private void Close_panel2_MouseEnter(object sender, MouseEventArgs e)
+        {
+            Enter_closePanel();
+        }
+
+        private void Close_panel2_MouseLeave(object sender, MouseEventArgs e)
+        {
+            Leave_closePanel();
+        }
+
+        private void Close_panel3_MouseEnter(object sender, MouseEventArgs e)
+        {
+            Enter_closePanel();
+        }
+
+        private void Close_panel3_MouseLeave(object sender, MouseEventArgs e)
+        {
+            Leave_closePanel();
+        }
+
+        private void Close_btn_MouseEnter(object sender, MouseEventArgs e)
+        {
+            Enter_closePanel();
+        }
+
+        private void Close_btn_MouseLeave(object sender, MouseEventArgs e)
+        {
+            Leave_closePanel();
         }
     }
 }
