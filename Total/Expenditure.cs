@@ -14,6 +14,30 @@ namespace Total
         int cashTotal = 0;
 
 
+
+        public void Initialize_allData()
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                cashNames[i] = "지출";
+            }
+
+            Initialize_valueData();
+        }
+
+        public void Initialize_valueData()
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                cashPrices[i] = "0";
+                cashTypes[i] = 0;
+            }
+
+            cashTotal = 0;
+
+            originalPrice = 0;
+        }
+
         public void Save_originalPrice(int _price) { originalPrice = _price; }
 
         public void Save_name(int _index, string _name) { cashNames[_index] = _name; }

@@ -6,7 +6,7 @@ namespace Total
     [Serializable]
     class Counter
     {
-        string name = string.Empty;
+        string name = "금고";
 
         public Dictionary<string, string> amount = new Dictionary<string, string>()
         {
@@ -35,6 +35,36 @@ namespace Total
         };
 
         int totalPrice = 0;
+
+        public void Initialize_allData()
+        {
+            name = "금고";
+
+            Initialize_valueData();
+        }
+
+        public void Initialize_valueData()
+        {
+            amount["10"] = "0";
+            amount["50"] = "0";
+            amount["100"] = "0";
+            amount["500"] = "0";
+            amount["1000"] = "0";
+            amount["5000"] = "0";
+            amount["10000"] = "0";
+            amount["50000"] = "0";
+            amount["100000"] = "0";
+
+            price["10"] = "0";
+            price["50"] = "0";
+            price["100"] = "0";
+            price["500"] = "0";
+            price["1000"] = "0";
+            price["5000"] = "0";
+            price["10000"] = "0";
+            price["50000"] = "0";
+            price["100000"] = "0";
+        }
 
         public void UpdateData(int currency, int _amount, int _price)
         {

@@ -32,19 +32,8 @@ namespace Total
             //Save_expenditureData();
 
 
-            // Load Ui with loaded data
-            for (int i = 0; i < 4; i++)
-            {
-                Update_counter_textBoxes(i);
-
-                Update_counter_total_textBlocks(i);
-            }
-
-            Update_cash_textBoxes();
-
-            Update_cash_total_textBlocks();
-
-            Update_result();
+            // Refresh Ui with loaded data
+            Refresh_ui();
 
             init = true;
         }
@@ -56,7 +45,7 @@ namespace Total
         private void Save_countersData()
         {
             if (!init) return;
-            IFormatter Formatter = new BinaryFormatter();
+            BinaryFormatter Formatter = new BinaryFormatter();
             using (FileStream stream = new FileStream(Application.StartupPath + "\\" + "countersData.dat", FileMode.Create, FileAccess.Write, FileShare.None))
             {
                 Formatter.Serialize(stream, counters);
@@ -66,7 +55,7 @@ namespace Total
         private void Save_expenditureData()
         {
             if (!init) return;
-            IFormatter Formatter = new BinaryFormatter();
+            BinaryFormatter Formatter = new BinaryFormatter();
             using (FileStream stream = new FileStream(Application.StartupPath + "\\" + "expenditureData.dat", FileMode.Create, FileAccess.Write, FileShare.None))
             {
                 Formatter.Serialize(stream, expenditure);
@@ -83,13 +72,152 @@ namespace Total
             expenditure = (Expenditure)Formatter.Deserialize(stream);
 
             stream.Close();
-
-            for (int i = 0; i < 10; i++) Console.WriteLine("type : " + expenditure.Load_type(i) + " / price : " + expenditure.Load_price(i));
         }
 
 
-        /// COUNTER 1
+        private void Refresh_ui()
+        {
+            for (int i = 0; i < 4; i++)
+            {
+                Update_counter_textBoxes(i);
 
+                Update_counter_total_textBlocks(i);
+            }
+
+            Update_cash_textBoxes();
+
+            Update_cash_total_textBlocks();
+
+            Update_result();
+        }
+
+
+        /// COUNTER
+        /// METHOD
+
+        private void Update_counter_textBoxes(int _counter)
+        {
+            switch (_counter)
+            {
+                case 0:
+                    counter1_amountBox_10.Text = counters[0].amount["10"];
+                    counter1_amountBox_50.Text = counters[0].amount["50"];
+                    counter1_amountBox_100.Text = counters[0].amount["100"];
+                    counter1_amountBox_500.Text = counters[0].amount["500"];
+                    counter1_amountBox_1000.Text = counters[0].amount["1000"];
+                    counter1_amountBox_5000.Text = counters[0].amount["5000"];
+                    counter1_amountBox_10000.Text = counters[0].amount["10000"];
+                    counter1_amountBox_50000.Text = counters[0].amount["50000"];
+                    counter1_amountBox_100000.Text = counters[0].amount["100000"];
+
+                    counter1_priceBox_10.Text = counters[0].price["10"];
+                    counter1_priceBox_50.Text = counters[0].price["50"];
+                    counter1_priceBox_100.Text = counters[0].price["100"];
+                    counter1_priceBox_500.Text = counters[0].price["500"];
+                    counter1_priceBox_1000.Text = counters[0].price["1000"];
+                    counter1_priceBox_5000.Text = counters[0].price["5000"];
+                    counter1_priceBox_10000.Text = counters[0].price["10000"];
+                    counter1_priceBox_50000.Text = counters[0].price["50000"];
+                    counter1_priceBox_100000.Text = counters[0].price["100000"];
+                    break;
+                case 1:
+                    counter2_amountBox_10.Text = counters[1].amount["10"];
+                    counter2_amountBox_50.Text = counters[1].amount["50"];
+                    counter2_amountBox_100.Text = counters[1].amount["100"];
+                    counter2_amountBox_500.Text = counters[1].amount["500"];
+                    counter2_amountBox_1000.Text = counters[1].amount["1000"];
+                    counter2_amountBox_5000.Text = counters[1].amount["5000"];
+                    counter2_amountBox_10000.Text = counters[1].amount["10000"];
+                    counter2_amountBox_50000.Text = counters[1].amount["50000"];
+                    counter2_amountBox_100000.Text = counters[1].amount["100000"];
+
+                    counter2_priceBox_10.Text = counters[1].price["10"];
+                    counter2_priceBox_50.Text = counters[1].price["50"];
+                    counter2_priceBox_100.Text = counters[1].price["100"];
+                    counter2_priceBox_500.Text = counters[1].price["500"];
+                    counter2_priceBox_1000.Text = counters[1].price["1000"];
+                    counter2_priceBox_5000.Text = counters[1].price["5000"];
+                    counter2_priceBox_10000.Text = counters[1].price["10000"];
+                    counter2_priceBox_50000.Text = counters[1].price["50000"];
+                    counter2_priceBox_100000.Text = counters[1].price["100000"];
+                    break;
+                case 2:
+                    counter3_amountBox_10.Text = counters[2].amount["10"];
+                    counter3_amountBox_50.Text = counters[2].amount["50"];
+                    counter3_amountBox_100.Text = counters[2].amount["100"];
+                    counter3_amountBox_500.Text = counters[2].amount["500"];
+                    counter3_amountBox_1000.Text = counters[2].amount["1000"];
+                    counter3_amountBox_5000.Text = counters[2].amount["5000"];
+                    counter3_amountBox_10000.Text = counters[2].amount["10000"];
+                    counter3_amountBox_50000.Text = counters[2].amount["50000"];
+                    counter3_amountBox_100000.Text = counters[2].amount["100000"];
+
+                    counter3_priceBox_10.Text = counters[2].price["10"];
+                    counter3_priceBox_50.Text = counters[2].price["50"];
+                    counter3_priceBox_100.Text = counters[2].price["100"];
+                    counter3_priceBox_500.Text = counters[2].price["500"];
+                    counter3_priceBox_1000.Text = counters[2].price["1000"];
+                    counter3_priceBox_5000.Text = counters[2].price["5000"];
+                    counter3_priceBox_10000.Text = counters[2].price["10000"];
+                    counter3_priceBox_50000.Text = counters[2].price["50000"];
+                    counter3_priceBox_100000.Text = counters[2].price["100000"];
+                    break;
+                case 3:
+                    counter4_amountBox_10.Text = counters[3].amount["10"];
+                    counter4_amountBox_50.Text = counters[3].amount["50"];
+                    counter4_amountBox_100.Text = counters[3].amount["100"];
+                    counter4_amountBox_500.Text = counters[3].amount["500"];
+                    counter4_amountBox_1000.Text = counters[3].amount["1000"];
+                    counter4_amountBox_5000.Text = counters[3].amount["5000"];
+                    counter4_amountBox_10000.Text = counters[3].amount["10000"];
+                    counter4_amountBox_50000.Text = counters[3].amount["50000"];
+                    counter4_amountBox_100000.Text = counters[3].amount["100000"];
+
+                    counter4_priceBox_10.Text = counters[3].price["10"];
+                    counter4_priceBox_50.Text = counters[3].price["50"];
+                    counter4_priceBox_100.Text = counters[3].price["100"];
+                    counter4_priceBox_500.Text = counters[3].price["500"];
+                    counter4_priceBox_1000.Text = counters[3].price["1000"];
+                    counter4_priceBox_5000.Text = counters[3].price["5000"];
+                    counter4_priceBox_10000.Text = counters[3].price["10000"];
+                    counter4_priceBox_50000.Text = counters[3].price["50000"];
+                    counter4_priceBox_100000.Text = counters[3].price["100000"];
+                    break;
+            }
+        }
+
+        private void Update_Save_counter_data(int _counter, int _currency, string _amount, string _price)
+        {
+            counters[_counter].UpdateData(_currency, int.Parse(_amount), int.Parse(_price));
+            Save_countersData();
+        }
+
+        private void Update_counter_total_textBlocks(int _counter)
+        {
+            string total = counters[_counter].Get_totalPrice().ToString();
+
+            switch (_counter)
+            {
+                case 0:
+                    counter1_total_text1.Text = total;
+                    counter1_total_text2.Text = total;
+                    break;
+                case 1:
+                    counter2_total_text1.Text = total;
+                    counter2_total_text2.Text = total;
+                    break;
+                case 2:
+                    counter3_total_text1.Text = total;
+                    counter3_total_text2.Text = total;
+                    break;
+            }
+
+            Update_result();
+        }
+
+
+        /// EVENT
+        /// COUNTER 1
 
         private void counter1_amountBox_10_KeyDown(object sender, KeyEventArgs e)
         {
@@ -634,7 +762,6 @@ namespace Total
         
         /// COUNTER 2
         
-
         private void counter2_amountBox_10_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Return)
@@ -1177,7 +1304,6 @@ namespace Total
 
 
         /// COUNTER 3
-
 
         private void counter3_amountBox_10_KeyDown(object sender, KeyEventArgs e)
         {
@@ -1722,7 +1848,6 @@ namespace Total
 
         /// COUNTER 4
 
-
         private void counter4_amountBox_10_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Return)
@@ -2264,131 +2389,54 @@ namespace Total
         }
 
 
-        /// Methods
-
-        private void Update_counter_textBoxes(int _counter)
-        {
-            switch (_counter)
-            {
-                case 0:
-                    counter1_amountBox_10.Text = counters[0].amount["10"];
-                    counter1_amountBox_50.Text = counters[0].amount["50"];
-                    counter1_amountBox_100.Text = counters[0].amount["100"];
-                    counter1_amountBox_500.Text = counters[0].amount["500"];
-                    counter1_amountBox_1000.Text = counters[0].amount["1000"];
-                    counter1_amountBox_5000.Text = counters[0].amount["5000"];
-                    counter1_amountBox_10000.Text = counters[0].amount["10000"];
-                    counter1_amountBox_50000.Text = counters[0].amount["50000"];
-                    counter1_amountBox_100000.Text = counters[0].amount["100000"];
-
-                    counter1_priceBox_10.Text = counters[0].price["10"];
-                    counter1_priceBox_50.Text = counters[0].price["50"];
-                    counter1_priceBox_100.Text = counters[0].price["100"];
-                    counter1_priceBox_500.Text = counters[0].price["500"];
-                    counter1_priceBox_1000.Text = counters[0].price["1000"];
-                    counter1_priceBox_5000.Text = counters[0].price["5000"];
-                    counter1_priceBox_10000.Text = counters[0].price["10000"];
-                    counter1_priceBox_50000.Text = counters[0].price["50000"];
-                    counter1_priceBox_100000.Text = counters[0].price["100000"];
-                    break;
-                case 1:
-                    counter2_amountBox_10.Text = counters[1].amount["10"];
-                    counter2_amountBox_50.Text = counters[1].amount["50"];
-                    counter2_amountBox_100.Text = counters[1].amount["100"];
-                    counter2_amountBox_500.Text = counters[1].amount["500"];
-                    counter2_amountBox_1000.Text = counters[1].amount["1000"];
-                    counter2_amountBox_5000.Text = counters[1].amount["5000"];
-                    counter2_amountBox_10000.Text = counters[1].amount["10000"];
-                    counter2_amountBox_50000.Text = counters[1].amount["50000"];
-                    counter2_amountBox_100000.Text = counters[1].amount["100000"];
-
-                    counter2_priceBox_10.Text = counters[1].price["10"];
-                    counter2_priceBox_50.Text = counters[1].price["50"];
-                    counter2_priceBox_100.Text = counters[1].price["100"];
-                    counter2_priceBox_500.Text = counters[1].price["500"];
-                    counter2_priceBox_1000.Text = counters[1].price["1000"];
-                    counter2_priceBox_5000.Text = counters[1].price["5000"];
-                    counter2_priceBox_10000.Text = counters[1].price["10000"];
-                    counter2_priceBox_50000.Text = counters[1].price["50000"];
-                    counter2_priceBox_100000.Text = counters[1].price["100000"];
-                    break;
-                case 2:
-                    counter3_amountBox_10.Text = counters[2].amount["10"];
-                    counter3_amountBox_50.Text = counters[2].amount["50"];
-                    counter3_amountBox_100.Text = counters[2].amount["100"];
-                    counter3_amountBox_500.Text = counters[2].amount["500"];
-                    counter3_amountBox_1000.Text = counters[2].amount["1000"];
-                    counter3_amountBox_5000.Text = counters[2].amount["5000"];
-                    counter3_amountBox_10000.Text = counters[2].amount["10000"];
-                    counter3_amountBox_50000.Text = counters[2].amount["50000"];
-                    counter3_amountBox_100000.Text = counters[2].amount["100000"];
-
-                    counter3_priceBox_10.Text = counters[2].price["10"];
-                    counter3_priceBox_50.Text = counters[2].price["50"];
-                    counter3_priceBox_100.Text = counters[2].price["100"];
-                    counter3_priceBox_500.Text = counters[2].price["500"];
-                    counter3_priceBox_1000.Text = counters[2].price["1000"];
-                    counter3_priceBox_5000.Text = counters[2].price["5000"];
-                    counter3_priceBox_10000.Text = counters[2].price["10000"];
-                    counter3_priceBox_50000.Text = counters[2].price["50000"];
-                    counter3_priceBox_100000.Text = counters[2].price["100000"];
-                    break;
-                case 3:
-                    counter4_amountBox_10.Text = counters[3].amount["10"];
-                    counter4_amountBox_50.Text = counters[3].amount["50"];
-                    counter4_amountBox_100.Text = counters[3].amount["100"];
-                    counter4_amountBox_500.Text = counters[3].amount["500"];
-                    counter4_amountBox_1000.Text = counters[3].amount["1000"];
-                    counter4_amountBox_5000.Text = counters[3].amount["5000"];
-                    counter4_amountBox_10000.Text = counters[3].amount["10000"];
-                    counter4_amountBox_50000.Text = counters[3].amount["50000"];
-                    counter4_amountBox_100000.Text = counters[3].amount["100000"];
-
-                    counter4_priceBox_10.Text = counters[3].price["10"];
-                    counter4_priceBox_50.Text = counters[3].price["50"];
-                    counter4_priceBox_100.Text = counters[3].price["100"];
-                    counter4_priceBox_500.Text = counters[3].price["500"];
-                    counter4_priceBox_1000.Text = counters[3].price["1000"];
-                    counter4_priceBox_5000.Text = counters[3].price["5000"];
-                    counter4_priceBox_10000.Text = counters[3].price["10000"];
-                    counter4_priceBox_50000.Text = counters[3].price["50000"];
-                    counter4_priceBox_100000.Text = counters[3].price["100000"];
-                    break;
-            }
-        }
-
-        private void Update_Save_counter_data(int _counter, int _currency, string _amount, string _price)
-        {
-            counters[_counter].UpdateData(_currency, int.Parse(_amount), int.Parse(_price));
-            Save_countersData();
-        }
-
-        private void Update_counter_total_textBlocks(int _counter)
-        {
-            string total = counters[_counter].Get_totalPrice().ToString();
-
-            switch (_counter)
-            {
-                case 0:
-                    counter1_total_text1.Text = total;
-                    counter1_total_text2.Text = total;
-                    break;
-                case 1:
-                    counter2_total_text1.Text = total;
-                    counter2_total_text2.Text = total;
-                    break;
-                case 2:
-                    counter3_total_text1.Text = total;
-                    counter3_total_text2.Text = total;
-                    break;
-            }
-
-            Update_result();
-        }
-
-
 
         /// CASH EXPENDITURE
+        /// METHOD
+
+        private void Update_cash_total_textBlocks()
+        {
+            cashExpenditure_total_text1.Text = expenditure.Get_totalPrice().ToString();
+            if (cashExpenditure_total_text2 != null) cashExpenditure_total_text2.Text = expenditure.Get_totalPrice().ToString();
+        }
+
+        private void Update_cash_textBoxes()
+        {
+            cashNameBox_0.Text = expenditure.Load_name(0);
+            cashNameBox_1.Text = expenditure.Load_name(1);
+            cashNameBox_2.Text = expenditure.Load_name(2);
+            cashNameBox_3.Text = expenditure.Load_name(3);
+            cashNameBox_4.Text = expenditure.Load_name(4);
+            cashNameBox_5.Text = expenditure.Load_name(5);
+            cashNameBox_6.Text = expenditure.Load_name(6);
+            cashNameBox_7.Text = expenditure.Load_name(7);
+            cashNameBox_8.Text = expenditure.Load_name(8);
+            cashNameBox_9.Text = expenditure.Load_name(9);
+
+            cashPriceBox_0.Text = expenditure.Load_price(0);
+            cashPriceBox_1.Text = expenditure.Load_price(1);
+            cashPriceBox_2.Text = expenditure.Load_price(2);
+            cashPriceBox_3.Text = expenditure.Load_price(3);
+            cashPriceBox_4.Text = expenditure.Load_price(4);
+            cashPriceBox_5.Text = expenditure.Load_price(5);
+            cashPriceBox_6.Text = expenditure.Load_price(6);
+            cashPriceBox_7.Text = expenditure.Load_price(7);
+            cashPriceBox_8.Text = expenditure.Load_price(8);
+            cashPriceBox_9.Text = expenditure.Load_price(9);
+
+            cashTypeBox_0.SelectedIndex = expenditure.Load_type(0);
+            cashTypeBox_1.SelectedIndex = expenditure.Load_type(1);
+            cashTypeBox_2.SelectedIndex = expenditure.Load_type(2);
+            cashTypeBox_3.SelectedIndex = expenditure.Load_type(3);
+            cashTypeBox_4.SelectedIndex = expenditure.Load_type(4);
+            cashTypeBox_5.SelectedIndex = expenditure.Load_type(5);
+            cashTypeBox_6.SelectedIndex = expenditure.Load_type(6);
+            cashTypeBox_7.SelectedIndex = expenditure.Load_type(7);
+            cashTypeBox_8.SelectedIndex = expenditure.Load_type(8);
+            cashTypeBox_9.SelectedIndex = expenditure.Load_type(9);
+        }
+
+
+        /// EVENT
 
         private void CashNameBox_0_KeyDown(object sender, KeyEventArgs e)
         {
@@ -2851,52 +2899,34 @@ namespace Total
         }
 
 
-        /// Methods
-
-        private void Update_cash_total_textBlocks()
-        {
-            cashExpenditure_total_text1.Text = expenditure.Get_totalPrice().ToString();
-            if(cashExpenditure_total_text2!=null) cashExpenditure_total_text2.Text = expenditure.Get_totalPrice().ToString();
-        }
-
-        private void Update_cash_textBoxes()
-        {
-            cashNameBox_0.Text = expenditure.Load_name(0);
-            cashNameBox_1.Text = expenditure.Load_name(1);
-            cashNameBox_2.Text = expenditure.Load_name(2);
-            cashNameBox_3.Text = expenditure.Load_name(3);
-            cashNameBox_4.Text = expenditure.Load_name(4);
-            cashNameBox_5.Text = expenditure.Load_name(5);
-            cashNameBox_6.Text = expenditure.Load_name(6);
-            cashNameBox_7.Text = expenditure.Load_name(7);
-            cashNameBox_8.Text = expenditure.Load_name(8);
-            cashNameBox_9.Text = expenditure.Load_name(9);
-
-            cashPriceBox_0.Text = expenditure.Load_price(0);
-            cashPriceBox_1.Text = expenditure.Load_price(1);
-            cashPriceBox_2.Text = expenditure.Load_price(2);
-            cashPriceBox_3.Text = expenditure.Load_price(3);
-            cashPriceBox_4.Text = expenditure.Load_price(4);
-            cashPriceBox_5.Text = expenditure.Load_price(5);
-            cashPriceBox_6.Text = expenditure.Load_price(6);
-            cashPriceBox_7.Text = expenditure.Load_price(7);
-            cashPriceBox_8.Text = expenditure.Load_price(8);
-            cashPriceBox_9.Text = expenditure.Load_price(9);
-
-            cashTypeBox_0.SelectedIndex = expenditure.Load_type(0);
-            cashTypeBox_1.SelectedIndex = expenditure.Load_type(1);
-            cashTypeBox_2.SelectedIndex = expenditure.Load_type(2);
-            cashTypeBox_3.SelectedIndex = expenditure.Load_type(3);
-            cashTypeBox_4.SelectedIndex = expenditure.Load_type(4);
-            cashTypeBox_5.SelectedIndex = expenditure.Load_type(5);
-            cashTypeBox_6.SelectedIndex = expenditure.Load_type(6);
-            cashTypeBox_7.SelectedIndex = expenditure.Load_type(7);
-            cashTypeBox_8.SelectedIndex = expenditure.Load_type(8);
-            cashTypeBox_9.SelectedIndex = expenditure.Load_type(9);
-        }
-
 
         /// RESULT 
+        /// METHOD
+
+        private void Update_result()
+        {
+            if (originalPriceBox != null) originalPriceBox.Text = expenditure.Load_originalPrice().ToString();
+
+            int result = expenditure.Load_originalPrice() - counters[0].Get_totalPrice() - counters[1].Get_totalPrice() - counters[2].Get_totalPrice()
+                - counters[3].Get_totalPrice() - expenditure.Get_totalPrice();
+
+            if (judge_text != null)
+            {
+                if (result < 0)
+                {
+                    result *= -1;
+                    judge_text.Text = "남습니다";
+                }
+                else
+                {
+                    judge_text.Text = "모자랍니다";
+                }
+            }
+            if (resultPrice_text != null) resultPrice_text.Text = result.ToString();
+        }
+
+
+        // EVENT
 
         private void originalPriceBox_KeyDown(object sender, KeyEventArgs e)
         {
@@ -2922,30 +2952,46 @@ namespace Total
             }
         }
 
-        private void Update_result()
+        private void ValueReset_btn_Click(object sender, RoutedEventArgs e)
         {
-            if(originalPriceBox != null) originalPriceBox.Text = expenditure.Load_originalPrice().ToString();
-
-            int result = expenditure.Load_originalPrice() - counters[0].Get_totalPrice() - counters[1].Get_totalPrice() - counters[2].Get_totalPrice()
-                - counters[3].Get_totalPrice() - expenditure.Get_totalPrice();
-
-            if (judge_text != null)
+            // Initialize data
+            foreach (Counter counter in counters)
             {
-                if (result < 0)
-                {
-                    result *= -1;
-                    judge_text.Text = "남습니다";
-                }
-                else
-                {
-                    judge_text.Text = "모자랍니다";
-                }
+                counter.Initialize_valueData();
             }
-            if (resultPrice_text != null) resultPrice_text.Text = result.ToString();
+
+            expenditure.Initialize_valueData();
+
+            // Save initailized data
+            Save_countersData();
+
+            Save_expenditureData();
+
+            Refresh_ui();
+        }
+
+        private void AllReset_btn_Click(object sender, RoutedEventArgs e)
+        {
+            // Initialize data
+            foreach (Counter counter in counters)
+            {
+                counter.Initialize_allData();
+            }
+
+            expenditure.Initialize_allData();
+
+            // Save initailized data
+            Save_countersData();
+
+            Save_expenditureData();
+
+            Refresh_ui();
+
         }
 
 
         /// TOP BAR
+        /// METHOD
 
         private void Enter_closePanel()
         {
@@ -2962,8 +3008,7 @@ namespace Total
         }
 
 
-        /// 
-
+        /// EVENT
 
         private void TopBar_MouseDown(object sender, MouseButtonEventArgs e)
         {
@@ -3080,6 +3125,5 @@ namespace Total
         {
             System.Windows.Application.Current.Shutdown(110);
         }
-
     }
 }
