@@ -2980,6 +2980,11 @@ namespace Total
             help_panel.Fill = new SolidColorBrush(Colors.White);
         }
 
+        private void Help_panel_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
         private void Help_btn_MouseEnter(object sender, MouseEventArgs e)
         {
             help_panel.Fill = new SolidColorBrush(Color.FromRgb(222, 222, 222));
@@ -2990,6 +2995,12 @@ namespace Total
             help_panel.Fill = new SolidColorBrush(Colors.White);
         }
 
+        private void Help_btn_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+
         private void Minimize_panel_MouseEnter(object sender, MouseEventArgs e)
         {
             minimize_panel.Fill = new SolidColorBrush(Color.FromRgb(222, 222, 222));
@@ -2998,6 +3009,11 @@ namespace Total
         private void Minimize_panel_MouseLeave(object sender, MouseEventArgs e)
         {
             minimize_panel.Fill = new SolidColorBrush(Colors.White);
+        }
+
+        private void Minimize_panel_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            WindowState = WindowState.Minimized;
         }
 
         private void Minimize_btn_MouseEnter(object sender, MouseEventArgs e)
@@ -3010,6 +3026,11 @@ namespace Total
             minimize_panel.Fill = new SolidColorBrush(Colors.White);
         }
 
+        private void Minimize_btn_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            WindowState = WindowState.Minimized;
+        }
+
         private void Close_panel1_MouseEnter(object sender, MouseEventArgs e)
         {
             Enter_closePanel();
@@ -3018,6 +3039,11 @@ namespace Total
         private void Close_panel1_MouseLeave(object sender, MouseEventArgs e)
         {
             Leave_closePanel();
+        }
+
+        private void Close_panel1_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            System.Windows.Application.Current.Shutdown(110);
         }
 
         private void Close_panel2_MouseEnter(object sender, MouseEventArgs e)
@@ -3049,5 +3075,11 @@ namespace Total
         {
             Leave_closePanel();
         }
+
+        private void Close_btn_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            System.Windows.Application.Current.Shutdown(110);
+        }
+
     }
 }
