@@ -91,9 +91,14 @@ namespace Total
             Update_result();
         }
 
-        private string PriceFormat(string price)
+        private string Include_priceFormat(string price)
         {
             return string.Format("{0:n0}", int.Parse(price));
+        }
+
+        private string Exclude_priceFormat(string price)
+        {
+            return price.Replace(",", "");
         }
 
         
@@ -105,88 +110,88 @@ namespace Total
             switch (_counter)
             {
                 case 0:
-                    counter1_amountBox_10.Text = PriceFormat(counters[0].amount["10"]);
-                    counter1_amountBox_50.Text = PriceFormat(counters[0].amount["50"]);
-                    counter1_amountBox_100.Text = PriceFormat(counters[0].amount["100"]);
-                    counter1_amountBox_500.Text = PriceFormat(counters[0].amount["500"]);
-                    counter1_amountBox_1000.Text = PriceFormat(counters[0].amount["1000"]);
-                    counter1_amountBox_5000.Text = PriceFormat(counters[0].amount["5000"]);
-                    counter1_amountBox_10000.Text = PriceFormat(counters[0].amount["10000"]);
-                    counter1_amountBox_50000.Text = PriceFormat(counters[0].amount["50000"]);
-                    counter1_amountBox_100000.Text = PriceFormat(counters[0].amount["100000"]);
+                    counter1_amountBox_10.Text = Include_priceFormat(counters[0].amount["10"]);
+                    counter1_amountBox_50.Text = Include_priceFormat(counters[0].amount["50"]);
+                    counter1_amountBox_100.Text = Include_priceFormat(counters[0].amount["100"]);
+                    counter1_amountBox_500.Text = Include_priceFormat(counters[0].amount["500"]);
+                    counter1_amountBox_1000.Text = Include_priceFormat(counters[0].amount["1000"]);
+                    counter1_amountBox_5000.Text = Include_priceFormat(counters[0].amount["5000"]);
+                    counter1_amountBox_10000.Text = Include_priceFormat(counters[0].amount["10000"]);
+                    counter1_amountBox_50000.Text = Include_priceFormat(counters[0].amount["50000"]);
+                    counter1_amountBox_100000.Text = Include_priceFormat(counters[0].amount["100000"]);
 
-                    counter1_priceBox_10.Text = PriceFormat(counters[0].price["10"]);
-                    counter1_priceBox_50.Text = PriceFormat(counters[0].price["50"]);
-                    counter1_priceBox_100.Text = PriceFormat(counters[0].price["100"]);
-                    counter1_priceBox_500.Text = PriceFormat(counters[0].price["500"]);
-                    counter1_priceBox_1000.Text = PriceFormat(counters[0].price["1000"]);
-                    counter1_priceBox_5000.Text = PriceFormat(counters[0].price["5000"]);
-                    counter1_priceBox_10000.Text = PriceFormat(counters[0].price["10000"]);
-                    counter1_priceBox_50000.Text = PriceFormat(counters[0].price["50000"]);
-                    counter1_priceBox_100000.Text = PriceFormat(counters[0].price["100000"]);
+                    counter1_priceBox_10.Text = Include_priceFormat(counters[0].price["10"]);
+                    counter1_priceBox_50.Text = Include_priceFormat(counters[0].price["50"]);
+                    counter1_priceBox_100.Text = Include_priceFormat(counters[0].price["100"]);
+                    counter1_priceBox_500.Text = Include_priceFormat(counters[0].price["500"]);
+                    counter1_priceBox_1000.Text = Include_priceFormat(counters[0].price["1000"]);
+                    counter1_priceBox_5000.Text = Include_priceFormat(counters[0].price["5000"]);
+                    counter1_priceBox_10000.Text = Include_priceFormat(counters[0].price["10000"]);
+                    counter1_priceBox_50000.Text = Include_priceFormat(counters[0].price["50000"]);
+                    counter1_priceBox_100000.Text = Include_priceFormat(counters[0].price["100000"]);
                     break;
                 case 1:
-                    counter2_amountBox_10.Text = PriceFormat(counters[1].amount["10"]);
-                    counter2_amountBox_50.Text = PriceFormat(counters[1].amount["50"]);
-                    counter2_amountBox_100.Text = PriceFormat(counters[1].amount["100"]);
-                    counter2_amountBox_500.Text = PriceFormat(counters[1].amount["500"]);
-                    counter2_amountBox_1000.Text = PriceFormat(counters[1].amount["1000"]);
-                    counter2_amountBox_5000.Text = PriceFormat(counters[1].amount["5000"]);
-                    counter2_amountBox_10000.Text = PriceFormat(counters[1].amount["10000"]);
-                    counter2_amountBox_50000.Text = PriceFormat(counters[1].amount["50000"]);
-                    counter2_amountBox_100000.Text = PriceFormat(counters[1].amount["100000"]);
+                    counter2_amountBox_10.Text = Include_priceFormat(counters[1].amount["10"]);
+                    counter2_amountBox_50.Text = Include_priceFormat(counters[1].amount["50"]);
+                    counter2_amountBox_100.Text = Include_priceFormat(counters[1].amount["100"]);
+                    counter2_amountBox_500.Text = Include_priceFormat(counters[1].amount["500"]);
+                    counter2_amountBox_1000.Text = Include_priceFormat(counters[1].amount["1000"]);
+                    counter2_amountBox_5000.Text = Include_priceFormat(counters[1].amount["5000"]);
+                    counter2_amountBox_10000.Text = Include_priceFormat(counters[1].amount["10000"]);
+                    counter2_amountBox_50000.Text = Include_priceFormat(counters[1].amount["50000"]);
+                    counter2_amountBox_100000.Text = Include_priceFormat(counters[1].amount["100000"]);
 
-                    counter2_priceBox_10.Text = PriceFormat(counters[1].price["10"]);
-                    counter2_priceBox_50.Text = PriceFormat(counters[1].price["50"]);
-                    counter2_priceBox_100.Text = PriceFormat(counters[1].price["100"]);
-                    counter2_priceBox_500.Text = PriceFormat(counters[1].price["500"]);
-                    counter2_priceBox_1000.Text = PriceFormat(counters[1].price["1000"]);
-                    counter2_priceBox_5000.Text = PriceFormat(counters[1].price["5000"]);
-                    counter2_priceBox_10000.Text = PriceFormat(counters[1].price["10000"]);
-                    counter2_priceBox_50000.Text = PriceFormat(counters[1].price["50000"]);
-                    counter2_priceBox_100000.Text = PriceFormat(counters[1].price["100000"]);
+                    counter2_priceBox_10.Text = Include_priceFormat(counters[1].price["10"]);
+                    counter2_priceBox_50.Text = Include_priceFormat(counters[1].price["50"]);
+                    counter2_priceBox_100.Text = Include_priceFormat(counters[1].price["100"]);
+                    counter2_priceBox_500.Text = Include_priceFormat(counters[1].price["500"]);
+                    counter2_priceBox_1000.Text = Include_priceFormat(counters[1].price["1000"]);
+                    counter2_priceBox_5000.Text = Include_priceFormat(counters[1].price["5000"]);
+                    counter2_priceBox_10000.Text = Include_priceFormat(counters[1].price["10000"]);
+                    counter2_priceBox_50000.Text = Include_priceFormat(counters[1].price["50000"]);
+                    counter2_priceBox_100000.Text = Include_priceFormat(counters[1].price["100000"]);
                     break;
                 case 2:
-                    counter3_amountBox_10.Text = PriceFormat(counters[2].amount["10"]);
-                    counter3_amountBox_50.Text = PriceFormat(counters[2].amount["50"]);
-                    counter3_amountBox_100.Text = PriceFormat(counters[2].amount["100"]);
-                    counter3_amountBox_500.Text = PriceFormat(counters[2].amount["500"]);
-                    counter3_amountBox_1000.Text = PriceFormat(counters[2].amount["1000"]);
-                    counter3_amountBox_5000.Text = PriceFormat(counters[2].amount["5000"]);
-                    counter3_amountBox_10000.Text = PriceFormat(counters[2].amount["10000"]);
-                    counter3_amountBox_50000.Text = PriceFormat(counters[2].amount["50000"]);
-                    counter3_amountBox_100000.Text = PriceFormat(counters[2].amount["100000"]);
+                    counter3_amountBox_10.Text = Include_priceFormat(counters[2].amount["10"]);
+                    counter3_amountBox_50.Text = Include_priceFormat(counters[2].amount["50"]);
+                    counter3_amountBox_100.Text = Include_priceFormat(counters[2].amount["100"]);
+                    counter3_amountBox_500.Text = Include_priceFormat(counters[2].amount["500"]);
+                    counter3_amountBox_1000.Text = Include_priceFormat(counters[2].amount["1000"]);
+                    counter3_amountBox_5000.Text = Include_priceFormat(counters[2].amount["5000"]);
+                    counter3_amountBox_10000.Text = Include_priceFormat(counters[2].amount["10000"]);
+                    counter3_amountBox_50000.Text = Include_priceFormat(counters[2].amount["50000"]);
+                    counter3_amountBox_100000.Text = Include_priceFormat(counters[2].amount["100000"]);
 
-                    counter3_priceBox_10.Text = PriceFormat(counters[2].price["10"]);
-                    counter3_priceBox_50.Text = PriceFormat(counters[2].price["50"]);
-                    counter3_priceBox_100.Text = PriceFormat(counters[2].price["100"]);
-                    counter3_priceBox_500.Text = PriceFormat(counters[2].price["500"]);
-                    counter3_priceBox_1000.Text = PriceFormat(counters[2].price["1000"]);
-                    counter3_priceBox_5000.Text = PriceFormat(counters[2].price["5000"]);
-                    counter3_priceBox_10000.Text = PriceFormat(counters[2].price["10000"]);
-                    counter3_priceBox_50000.Text = PriceFormat(counters[2].price["50000"]);
-                    counter3_priceBox_100000.Text = PriceFormat(counters[2].price["100000"]);
+                    counter3_priceBox_10.Text = Include_priceFormat(counters[2].price["10"]);
+                    counter3_priceBox_50.Text = Include_priceFormat(counters[2].price["50"]);
+                    counter3_priceBox_100.Text = Include_priceFormat(counters[2].price["100"]);
+                    counter3_priceBox_500.Text = Include_priceFormat(counters[2].price["500"]);
+                    counter3_priceBox_1000.Text = Include_priceFormat(counters[2].price["1000"]);
+                    counter3_priceBox_5000.Text = Include_priceFormat(counters[2].price["5000"]);
+                    counter3_priceBox_10000.Text = Include_priceFormat(counters[2].price["10000"]);
+                    counter3_priceBox_50000.Text = Include_priceFormat(counters[2].price["50000"]);
+                    counter3_priceBox_100000.Text = Include_priceFormat(counters[2].price["100000"]);
                     break;
                 case 3:
-                    counter4_amountBox_10.Text = PriceFormat(counters[3].amount["10"]);
-                    counter4_amountBox_50.Text = PriceFormat(counters[3].amount["50"]);
-                    counter4_amountBox_100.Text = PriceFormat(counters[3].amount["100"]);
-                    counter4_amountBox_500.Text = PriceFormat(counters[3].amount["500"]);
-                    counter4_amountBox_1000.Text = PriceFormat(counters[3].amount["1000"]);
-                    counter4_amountBox_5000.Text = PriceFormat(counters[3].amount["5000"]);
-                    counter4_amountBox_10000.Text = PriceFormat(counters[3].amount["10000"]);
-                    counter4_amountBox_50000.Text = PriceFormat(counters[3].amount["50000"]);
-                    counter4_amountBox_100000.Text = PriceFormat(counters[3].amount["100000"]);
+                    counter4_amountBox_10.Text = Include_priceFormat(counters[3].amount["10"]);
+                    counter4_amountBox_50.Text = Include_priceFormat(counters[3].amount["50"]);
+                    counter4_amountBox_100.Text = Include_priceFormat(counters[3].amount["100"]);
+                    counter4_amountBox_500.Text = Include_priceFormat(counters[3].amount["500"]);
+                    counter4_amountBox_1000.Text = Include_priceFormat(counters[3].amount["1000"]);
+                    counter4_amountBox_5000.Text = Include_priceFormat(counters[3].amount["5000"]);
+                    counter4_amountBox_10000.Text = Include_priceFormat(counters[3].amount["10000"]);
+                    counter4_amountBox_50000.Text = Include_priceFormat(counters[3].amount["50000"]);
+                    counter4_amountBox_100000.Text = Include_priceFormat(counters[3].amount["100000"]);
 
-                    counter4_priceBox_10.Text = PriceFormat(counters[3].price["10"]);
-                    counter4_priceBox_50.Text = PriceFormat(counters[3].price["50"]);
-                    counter4_priceBox_100.Text = PriceFormat(counters[3].price["100"]);
-                    counter4_priceBox_500.Text = PriceFormat(counters[3].price["500"]);
-                    counter4_priceBox_1000.Text = PriceFormat(counters[3].price["1000"]);
-                    counter4_priceBox_5000.Text = PriceFormat(counters[3].price["5000"]);
-                    counter4_priceBox_10000.Text = PriceFormat(counters[3].price["10000"]);
-                    counter4_priceBox_50000.Text = PriceFormat(counters[3].price["50000"]);
-                    counter4_priceBox_100000.Text = PriceFormat(counters[3].price["100000"]);
+                    counter4_priceBox_10.Text = Include_priceFormat(counters[3].price["10"]);
+                    counter4_priceBox_50.Text = Include_priceFormat(counters[3].price["50"]);
+                    counter4_priceBox_100.Text = Include_priceFormat(counters[3].price["100"]);
+                    counter4_priceBox_500.Text = Include_priceFormat(counters[3].price["500"]);
+                    counter4_priceBox_1000.Text = Include_priceFormat(counters[3].price["1000"]);
+                    counter4_priceBox_5000.Text = Include_priceFormat(counters[3].price["5000"]);
+                    counter4_priceBox_10000.Text = Include_priceFormat(counters[3].price["10000"]);
+                    counter4_priceBox_50000.Text = Include_priceFormat(counters[3].price["50000"]);
+                    counter4_priceBox_100000.Text = Include_priceFormat(counters[3].price["100000"]);
                     break;
             }
         }
@@ -199,7 +204,7 @@ namespace Total
 
         private void Update_counter_total_textBlocks(int _counter)
         {
-            string total = PriceFormat(counters[_counter].Get_totalPrice().ToString());
+            string total = Include_priceFormat(counters[_counter].Get_totalPrice().ToString());
 
             switch (_counter)
             {
@@ -228,7 +233,7 @@ namespace Total
         {
             if (e.Key == Key.Return)
             {
-                string amount = counter1_amountBox_100000.Text;
+                string amount = Exclude_priceFormat(counter1_amountBox_100000.Text);
                 string price;
                 if (string.IsNullOrWhiteSpace(amount)) amount = "0";
 
@@ -259,7 +264,7 @@ namespace Total
         {
             if (e.Key == Key.Return)
             {
-                string amount = counter1_amountBox_50000.Text;
+                string amount = Exclude_priceFormat(counter1_amountBox_50000.Text);
                 string price;
                 if (string.IsNullOrWhiteSpace(amount)) amount = "0";
 
@@ -290,7 +295,7 @@ namespace Total
         {
             if (e.Key == Key.Return)
             {
-                string amount = counter1_amountBox_10000.Text;
+                string amount = Exclude_priceFormat(counter1_amountBox_10000.Text);
                 string price;
                 if (string.IsNullOrWhiteSpace(amount)) amount = "0";
 
@@ -321,7 +326,7 @@ namespace Total
         {
             if (e.Key == Key.Return)
             {
-                string amount = counter1_amountBox_5000.Text;
+                string amount = Exclude_priceFormat(counter1_amountBox_5000.Text);
                 string price;
                 if (string.IsNullOrWhiteSpace(amount)) amount = "0";
 
@@ -352,7 +357,7 @@ namespace Total
         {
             if (e.Key == Key.Return)
             {
-                string amount = counter1_amountBox_1000.Text;
+                string amount = Exclude_priceFormat(counter1_amountBox_1000.Text);
                 string price;
                 if (string.IsNullOrWhiteSpace(amount)) amount = "0";
 
@@ -383,7 +388,7 @@ namespace Total
         {
             if (e.Key == Key.Return)
             {
-                string amount = counter1_amountBox_500.Text;
+                string amount = Exclude_priceFormat(counter1_amountBox_500.Text);
                 string price;
                 if (string.IsNullOrWhiteSpace(amount)) amount = "0";
 
@@ -414,7 +419,7 @@ namespace Total
         {
             if (e.Key == Key.Return)
             {
-                string amount = counter1_amountBox_100.Text;
+                string amount = Exclude_priceFormat(counter1_amountBox_100.Text);
                 string price;
                 if (string.IsNullOrWhiteSpace(amount)) amount = "0";
 
@@ -445,7 +450,7 @@ namespace Total
         {
             if (e.Key == Key.Return)
             {
-                string amount = counter1_amountBox_50.Text;
+                string amount = Exclude_priceFormat(counter1_amountBox_50.Text);
                 string price;
                 if (string.IsNullOrWhiteSpace(amount)) amount = "0";
 
@@ -476,7 +481,7 @@ namespace Total
         {
             if (e.Key == Key.Return)
             {
-                string amount = counter1_amountBox_10.Text;
+                string amount = Exclude_priceFormat(counter1_amountBox_10.Text);
                 string price;
                 if (string.IsNullOrWhiteSpace(amount)) amount = "0";
 
@@ -499,47 +504,47 @@ namespace Total
             }
         }
 
-        private void Counter1_amountBox_100000_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter1_amountBox_100000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter1_amountBox_100000.SelectAll();
         }
 
-        private void Counter1_amountBox_50000_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter1_amountBox_50000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter1_amountBox_50000.SelectAll();
         }
 
-        private void Counter1_amountBox_10000_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter1_amountBox_10000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter1_amountBox_10000.SelectAll();
         }
 
-        private void Counter1_amountBox_5000_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter1_amountBox_5000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter1_amountBox_5000.SelectAll();
         }
 
-        private void Counter1_amountBox_1000_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter1_amountBox_1000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter1_amountBox_1000.SelectAll();
         }
 
-        private void Counter1_amountBox_500_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter1_amountBox_500_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter1_amountBox_500.SelectAll();
         }
 
-        private void Counter1_amountBox_100_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter1_amountBox_100_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter1_amountBox_100.SelectAll();
         }
 
-        private void Counter1_amountBox_50_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter1_amountBox_50_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter1_amountBox_50.SelectAll();
         }
 
-        private void Counter1_amountBox_10_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter1_amountBox_10_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter1_amountBox_10.SelectAll();
         }
@@ -549,7 +554,7 @@ namespace Total
             if (e.Key == Key.Return)
             {
                 string amount;
-                string price = counter1_priceBox_100000.Text;
+                string price = Exclude_priceFormat(counter1_priceBox_100000.Text);
                 if (string.IsNullOrWhiteSpace(price)) price = "0";
 
                 // Check if calculation should be done
@@ -580,7 +585,7 @@ namespace Total
             if (e.Key == Key.Return)
             {
                 string amount;
-                string price = counter1_priceBox_50000.Text;
+                string price = Exclude_priceFormat(counter1_priceBox_50000.Text);
                 if (string.IsNullOrWhiteSpace(price)) price = "0";
 
                 // Check if calculation should be done
@@ -611,7 +616,7 @@ namespace Total
             if (e.Key == Key.Return)
             {
                 string amount;
-                string price = counter1_priceBox_10000.Text;
+                string price = Exclude_priceFormat(counter1_priceBox_10000.Text);
                 if (string.IsNullOrWhiteSpace(price)) price = "0";
 
                 // Check if calculation should be done
@@ -642,7 +647,7 @@ namespace Total
             if (e.Key == Key.Return)
             {
                 string amount;
-                string price = counter1_priceBox_5000.Text;
+                string price = Exclude_priceFormat(counter1_priceBox_5000.Text);
                 if (string.IsNullOrWhiteSpace(price)) price = "0";
 
                 // Check if calculation should be done
@@ -673,7 +678,7 @@ namespace Total
             if (e.Key == Key.Return)
             {
                 string amount;
-                string price = counter1_priceBox_1000.Text;
+                string price = Exclude_priceFormat(counter1_priceBox_1000.Text);
                 if (string.IsNullOrWhiteSpace(price)) price = "0";
 
                 // Check if calculation should be done
@@ -704,7 +709,7 @@ namespace Total
             if (e.Key == Key.Return)
             {
                 string amount;
-                string price = counter1_priceBox_500.Text;
+                string price = Exclude_priceFormat(counter1_priceBox_500.Text);
                 if (string.IsNullOrWhiteSpace(price)) price = "0";
 
                 // Check if calculation should be done
@@ -735,7 +740,7 @@ namespace Total
             if (e.Key == Key.Return)
             {
                 string amount;
-                string price = counter1_priceBox_100.Text;
+                string price = Exclude_priceFormat(counter1_priceBox_100.Text);
                 if (string.IsNullOrWhiteSpace(price)) price = "0";
 
                 // Check if calculation should be done
@@ -766,7 +771,7 @@ namespace Total
             if (e.Key == Key.Return)
             {
                 string amount;
-                string price = counter1_priceBox_50.Text;
+                string price = Exclude_priceFormat(counter1_priceBox_50.Text);
                 if (string.IsNullOrWhiteSpace(price)) price = "0";
 
                 // Check if calculation should be done
@@ -797,7 +802,7 @@ namespace Total
             if (e.Key == Key.Return)
             {
                 string amount;
-                string price = counter1_priceBox_10.Text;
+                string price = Exclude_priceFormat(counter1_priceBox_10.Text);
                 if (string.IsNullOrWhiteSpace(price)) price = "0";
 
                 // Check if calculation should be done
@@ -819,47 +824,47 @@ namespace Total
             }
         }
 
-        private void Counter1_priceBox_100000_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter1_priceBox_100000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter1_priceBox_100000.SelectAll();
         }
 
-        private void Counter1_priceBox_50000_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter1_priceBox_50000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter1_priceBox_50000.SelectAll();
         }
 
-        private void Counter1_priceBox_10000_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter1_priceBox_10000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter1_priceBox_10000.SelectAll();
         }
 
-        private void Counter1_priceBox_5000_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter1_priceBox_5000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter1_priceBox_5000.SelectAll();
         }
 
-        private void Counter1_priceBox_1000_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter1_priceBox_1000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter1_priceBox_1000.SelectAll();
         }
 
-        private void Counter1_priceBox_500_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter1_priceBox_500_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter1_priceBox_500.SelectAll();
         }
 
-        private void Counter1_priceBox_100_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter1_priceBox_100_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter1_priceBox_100.SelectAll();
         }
 
-        private void Counter1_priceBox_50_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter1_priceBox_50_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter1_priceBox_50.SelectAll();
         }
 
-        private void Counter1_priceBox_10_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter1_priceBox_10_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter1_priceBox_10.SelectAll();
         }
@@ -874,7 +879,7 @@ namespace Total
         {
             if (e.Key == Key.Return)
             {
-                string amount = counter2_amountBox_100000.Text;
+                string amount = Exclude_priceFormat(counter2_amountBox_100000.Text);
                 string price;
                 if (string.IsNullOrWhiteSpace(amount)) amount = "0";
 
@@ -905,7 +910,7 @@ namespace Total
         {
             if (e.Key == Key.Return)
             {
-                string amount = counter2_amountBox_50000.Text;
+                string amount = Exclude_priceFormat(counter2_amountBox_50000.Text);
                 string price;
                 if (string.IsNullOrWhiteSpace(amount)) amount = "0";
 
@@ -936,7 +941,7 @@ namespace Total
         {
             if (e.Key == Key.Return)
             {
-                string amount = counter2_amountBox_10000.Text;
+                string amount = Exclude_priceFormat(counter2_amountBox_10000.Text);
                 string price;
                 if (string.IsNullOrWhiteSpace(amount)) amount = "0";
 
@@ -967,7 +972,7 @@ namespace Total
         {
             if (e.Key == Key.Return)
             {
-                string amount = counter2_amountBox_5000.Text;
+                string amount = Exclude_priceFormat(counter2_amountBox_5000.Text);
                 string price;
                 if (string.IsNullOrWhiteSpace(amount)) amount = "0";
 
@@ -998,7 +1003,7 @@ namespace Total
         {
             if (e.Key == Key.Return)
             {
-                string amount = counter2_amountBox_1000.Text;
+                string amount = Exclude_priceFormat(counter2_amountBox_1000.Text);
                 string price;
                 if (string.IsNullOrWhiteSpace(amount)) amount = "0";
 
@@ -1029,7 +1034,7 @@ namespace Total
         {
             if (e.Key == Key.Return)
             {
-                string amount = counter2_amountBox_500.Text;
+                string amount = Exclude_priceFormat(counter2_amountBox_500.Text);
                 string price;
                 if (string.IsNullOrWhiteSpace(amount)) amount = "0";
 
@@ -1060,7 +1065,7 @@ namespace Total
         {
             if (e.Key == Key.Return)
             {
-                string amount = counter2_amountBox_100.Text;
+                string amount = Exclude_priceFormat(counter2_amountBox_100.Text);
                 string price;
                 if (string.IsNullOrWhiteSpace(amount)) amount = "0";
 
@@ -1091,7 +1096,7 @@ namespace Total
         {
             if (e.Key == Key.Return)
             {
-                string amount = counter2_amountBox_50.Text;
+                string amount = Exclude_priceFormat(counter2_amountBox_50.Text);
                 string price;
                 if (string.IsNullOrWhiteSpace(amount)) amount = "0";
 
@@ -1122,7 +1127,7 @@ namespace Total
         {
             if (e.Key == Key.Return)
             {
-                string amount = counter2_amountBox_10.Text;
+                string amount = Exclude_priceFormat(counter2_amountBox_10.Text);
                 string price;
                 if (string.IsNullOrWhiteSpace(amount)) amount = "0";
 
@@ -1145,47 +1150,47 @@ namespace Total
             }
         }
 
-        private void Counter2_amountBox_100000_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter2_amountBox_100000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter2_amountBox_100000.SelectAll();
         }
 
-        private void Counter2_amountBox_50000_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter2_amountBox_50000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter2_amountBox_50000.SelectAll();
         }
 
-        private void Counter2_amountBox_10000_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter2_amountBox_10000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter2_amountBox_10000.SelectAll();
         }
 
-        private void Counter2_amountBox_5000_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter2_amountBox_5000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter2_amountBox_5000.SelectAll();
         }
 
-        private void Counter2_amountBox_1000_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter2_amountBox_1000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter2_amountBox_1000.SelectAll();
         }
 
-        private void Counter2_amountBox_500_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter2_amountBox_500_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter2_amountBox_500.SelectAll();
         }
 
-        private void Counter2_amountBox_100_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter2_amountBox_100_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter2_amountBox_100.SelectAll();
         }
 
-        private void Counter2_amountBox_50_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter2_amountBox_50_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter2_amountBox_50.SelectAll();
         }
 
-        private void Counter2_amountBox_10_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter2_amountBox_10_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter2_amountBox_10.SelectAll();
         }
@@ -1195,7 +1200,7 @@ namespace Total
             if (e.Key == Key.Return)
             {
                 string amount;
-                string price = counter2_priceBox_100000.Text;
+                string price = Exclude_priceFormat(counter2_priceBox_100000.Text);
                 if (string.IsNullOrWhiteSpace(price)) price = "0";
 
                 // Check if calculation should be done
@@ -1226,7 +1231,7 @@ namespace Total
             if (e.Key == Key.Return)
             {
                 string amount;
-                string price = counter2_priceBox_50000.Text;
+                string price = Exclude_priceFormat(counter2_priceBox_50000.Text);
                 if (string.IsNullOrWhiteSpace(price)) price = "0";
 
                 // Check if calculation should be done
@@ -1257,7 +1262,7 @@ namespace Total
             if (e.Key == Key.Return)
             {
                 string amount;
-                string price = counter2_priceBox_10000.Text;
+                string price = Exclude_priceFormat(counter2_priceBox_10000.Text);
                 if (string.IsNullOrWhiteSpace(price)) price = "0";
 
                 // Check if calculation should be done
@@ -1288,7 +1293,7 @@ namespace Total
             if (e.Key == Key.Return)
             {
                 string amount;
-                string price = counter2_priceBox_5000.Text;
+                string price = Exclude_priceFormat(counter2_priceBox_5000.Text);
                 if (string.IsNullOrWhiteSpace(price)) price = "0";
 
                 // Check if calculation should be done
@@ -1319,7 +1324,7 @@ namespace Total
             if (e.Key == Key.Return)
             {
                 string amount;
-                string price = counter2_priceBox_1000.Text;
+                string price = Exclude_priceFormat(counter2_priceBox_1000.Text);
                 if (string.IsNullOrWhiteSpace(price)) price = "0";
 
                 // Check if calculation should be done
@@ -1350,7 +1355,7 @@ namespace Total
             if (e.Key == Key.Return)
             {
                 string amount;
-                string price = counter2_priceBox_500.Text;
+                string price = Exclude_priceFormat(counter2_priceBox_500.Text);
                 if (string.IsNullOrWhiteSpace(price)) price = "0";
 
                 // Check if calculation should be done
@@ -1381,7 +1386,7 @@ namespace Total
             if (e.Key == Key.Return)
             {
                 string amount;
-                string price = counter2_priceBox_100.Text;
+                string price = Exclude_priceFormat(counter2_priceBox_100.Text);
                 if (string.IsNullOrWhiteSpace(price)) price = "0";
 
                 // Check if calculation should be done
@@ -1412,7 +1417,7 @@ namespace Total
             if (e.Key == Key.Return)
             {
                 string amount;
-                string price = counter2_priceBox_50.Text;
+                string price = Exclude_priceFormat(counter2_priceBox_50.Text);
                 if (string.IsNullOrWhiteSpace(price)) price = "0";
 
                 // Check if calculation should be done
@@ -1443,7 +1448,7 @@ namespace Total
             if (e.Key == Key.Return)
             {
                 string amount;
-                string price = counter2_priceBox_10.Text;
+                string price = Exclude_priceFormat(counter2_priceBox_10.Text);
                 if (string.IsNullOrWhiteSpace(price)) price = "0";
 
                 // Check if calculation should be done
@@ -1465,47 +1470,47 @@ namespace Total
             }
         }
 
-        private void Counter2_priceBox_100000_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter2_priceBox_100000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter2_priceBox_100000.SelectAll();
         }
 
-        private void Counter2_priceBox_50000_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter2_priceBox_50000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter2_priceBox_50000.SelectAll();
         }
 
-        private void Counter2_priceBox_10000_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter2_priceBox_10000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter2_priceBox_10000.SelectAll();
         }
 
-        private void Counter2_priceBox_5000_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter2_priceBox_5000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter2_priceBox_5000.SelectAll();
         }
 
-        private void Counter2_priceBox_1000_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter2_priceBox_1000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter2_priceBox_1000.SelectAll();
         }
 
-        private void Counter2_priceBox_500_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter2_priceBox_500_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter2_priceBox_500.SelectAll();
         }
 
-        private void Counter2_priceBox_100_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter2_priceBox_100_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter2_priceBox_100.SelectAll();
         }
 
-        private void Counter2_priceBox_50_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter2_priceBox_50_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter2_priceBox_50.SelectAll();
         }
 
-        private void Counter2_priceBox_10_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter2_priceBox_10_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter2_priceBox_10.SelectAll();
         }
@@ -1518,7 +1523,7 @@ namespace Total
         {
             if (e.Key == Key.Return)
             {
-                string amount = counter3_amountBox_100000.Text;
+                string amount = Exclude_priceFormat(counter3_amountBox_100000.Text);
                 string price;
                 if (string.IsNullOrWhiteSpace(amount)) amount = "0";
 
@@ -1549,7 +1554,7 @@ namespace Total
         {
             if (e.Key == Key.Return)
             {
-                string amount = counter3_amountBox_50000.Text;
+                string amount = Exclude_priceFormat(counter3_amountBox_50000.Text);
                 string price;
                 if (string.IsNullOrWhiteSpace(amount)) amount = "0";
 
@@ -1580,7 +1585,7 @@ namespace Total
         {
             if (e.Key == Key.Return)
             {
-                string amount = counter3_amountBox_10000.Text;
+                string amount = Exclude_priceFormat(counter3_amountBox_10000.Text);
                 string price;
                 if (string.IsNullOrWhiteSpace(amount)) amount = "0";
 
@@ -1611,7 +1616,7 @@ namespace Total
         {
             if (e.Key == Key.Return)
             {
-                string amount = counter3_amountBox_5000.Text;
+                string amount = Exclude_priceFormat(counter3_amountBox_5000.Text);
                 string price;
                 if (string.IsNullOrWhiteSpace(amount)) amount = "0";
 
@@ -1642,7 +1647,7 @@ namespace Total
         {
             if (e.Key == Key.Return)
             {
-                string amount = counter3_amountBox_1000.Text;
+                string amount = Exclude_priceFormat(counter3_amountBox_1000.Text);
                 string price;
                 if (string.IsNullOrWhiteSpace(amount)) amount = "0";
 
@@ -1673,7 +1678,7 @@ namespace Total
         {
             if (e.Key == Key.Return)
             {
-                string amount = counter3_amountBox_500.Text;
+                string amount = Exclude_priceFormat(counter3_amountBox_500.Text);
                 string price;
                 if (string.IsNullOrWhiteSpace(amount)) amount = "0";
 
@@ -1704,7 +1709,7 @@ namespace Total
         {
             if (e.Key == Key.Return)
             {
-                string amount = counter3_amountBox_100.Text;
+                string amount = Exclude_priceFormat(counter3_amountBox_100.Text);
                 string price;
                 if (string.IsNullOrWhiteSpace(amount)) amount = "0";
 
@@ -1735,7 +1740,7 @@ namespace Total
         {
             if (e.Key == Key.Return)
             {
-                string amount = counter3_amountBox_50.Text;
+                string amount = Exclude_priceFormat(counter3_amountBox_50.Text);
                 string price;
                 if (string.IsNullOrWhiteSpace(amount)) amount = "0";
 
@@ -1766,7 +1771,7 @@ namespace Total
         {
             if (e.Key == Key.Return)
             {
-                string amount = counter3_amountBox_10.Text;
+                string amount = Exclude_priceFormat(counter3_amountBox_10.Text);
                 string price;
                 if (string.IsNullOrWhiteSpace(amount)) amount = "0";
 
@@ -1789,47 +1794,47 @@ namespace Total
             }
         }
 
-        private void Counter3_amountBox_100000_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter3_amountBox_100000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter3_amountBox_100000.SelectAll();
         }
 
-        private void Counter3_amountBox_50000_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter3_amountBox_50000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter3_amountBox_50000.SelectAll();
         }
 
-        private void Counter3_amountBox_10000_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter3_amountBox_10000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter3_amountBox_10000.SelectAll();
         }
 
-        private void Counter3_amountBox_5000_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter3_amountBox_5000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter3_amountBox_5000.SelectAll();
         }
 
-        private void Counter3_amountBox_1000_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter3_amountBox_1000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter3_amountBox_1000.SelectAll();
         }
 
-        private void Counter3_amountBox_500_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter3_amountBox_500_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter3_amountBox_500.SelectAll();
         }
 
-        private void Counter3_amountBox_100_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter3_amountBox_100_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter3_amountBox_100.SelectAll();
         }
 
-        private void Counter3_amountBox_50_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter3_amountBox_50_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter3_amountBox_50.SelectAll();
         }
 
-        private void Counter3_amountBox_10_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter3_amountBox_10_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter3_amountBox_10.SelectAll();
         }
@@ -1839,7 +1844,7 @@ namespace Total
             if (e.Key == Key.Return)
             {
                 string amount;
-                string price = counter3_priceBox_100000.Text;
+                string price = Exclude_priceFormat(counter3_priceBox_100000.Text);
                 if (string.IsNullOrWhiteSpace(price)) price = "0";
 
                 // Check if calculation should be done
@@ -1870,7 +1875,7 @@ namespace Total
             if (e.Key == Key.Return)
             {
                 string amount;
-                string price = counter3_priceBox_50000.Text;
+                string price = Exclude_priceFormat(counter3_priceBox_50000.Text);
                 if (string.IsNullOrWhiteSpace(price)) price = "0";
 
                 // Check if calculation should be done
@@ -1901,7 +1906,7 @@ namespace Total
             if (e.Key == Key.Return)
             {
                 string amount;
-                string price = counter3_priceBox_10000.Text;
+                string price = Exclude_priceFormat(counter3_priceBox_10000.Text);
                 if (string.IsNullOrWhiteSpace(price)) price = "0";
 
                 // Check if calculation should be done
@@ -1932,7 +1937,7 @@ namespace Total
             if (e.Key == Key.Return)
             {
                 string amount;
-                string price = counter3_priceBox_5000.Text;
+                string price = Exclude_priceFormat(counter3_priceBox_5000.Text);
                 if (string.IsNullOrWhiteSpace(price)) price = "0";
 
                 // Check if calculation should be done
@@ -1963,7 +1968,7 @@ namespace Total
             if (e.Key == Key.Return)
             {
                 string amount;
-                string price = counter3_priceBox_1000.Text;
+                string price = Exclude_priceFormat(counter3_priceBox_1000.Text);
                 if (string.IsNullOrWhiteSpace(price)) price = "0";
 
                 // Check if calculation should be done
@@ -1994,7 +1999,7 @@ namespace Total
             if (e.Key == Key.Return)
             {
                 string amount;
-                string price = counter3_priceBox_500.Text;
+                string price = Exclude_priceFormat(counter3_priceBox_500.Text);
                 if (string.IsNullOrWhiteSpace(price)) price = "0";
 
                 // Check if calculation should be done
@@ -2025,7 +2030,7 @@ namespace Total
             if (e.Key == Key.Return)
             {
                 string amount;
-                string price = counter3_priceBox_100.Text;
+                string price = Exclude_priceFormat(counter3_priceBox_100.Text);
                 if (string.IsNullOrWhiteSpace(price)) price = "0";
 
                 // Check if calculation should be done
@@ -2056,7 +2061,7 @@ namespace Total
             if (e.Key == Key.Return)
             {
                 string amount;
-                string price = counter3_priceBox_50.Text;
+                string price = Exclude_priceFormat(counter3_priceBox_50.Text);
                 if (string.IsNullOrWhiteSpace(price)) price = "0";
 
                 // Check if calculation should be done
@@ -2087,7 +2092,7 @@ namespace Total
             if (e.Key == Key.Return)
             {
                 string amount;
-                string price = counter3_priceBox_10.Text;
+                string price = Exclude_priceFormat(counter3_priceBox_10.Text);
                 if (string.IsNullOrWhiteSpace(price)) price = "0";
 
                 // Check if calculation should be done
@@ -2109,47 +2114,47 @@ namespace Total
             }
         }
 
-        private void Counter3_priceBox_100000_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter3_priceBox_100000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter3_priceBox_100000.SelectAll();
         }
 
-        private void Counter3_priceBox_50000_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter3_priceBox_50000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter3_priceBox_50000.SelectAll();
         }
 
-        private void Counter3_priceBox_10000_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter3_priceBox_10000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter3_priceBox_10000.SelectAll();
         }
 
-        private void Counter3_priceBox_5000_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter3_priceBox_5000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter3_priceBox_5000.SelectAll();
         }
 
-        private void Counter3_priceBox_1000_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter3_priceBox_1000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter3_priceBox_1000.SelectAll();
         }
 
-        private void Counter3_priceBox_500_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter3_priceBox_500_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter3_priceBox_500.SelectAll();
         }
 
-        private void Counter3_priceBox_100_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter3_priceBox_100_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter3_priceBox_100.SelectAll();
         }
 
-        private void Counter3_priceBox_50_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter3_priceBox_50_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter3_priceBox_50.SelectAll();
         }
 
-        private void Counter3_priceBox_10_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter3_priceBox_10_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter3_priceBox_10.SelectAll();
         }
@@ -2162,7 +2167,7 @@ namespace Total
         {
             if (e.Key == Key.Return)
             {
-                string amount = counter4_amountBox_100000.Text;
+                string amount = Exclude_priceFormat(counter4_amountBox_100000.Text);
                 string price;
                 if (string.IsNullOrWhiteSpace(amount)) amount = "0";
 
@@ -2193,7 +2198,7 @@ namespace Total
         {
             if (e.Key == Key.Return)
             {
-                string amount = counter4_amountBox_50000.Text;
+                string amount = Exclude_priceFormat(counter4_amountBox_50000.Text);
                 string price;
                 if (string.IsNullOrWhiteSpace(amount)) amount = "0";
 
@@ -2224,7 +2229,7 @@ namespace Total
         {
             if (e.Key == Key.Return)
             {
-                string amount = counter4_amountBox_10000.Text;
+                string amount = Exclude_priceFormat(counter4_amountBox_10000.Text);
                 string price;
                 if (string.IsNullOrWhiteSpace(amount)) amount = "0";
 
@@ -2255,7 +2260,7 @@ namespace Total
         {
             if (e.Key == Key.Return)
             {
-                string amount = counter4_amountBox_5000.Text;
+                string amount = Exclude_priceFormat(counter4_amountBox_5000.Text);
                 string price;
                 if (string.IsNullOrWhiteSpace(amount)) amount = "0";
 
@@ -2286,7 +2291,7 @@ namespace Total
         {
             if (e.Key == Key.Return)
             {
-                string amount = counter4_amountBox_1000.Text;
+                string amount = Exclude_priceFormat(counter4_amountBox_1000.Text);
                 string price;
                 if (string.IsNullOrWhiteSpace(amount)) amount = "0";
 
@@ -2317,7 +2322,7 @@ namespace Total
         {
             if (e.Key == Key.Return)
             {
-                string amount = counter4_amountBox_500.Text;
+                string amount = Exclude_priceFormat(counter4_amountBox_500.Text);
                 string price;
                 if (string.IsNullOrWhiteSpace(amount)) amount = "0";
 
@@ -2348,7 +2353,7 @@ namespace Total
         {
             if (e.Key == Key.Return)
             {
-                string amount = counter4_amountBox_100.Text;
+                string amount = Exclude_priceFormat(counter4_amountBox_100.Text);
                 string price;
                 if (string.IsNullOrWhiteSpace(amount)) amount = "0";
 
@@ -2379,7 +2384,7 @@ namespace Total
         {
             if (e.Key == Key.Return)
             {
-                string amount = counter4_amountBox_50.Text;
+                string amount = Exclude_priceFormat(counter4_amountBox_50.Text);
                 string price;
                 if (string.IsNullOrWhiteSpace(amount)) amount = "0";
 
@@ -2410,7 +2415,7 @@ namespace Total
         {
             if (e.Key == Key.Return)
             {
-                string amount = counter4_amountBox_10.Text;
+                string amount = Exclude_priceFormat(counter4_amountBox_10.Text);
                 string price;
                 if (string.IsNullOrWhiteSpace(amount)) amount = "0";
 
@@ -2433,47 +2438,47 @@ namespace Total
             }
         }
 
-        private void Counter4_amountBox_100000_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter4_amountBox_100000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter4_amountBox_100000.SelectAll();
         }
 
-        private void Counter4_amountBox_50000_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter4_amountBox_50000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter4_amountBox_50000.SelectAll();
         }
 
-        private void Counter4_amountBox_10000_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter4_amountBox_10000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter4_amountBox_10000.SelectAll();
         }
 
-        private void Counter4_amountBox_5000_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter4_amountBox_5000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter4_amountBox_5000.SelectAll();
         }
 
-        private void Counter4_amountBox_1000_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter4_amountBox_1000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter4_amountBox_1000.SelectAll();
         }
 
-        private void Counter4_amountBox_500_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter4_amountBox_500_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter4_amountBox_500.SelectAll();
         }
 
-        private void Counter4_amountBox_100_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter4_amountBox_100_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter4_amountBox_100.SelectAll();
         }
 
-        private void Counter4_amountBox_50_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter4_amountBox_50_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter4_amountBox_50.SelectAll();
         }
 
-        private void Counter4_amountBox_10_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter4_amountBox_10_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter4_amountBox_10.SelectAll();
         }
@@ -2483,7 +2488,7 @@ namespace Total
             if (e.Key == Key.Return)
             {
                 string amount;
-                string price = counter4_priceBox_100000.Text;
+                string price = Exclude_priceFormat(counter4_priceBox_100000.Text);
                 if (string.IsNullOrWhiteSpace(price)) price = "0";
 
                 // Check if calculation should be done
@@ -2514,7 +2519,7 @@ namespace Total
             if (e.Key == Key.Return)
             {
                 string amount;
-                string price = counter4_priceBox_50000.Text;
+                string price = Exclude_priceFormat(counter4_priceBox_50000.Text);
                 if (string.IsNullOrWhiteSpace(price)) price = "0";
 
                 // Check if calculation should be done
@@ -2545,7 +2550,7 @@ namespace Total
             if (e.Key == Key.Return)
             {
                 string amount;
-                string price = counter4_priceBox_10000.Text;
+                string price = Exclude_priceFormat(counter4_priceBox_10000.Text);
                 if (string.IsNullOrWhiteSpace(price)) price = "0";
 
                 // Check if calculation should be done
@@ -2576,7 +2581,7 @@ namespace Total
             if (e.Key == Key.Return)
             {
                 string amount;
-                string price = counter4_priceBox_5000.Text;
+                string price = Exclude_priceFormat(counter4_priceBox_5000.Text);
                 if (string.IsNullOrWhiteSpace(price)) price = "0";
 
                 // Check if calculation should be done
@@ -2607,7 +2612,7 @@ namespace Total
             if (e.Key == Key.Return)
             {
                 string amount;
-                string price = counter4_priceBox_1000.Text;
+                string price = Exclude_priceFormat(counter4_priceBox_1000.Text);
                 if (string.IsNullOrWhiteSpace(price)) price = "0";
 
                 // Check if calculation should be done
@@ -2639,7 +2644,7 @@ namespace Total
             if (e.Key == Key.Return)
             {
                 string amount;
-                string price = counter4_priceBox_500.Text;
+                string price = Exclude_priceFormat(counter4_priceBox_500.Text);
                 if (string.IsNullOrWhiteSpace(price)) price = "0";
 
                 // Check if calculation should be done
@@ -2670,7 +2675,7 @@ namespace Total
             if (e.Key == Key.Return)
             {
                 string amount;
-                string price = counter4_priceBox_100.Text;
+                string price = Exclude_priceFormat(counter4_priceBox_100.Text);
                 if (string.IsNullOrWhiteSpace(price)) price = "0";
 
                 // Check if calculation should be done
@@ -2701,7 +2706,7 @@ namespace Total
             if (e.Key == Key.Return)
             {
                 string amount;
-                string price = counter4_priceBox_50.Text;
+                string price = Exclude_priceFormat(counter4_priceBox_50.Text);
                 if (string.IsNullOrWhiteSpace(price)) price = "0";
 
                 // Check if calculation should be done
@@ -2732,7 +2737,7 @@ namespace Total
             if (e.Key == Key.Return)
             {
                 string amount;
-                string price = counter4_priceBox_10.Text;
+                string price = Exclude_priceFormat(counter4_priceBox_10.Text);
                 if (string.IsNullOrWhiteSpace(price)) price = "0";
 
                 // Check if calculation should be done
@@ -2754,47 +2759,47 @@ namespace Total
             }
         }
 
-        private void Counter4_priceBox_100000_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter4_priceBox_100000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter4_priceBox_100000.SelectAll();
         }
 
-        private void Counter4_priceBox_50000_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter4_priceBox_50000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter4_priceBox_50000.SelectAll();
         }
 
-        private void Counter4_priceBox_10000_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter4_priceBox_10000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter4_priceBox_10000.SelectAll();
         }
 
-        private void Counter4_priceBox_5000_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter4_priceBox_5000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter4_priceBox_5000.SelectAll();
         }
 
-        private void Counter4_priceBox_1000_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter4_priceBox_1000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter4_priceBox_1000.SelectAll();
         }
 
-        private void Counter4_priceBox_500_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter4_priceBox_500_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter4_priceBox_500.SelectAll();
         }
 
-        private void Counter4_priceBox_100_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter4_priceBox_100_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter4_priceBox_100.SelectAll();
         }
 
-        private void Counter4_priceBox_50_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter4_priceBox_50_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter4_priceBox_50.SelectAll();
         }
 
-        private void Counter4_priceBox_10_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Counter4_priceBox_10_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             counter4_priceBox_10.SelectAll();
         }
@@ -2806,8 +2811,8 @@ namespace Total
 
         private void Update_cash_total_textBlocks()
         {
-            cashExpenditure_total_text1.Text = PriceFormat(expenditure.Get_totalPrice().ToString());
-            if (cashExpenditure_total_text2 != null) cashExpenditure_total_text2.Text = PriceFormat(expenditure.Get_totalPrice().ToString());
+            cashExpenditure_total_text1.Text = Include_priceFormat(expenditure.Get_totalPrice().ToString());
+            if (cashExpenditure_total_text2 != null) cashExpenditure_total_text2.Text = Include_priceFormat(expenditure.Get_totalPrice().ToString());
         }
 
         private void Update_cash_textBoxes()
@@ -2823,16 +2828,16 @@ namespace Total
             cashNameBox_8.Text = expenditure.Load_name(8);
             cashNameBox_9.Text = expenditure.Load_name(9);
 
-            cashPriceBox_0.Text = PriceFormat(expenditure.Load_price(0));
-            cashPriceBox_1.Text = PriceFormat(expenditure.Load_price(1));
-            cashPriceBox_2.Text = PriceFormat(expenditure.Load_price(2));
-            cashPriceBox_3.Text = PriceFormat(expenditure.Load_price(3));
-            cashPriceBox_4.Text = PriceFormat(expenditure.Load_price(4));
-            cashPriceBox_5.Text = PriceFormat(expenditure.Load_price(5));
-            cashPriceBox_6.Text = PriceFormat(expenditure.Load_price(6));
-            cashPriceBox_7.Text = PriceFormat(expenditure.Load_price(7));
-            cashPriceBox_8.Text = PriceFormat(expenditure.Load_price(8));
-            cashPriceBox_9.Text = PriceFormat(expenditure.Load_price(9));
+            cashPriceBox_0.Text = Include_priceFormat(expenditure.Load_price(0));
+            cashPriceBox_1.Text = Include_priceFormat(expenditure.Load_price(1));
+            cashPriceBox_2.Text = Include_priceFormat(expenditure.Load_price(2));
+            cashPriceBox_3.Text = Include_priceFormat(expenditure.Load_price(3));
+            cashPriceBox_4.Text = Include_priceFormat(expenditure.Load_price(4));
+            cashPriceBox_5.Text = Include_priceFormat(expenditure.Load_price(5));
+            cashPriceBox_6.Text = Include_priceFormat(expenditure.Load_price(6));
+            cashPriceBox_7.Text = Include_priceFormat(expenditure.Load_price(7));
+            cashPriceBox_8.Text = Include_priceFormat(expenditure.Load_price(8));
+            cashPriceBox_9.Text = Include_priceFormat(expenditure.Load_price(9));
 
             cashTypeBox_0.SelectedIndex = expenditure.Load_type(0);
             cashTypeBox_1.SelectedIndex = expenditure.Load_type(1);
@@ -2986,52 +2991,52 @@ namespace Total
             }
         }
 
-        private void CashNameBox_0_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void CashNameBox_0_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             cashNameBox_0.SelectAll();
         }
 
-        private void CashNameBox_1_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void CashNameBox_1_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             cashNameBox_1.SelectAll();
         }
 
-        private void CashNameBox_2_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void CashNameBox_2_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             cashNameBox_2.SelectAll();
         }
 
-        private void CashNameBox_3_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void CashNameBox_3_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             cashNameBox_3.SelectAll();
         }
 
-        private void CashNameBox_4_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void CashNameBox_4_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             cashNameBox_4.SelectAll();
         }
 
-        private void CashNameBox_5_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void CashNameBox_5_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             cashNameBox_5.SelectAll();
         }
 
-        private void CashNameBox_6_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void CashNameBox_6_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             cashNameBox_6.SelectAll();
         }
 
-        private void CashNameBox_7_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void CashNameBox_7_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             cashNameBox_7.SelectAll();
         }
 
-        private void CashNameBox_8_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void CashNameBox_8_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             cashNameBox_8.SelectAll();
         }
 
-        private void CashNameBox_9_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void CashNameBox_9_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             cashNameBox_9.SelectAll();
         }
@@ -3040,12 +3045,12 @@ namespace Total
         {
             if (e.Key == Key.Return)
             {
-                string price = cashPriceBox_0.Text;
+                string price = Exclude_priceFormat(cashPriceBox_0.Text);
                 if (string.IsNullOrWhiteSpace(price)) price = "0";
 
                 // Check if calculation should be done
                 price = Step1.CheckCalculation(price);
-                cashPriceBox_0.Text = PriceFormat(price);
+                cashPriceBox_0.Text = Include_priceFormat(price);
 
                 // Save data
                 expenditure.Save_price(0, price);
@@ -3066,12 +3071,12 @@ namespace Total
         {
             if (e.Key == Key.Return)
             {
-                string price = cashPriceBox_1.Text;
+                string price = Exclude_priceFormat(cashPriceBox_1.Text);
                 if (string.IsNullOrWhiteSpace(price)) price = "0";
 
                 // Check if calculation should be done
                 price = Step1.CheckCalculation(price);
-                cashPriceBox_1.Text = PriceFormat(price);
+                cashPriceBox_1.Text = Include_priceFormat(price);
 
                 // Save data
                 expenditure.Save_price(1, price);
@@ -3092,12 +3097,12 @@ namespace Total
         {
             if (e.Key == Key.Return)
             {
-                string price = cashPriceBox_2.Text;
+                string price = Exclude_priceFormat(cashPriceBox_2.Text);
                 if (string.IsNullOrWhiteSpace(price)) price = "0";
 
                 // Check if calculation should be done
                 price = Step1.CheckCalculation(price);
-                cashPriceBox_2.Text = PriceFormat(price);
+                cashPriceBox_2.Text = Include_priceFormat(price);
 
                 // Save data
                 expenditure.Save_price(2, price);
@@ -3118,12 +3123,12 @@ namespace Total
         {
             if (e.Key == Key.Return)
             {
-                string price = cashPriceBox_3.Text;
+                string price = Exclude_priceFormat(cashPriceBox_3.Text);
                 if (string.IsNullOrWhiteSpace(price)) price = "0";
 
                 // Check if calculation should be done
                 price = Step1.CheckCalculation(price);
-                cashPriceBox_3.Text = PriceFormat(price);
+                cashPriceBox_3.Text = Include_priceFormat(price);
 
                 // Save data
                 expenditure.Save_price(3, price);
@@ -3144,12 +3149,12 @@ namespace Total
         {
             if (e.Key == Key.Return)
             {
-                string price = cashPriceBox_4.Text;
+                string price = Exclude_priceFormat(cashPriceBox_4.Text);
                 if (string.IsNullOrWhiteSpace(price)) price = "0";
 
                 // Check if calculation should be done
                 price = Step1.CheckCalculation(price);
-                cashPriceBox_4.Text = PriceFormat(price);
+                cashPriceBox_4.Text = Include_priceFormat(price);
 
                 // Save data
                 expenditure.Save_price(4, price);
@@ -3170,12 +3175,12 @@ namespace Total
         {
             if (e.Key == Key.Return)
             {
-                string price = cashPriceBox_5.Text;
+                string price = Exclude_priceFormat(cashPriceBox_5.Text);
                 if (string.IsNullOrWhiteSpace(price)) price = "0";
 
                 // Check if calculation should be done
                 price = Step1.CheckCalculation(price);
-                cashPriceBox_5.Text = PriceFormat(price);
+                cashPriceBox_5.Text = Include_priceFormat(price);
 
                 // Save data
                 expenditure.Save_price(5, price);
@@ -3196,12 +3201,12 @@ namespace Total
         {
             if (e.Key == Key.Return)
             {
-                string price = cashPriceBox_6.Text;
+                string price = Exclude_priceFormat(cashPriceBox_6.Text);
                 if (string.IsNullOrWhiteSpace(price)) price = "0";
 
                 // Check if calculation should be done
                 price = Step1.CheckCalculation(price);
-                cashPriceBox_6.Text = PriceFormat(price);
+                cashPriceBox_6.Text = Include_priceFormat(price);
 
                 // Save data
                 expenditure.Save_price(6, price);
@@ -3222,12 +3227,12 @@ namespace Total
         {
             if (e.Key == Key.Return)
             {
-                string price = cashPriceBox_7.Text;
+                string price = Exclude_priceFormat(cashPriceBox_7.Text);
                 if (string.IsNullOrWhiteSpace(price)) price = "0";
 
                 // Check if calculation should be done
                 price = Step1.CheckCalculation(price);
-                cashPriceBox_7.Text = PriceFormat(price);
+                cashPriceBox_7.Text = Include_priceFormat(price);
 
                 // Save data
                 expenditure.Save_price(7, price);
@@ -3248,12 +3253,12 @@ namespace Total
         {
             if (e.Key == Key.Return)
             {
-                string price = cashPriceBox_8.Text;
+                string price = Exclude_priceFormat(cashPriceBox_8.Text);
                 if (string.IsNullOrWhiteSpace(price)) price = "0";
 
                 // Check if calculation should be done
                 price = Step1.CheckCalculation(price);
-                cashPriceBox_8.Text = PriceFormat(price);
+                cashPriceBox_8.Text = Include_priceFormat(price);
 
                 // Move Cursor behind of text
                 cashPriceBox_8.Select(cashPriceBox_8.Text.Length, 0);
@@ -3277,12 +3282,12 @@ namespace Total
         {
             if (e.Key == Key.Return)
             {
-                string price = cashPriceBox_9.Text;
+                string price = Exclude_priceFormat(cashPriceBox_9.Text);
                 if (string.IsNullOrWhiteSpace(price)) price = "0";
 
                 // Check if calculation should be done
                 price = Step1.CheckCalculation(price);
-                cashPriceBox_9.Text = PriceFormat(price);
+                cashPriceBox_9.Text = Include_priceFormat(price);
 
                 // Save data
                 expenditure.Save_price(9, price);
@@ -3295,52 +3300,52 @@ namespace Total
             }
         }
 
-        private void CashPriceBox_0_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void CashPriceBox_0_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             cashPriceBox_0.SelectAll();
         }
 
-        private void CashPriceBox_1_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void CashPriceBox_1_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             cashPriceBox_1.SelectAll();
         }
 
-        private void CashPriceBox_2_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void CashPriceBox_2_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             cashPriceBox_2.SelectAll();
         }
 
-        private void CashPriceBox_3_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void CashPriceBox_3_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             cashPriceBox_3.SelectAll();
         }
 
-        private void CashPriceBox_4_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void CashPriceBox_4_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             cashPriceBox_4.SelectAll();
         }
 
-        private void CashPriceBox_5_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void CashPriceBox_5_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             cashPriceBox_5.SelectAll();
         }
 
-        private void CashPriceBox_6_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void CashPriceBox_6_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             cashPriceBox_6.SelectAll();
         }
 
-        private void CashPriceBox_7_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void CashPriceBox_7_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             cashPriceBox_7.SelectAll();
         }
 
-        private void CashPriceBox_8_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void CashPriceBox_8_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             cashPriceBox_8.SelectAll();
         }
 
-        private void CashPriceBox_9_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void CashPriceBox_9_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             cashPriceBox_9.SelectAll();
         }
@@ -3462,7 +3467,7 @@ namespace Total
 
         private void Update_result()
         {
-            if (originalPriceBox != null) originalPriceBox.Text = PriceFormat(expenditure.Load_originalPrice().ToString());
+            if (originalPriceBox != null) originalPriceBox.Text = Include_priceFormat(expenditure.Load_originalPrice().ToString());
 
             int result = expenditure.Load_originalPrice() - counters[0].Get_totalPrice() - counters[1].Get_totalPrice() - counters[2].Get_totalPrice()
                 - counters[3].Get_totalPrice() - expenditure.Get_totalPrice();
@@ -3479,7 +3484,7 @@ namespace Total
                     judge_text.Text = "모자랍니다";
                 }
             }
-            if (resultPrice_text != null) resultPrice_text.Text = PriceFormat(result.ToString());
+            if (resultPrice_text != null) resultPrice_text.Text = Include_priceFormat(result.ToString());
         }
 
 
@@ -3489,7 +3494,7 @@ namespace Total
         {
             if (e.Key == Key.Return)
             {
-                string price = originalPriceBox.Text;
+                string price = Exclude_priceFormat(originalPriceBox.Text);
                 if (string.IsNullOrWhiteSpace(price)) price = "0";
 
                 // Check if calculation should be done
