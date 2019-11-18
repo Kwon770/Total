@@ -3677,7 +3677,8 @@ namespace Total
 
         private void Help_panel_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-
+            HelpWindow helpWindow = new HelpWindow();
+            helpWindow.Show();
         }
 
         private void Help_btn_MouseEnter(object sender, MouseEventArgs e)
@@ -3692,7 +3693,8 @@ namespace Total
 
         private void Help_btn_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-
+            HelpWindow helpWindow = new HelpWindow();
+            helpWindow.Show();
         }
 
 

@@ -61,9 +61,16 @@
     <Compile Include="ExportSettingWindow.xaml.cs">
       <DependentUpon>ExportSettingWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="HelpWindow.xaml.cs">
+      <DependentUpon>HelpWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Step1.cs" />
     <Compile Include="Step2.cs" />
     <Page Include="ExportSettingWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HelpWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
