@@ -3015,6 +3015,11 @@ namespace Total
             if (e.LeftButton == MouseButtonState.Pressed) DragMove();
         }
 
+        private void Transparent_slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            programGrid.Opacity = transparent_slider.Value;
+        }
+
         private void Help_panel_MouseEnter(object sender, MouseEventArgs e)
         {
             help_panel.Fill = new SolidColorBrush(Color.FromRgb(222, 222, 222));

@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="1080" Width="960" WindowStyle="None" AllowsTransparency="True" 
         Background="{x:Null}">
-    <Grid Height="1080" Width="960">
+    <Grid x:Name="programGrid" Height="1080" Width="960">
         <Grid.RowDefinitions>
             <RowDefinition/>
         </Grid.RowDefinitions>
@@ -351,6 +351,7 @@
             </Image.RenderTransform>
         </Image>
         <Image x:Name="close_btn" Source="Resources/close_icon.png" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Left" Height="21" Margin="922,22,0,0" VerticalAlignment="Top" Width="20" MouseEnter="Close_btn_MouseEnter" MouseLeave="Close_btn_MouseLeave" MouseLeftButtonUp="Close_btn_MouseLeftButtonUp"/>
+        <Slider x:Name="transparent_slider" HorizontalAlignment="Left" Margin="83,24,0,0" VerticalAlignment="Top" Width="182" Foreground="#FFE7EBEE" Background="White" BorderBrush="#00000000" Maximum="1" Value="1" ValueChanged="Transparent_slider_ValueChanged" Minimum="0.1" LargeChange="0.1" SmallChange="0.01"/>
 
     </Grid>
 </Window>
