@@ -7,12 +7,12 @@
         mc:Ignorable="d"
         Title="ExportSeetingWindow" Height="307.5" Width="300" WindowStyle="None" AllowsTransparency="True" Background="{x:Null}" WindowStartupLocation="CenterScreen">
     <Grid>
-        <Rectangle Fill="White" HorizontalAlignment="Left" Margin="10,10,0,40" RadiusY="12.5" RadiusX="12.5" Width="280"/>
+        <Rectangle Fill="White" HorizontalAlignment="Left" Margin="10,10,0,40" RadiusY="12.5" RadiusX="12.5" Width="280" MouseDown="Rectangle_MouseDown"/>
         <Rectangle Fill="#FFE7EBEE" HorizontalAlignment="Left" Height="254" Margin="10,40,0,0" VerticalAlignment="Top" Width="280" RadiusX="12.5" RadiusY="12.5"/>
         <TextBlock Margin="99,50,99,0" TextWrapping="Wrap" Text="결과 출력 설정" VerticalAlignment="Top" FontWeight="Bold" Height="22" FontSize="15" Foreground="#FF4B4B4B"/>
         <TextBlock HorizontalAlignment="Left" Margin="24,13,0,0" TextWrapping="Wrap" Text="Total" VerticalAlignment="Top" FontWeight="Bold" Height="27" Width="47" FontSize="17" Foreground="#FF4B4B4B"/>
         <Calendar x:Name="calendar" HorizontalAlignment="Left" Margin="60,80,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="close_btn" Content="취소" HorizontalAlignment="Left" Margin="34,256,0,0" VerticalAlignment="Top" Width="106" Height="27" RenderTransformOrigin="0.495,0.519" BorderBrush="#E5ABADB3" Background="#FFE7EBEE" BorderThickness="1" Foreground="Black" IsEnabled="False" Click="Close_btn_Click"/>
+        <Button x:Name="close_btn" Content="취소" HorizontalAlignment="Left" Margin="34,256,0,0" VerticalAlignment="Top" Width="106" Height="27" RenderTransformOrigin="0.495,0.519" BorderBrush="#E5ABADB3" Background="#FFE7EBEE" BorderThickness="1" Foreground="Black" Click="Close_btn_Click"/>
         <Button x:Name="export_btn" Content="결과 출력" HorizontalAlignment="Left" Margin="153,256,0,0" VerticalAlignment="Top" Width="106" Height="27" RenderTransformOrigin="0.495,0.519" BorderBrush="#E5ABADB3" Background="#FF79CFD9" BorderThickness="1" Foreground="White" Click="Export_btn_Click"/>
 
     </Grid>

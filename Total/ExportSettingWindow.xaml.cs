@@ -33,9 +33,14 @@ namespace Total
 
         private void Export_btn_Click(object sender, RoutedEventArgs e)
         {
-            string date = calendar.DisplayDate.Year.ToString() + "." + calendar.DisplayDate.Month.ToString() + "." + calendar.DisplayDate.Day.ToString();
+            string date = calendar.SelectedDate.Value.Year.ToString() + "." + calendar.SelectedDate.Value.Month.ToString() + "." + calendar.SelectedDate.Value.Day.ToString();
             mainWindow.Export_result(date);
             Close();
+        }
+
+        private void Rectangle_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed) DragMove();
         }
     }
 }
