@@ -80,6 +80,8 @@ namespace Total
         {
             for (int i = 0; i < 4; i++)
             {
+                Update_counterName_textBoxes(i);
+
                 Update_counter_textBoxes(i);
 
                 Update_counter_total_textBlocks(i);
@@ -105,6 +107,30 @@ namespace Total
         
         /// COUNTER
         /// METHOD
+
+        private void Update_counterName_textBoxes(int _counter)
+        {
+            switch (_counter)
+            {
+                case 0:
+                    counter1_text1.Text = counters[0].name;
+                    counter1_text2.Text = counters[0].name;
+                    break;
+                case 1:
+                    counter2_text1.Text = counters[1].name;
+                    counter2_text2.Text = counters[1].name;
+                    break;
+                case 2:
+                    counter3_text1.Text = counters[2].name;
+                    counter3_text2.Text = counters[2].name;
+                    break;
+                case 3:
+                    counter4_text1.Text = counters[3].name;
+                    counter4_text2.Text = counters[3].name;
+                    break;
+
+            }
+        }
 
         private void Update_counter_textBoxes(int _counter)
         {
@@ -229,6 +255,54 @@ namespace Total
 
         /// EVENT
         /// COUNTER 1
+
+        private void Counter1_text1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return)
+            {
+                counters[0].name = counter1_text1.Text;
+
+                Update_counterName_textBoxes(0);
+
+                Save_countersData();
+            }
+        }
+
+        private void Counter2_text1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return)
+            {
+                counters[1].name = counter2_text1.Text;
+
+                Update_counterName_textBoxes(1);
+
+                Save_countersData();
+            }
+        }
+
+        private void Counter3_text1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return)
+            {
+                counters[2].name = counter3_text1.Text;
+
+                Update_counterName_textBoxes(2);
+
+                Save_countersData();
+            }
+        }
+
+        private void Counter4_text1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return)
+            {
+                counters[3].name = counter4_text1.Text;
+
+                Update_counterName_textBoxes(3);
+
+                Save_countersData();
+            }
+        }
 
         private void counter1_amountBox_100000_KeyDown(object sender, KeyEventArgs e)
         {
