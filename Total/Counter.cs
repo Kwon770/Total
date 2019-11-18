@@ -65,6 +65,7 @@ namespace Total
             price["50000"] = "0";
             price["100000"] = "0";
 
+            totalPrice = 0;
         }
 
         public void UpdateData(int currency, int _amount, int _price)
