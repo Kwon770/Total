@@ -36,14 +36,14 @@ namespace Total
 
         int totalPrice = 0;
 
-        public void Initialize_allData()
+        public void Reset_allData()
         {
             name = "금고";
 
-            Initialize_valueData();
+            Reset_valueData();
         }
 
-        public void Initialize_valueData()
+        public void Reset_valueData()
         {
             amount["10"] = "0";
             amount["50"] = "0";
@@ -64,6 +64,7 @@ namespace Total
             price["10000"] = "0";
             price["50000"] = "0";
             price["100000"] = "0";
+
         }
 
         public void UpdateData(int currency, int _amount, int _price)

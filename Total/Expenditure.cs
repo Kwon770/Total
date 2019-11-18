@@ -15,17 +15,17 @@ namespace Total
 
 
 
-        public void Initialize_allData()
+        public void Reset_allData()
         {
             for (int i = 0; i < 10; i++)
             {
                 cashNames[i] = "지출";
             }
 
-            Initialize_valueData();
+            Reset_valueData();
         }
 
-        public void Initialize_valueData()
+        public void Reset_valueData()
         {
             for (int i = 0; i < 10; i++)
             {

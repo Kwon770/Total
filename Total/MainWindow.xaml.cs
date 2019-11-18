@@ -3517,15 +3517,19 @@ namespace Total
 
         private void ValueReset_btn_Click(object sender, RoutedEventArgs e)
         {
-            // Initialize data
+            // Confirm whether to initalize
+            MessageBoxResult result = MessageBox.Show("값을 초기화 하시겠습니까?", "값 초기화", MessageBoxButton.OKCancel);
+            if (result == MessageBoxResult.Cancel) return;
+
+            // Reset data
             foreach (Counter counter in counters)
             {
-                counter.Initialize_valueData();
+                counter.Reset_valueData();
             }
 
-            expenditure.Initialize_valueData();
+            expenditure.Reset_valueData();
 
-            // Save initailized data
+            // Save Reset data
             Save_countersData();
 
             Save_expenditureData();
@@ -3535,15 +3539,19 @@ namespace Total
 
         private void AllReset_btn_Click(object sender, RoutedEventArgs e)
         {
-            // Initialize data
+            // Confirm whether to initalize
+            MessageBoxResult result = MessageBox.Show("모든 값을 초기화 하시겠습니까?", "모든 값 초기화", MessageBoxButton.OKCancel);
+            if (result == MessageBoxResult.Cancel) return;
+
+            // Reset data
             foreach (Counter counter in counters)
             {
-                counter.Initialize_allData();
+                counter.Reset_allData();
             }
 
-            expenditure.Initialize_allData();
+            expenditure.Reset_allData();
 
-            // Save initailized data
+            // Save Reset data
             Save_countersData();
 
             Save_expenditureData();
