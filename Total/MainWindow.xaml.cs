@@ -3791,31 +3791,34 @@ namespace Total
             foreach (Counter counter in counters)
             {
                 dataString.AppendLine(counter.name + ">");
-                dataString.AppendLine(string.Format("10원 : {0, 2}개 -> {1, -6}원", Include_priceFormat(counter.amount["10"]), Include_priceFormat(counter.price["10"])));
-                dataString.AppendLine(string.Format("50원 : {0, 2}개 -> {1, -6}원", Include_priceFormat(counter.amount["50"]), Include_priceFormat(counter.price["50"])));
-                dataString.AppendLine(string.Format("100원 : {0, 2}개 -> {1, -6}원", Include_priceFormat(counter.amount["100"]), Include_priceFormat(counter.price["100"])));
-                dataString.AppendLine(string.Format("500원 : {0, 2}개 -> {1, -6}원", Include_priceFormat(counter.amount["500"]), Include_priceFormat(counter.price["500"])));
-                dataString.AppendLine(string.Format("1000원 : {0, 2}개 -> {1, -6}원", Include_priceFormat(counter.amount["1000"]), Include_priceFormat(counter.price["1000"])));
-                dataString.AppendLine(string.Format("5000원 : {0, 2}개 -> {1, -6}원", Include_priceFormat(counter.amount["5000"]), Include_priceFormat(counter.price["5000"])));
-                dataString.AppendLine(string.Format("10000원 : {0, 2}개 -> {1, -6}원", Include_priceFormat(counter.amount["10000"]), Include_priceFormat(counter.price["10000"])));
-                dataString.AppendLine(string.Format("50000원 : {0, 2}개 -> {1, -6}원", Include_priceFormat(counter.amount["50000"]), Include_priceFormat(counter.price["50000"])));
+                dataString.AppendLine(string.Format("10원         : {0, 2}개 -> {1, -6}원", Include_priceFormat(counter.amount["10"]), Include_priceFormat(counter.price["10"])));
+                dataString.AppendLine(string.Format("50원         : {0, 2}개 -> {1, -6}원", Include_priceFormat(counter.amount["50"]), Include_priceFormat(counter.price["50"])));
+                dataString.AppendLine(string.Format("100원       : {0, 2}개 -> {1, -6}원", Include_priceFormat(counter.amount["100"]), Include_priceFormat(counter.price["100"])));
+                dataString.AppendLine(string.Format("500원       : {0, 2}개 -> {1, -6}원", Include_priceFormat(counter.amount["500"]), Include_priceFormat(counter.price["500"])));
+                dataString.AppendLine(string.Format("1000원     : {0, 2}개 -> {1, -6}원", Include_priceFormat(counter.amount["1000"]), Include_priceFormat(counter.price["1000"])));
+                dataString.AppendLine(string.Format("5000원     : {0, 2}개 -> {1, -6}원", Include_priceFormat(counter.amount["5000"]), Include_priceFormat(counter.price["5000"])));
+                dataString.AppendLine(string.Format("10000원   : {0, 2}개 -> {1, -6}원", Include_priceFormat(counter.amount["10000"]), Include_priceFormat(counter.price["10000"])));
+                dataString.AppendLine(string.Format("50000원   : {0, 2}개 -> {1, -6}원", Include_priceFormat(counter.amount["50000"]), Include_priceFormat(counter.price["50000"])));
                 dataString.AppendLine(string.Format("100000원 : {0, 2}개 -> {1, -6}원", Include_priceFormat(counter.amount["100000"]), Include_priceFormat(counter.price["100000"])));
                 dataString.AppendLine(string.Format("총합 : {0, -7}원", Include_priceFormat(counter.Get_totalPrice().ToString())));
             }
             dataString.AppendLine("");
+            dataString.AppendLine("--------------------------------------------------------");
 
             dataString.AppendLine("현금 입출 내역 >");
             for (int i = 0; i < 10; i++)
             {
                 if (expenditure.Load_price(i) == "0") continue;
 
-                dataString.AppendLine(string.Format("{0, 20} : {1, -6}원", expenditure.Load_name(i), Include_priceFormat(expenditure.Load_price(i))));
+                dataString.AppendLine(string.Format("{0, -20} : {1, -6}원", expenditure.Load_name(i), Include_priceFormat(expenditure.Load_price(i))));
             }
             dataString.AppendLine(string.Format("총합 : {0, -7}원", Include_priceFormat(expenditure.Get_totalPrice().ToString())));
             dataString.AppendLine("");
+            dataString.AppendLine("--------------------------------------------------------");
 
             dataString.AppendLine(string.Format("카운터 인수인계 금액 : {0, -7}", Include_priceFormat(expenditure.Load_originalPrice().ToString())));
             dataString.AppendLine("");
+            dataString.AppendLine("--------------------------------------------------------");
 
             dataString.AppendLine("현금이 카운터에 비해 \n" + resultPrice_text.Text + " 원\n" + judge_text.Text);
 
