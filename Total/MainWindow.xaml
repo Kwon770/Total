@@ -11,8 +11,32 @@
         <Grid.RowDefinitions>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Rectangle Fill="#FFE7EBEE" Margin="10,28,10,48" RadiusY="12.5" RadiusX="12.5" IsEnabled="False"/>
 
+        <!-- TOP BAR -->
+
+        <Rectangle x:Name="topBar" Fill="White" Margin="10,10,10,823" RadiusY="12.5" RadiusX="12.5" MouseDown="TopBar_MouseDown" />
+        <TextBlock HorizontalAlignment="Left" Margin="26,18,0,0" TextWrapping="Wrap" Text="Total" VerticalAlignment="Top" FontWeight="Bold" Height="27" Width="47" FontSize="18" Foreground="#FF4B4B4B"/>
+
+        <Rectangle x:Name="help_panel" Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="42" Margin="846,10,0,0" StrokeThickness="2" VerticalAlignment="Top" Width="33" MouseEnter="Help_panel_MouseEnter" MouseLeave="Help_panel_MouseLeave" MouseLeftButtonUp="Help_panel_MouseLeftButtonUp"/>
+        <Rectangle x:Name="minimize_panel" Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="42" Margin="879,10,0,0" StrokeThickness="2" VerticalAlignment="Top" Width="35" MouseEnter="Minimize_panel_MouseEnter" MouseLeave="Minimize_panel_MouseLeave" MouseLeftButtonUp="Minimize_panel_MouseLeftButtonUp"/>
+        <Rectangle x:Name="close_panel1" Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="42" Margin="914,10,0,0" StrokeThickness="2" VerticalAlignment="Top" Width="23" MouseEnter="Close_panel1_MouseEnter" MouseLeave="Close_panel1_MouseLeave" MouseLeftButtonUp="Close_panel1_MouseLeftButtonUp"/>
+        <Rectangle x:Name="close_panel2" Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="42" Margin="925,10,0,0" StrokeThickness="2" VerticalAlignment="Top" Width="25" RadiusX="12.5" RadiusY="12.5" MouseEnter="Close_panel2_MouseEnter" MouseLeave="Close_panel2_MouseLeave"/>
+        <Rectangle x:Name="close_panel3" Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="20" Margin="914,32,0,0" StrokeThickness="2" VerticalAlignment="Top" Width="36" MouseEnter="Close_panel3_MouseEnter" MouseLeave="Close_panel3_MouseLeave"/>
+        <Image x:Name="help_btn" Source="Resources/help_icon.png" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Left" Height="20" Margin="852,22,0,0" VerticalAlignment="Top" Width="20" MouseEnter="Help_btn_MouseEnter" MouseLeave="Help_btn_MouseLeave" MouseLeftButtonUp="Help_btn_MouseLeftButtonUp"/>
+        <Image x:Name="minimize_btn" Source="Resources/minimize_icon.png" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Left" Height="20" Margin="886,41,0,0" VerticalAlignment="Top" Width="20" RenderTransformOrigin="0.5,0.5" MouseEnter="Minimize_btn_MouseEnter" MouseLeave="Minimize_btn_MouseLeave" MouseLeftButtonUp="Minimize_btn_MouseLeftButtonUp">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="180"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="close_btn" Source="Resources/close_icon.png" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Left" Height="21" Margin="922,22,0,0" VerticalAlignment="Top" Width="20" MouseEnter="Close_btn_MouseEnter" MouseLeave="Close_btn_MouseLeave" MouseLeftButtonUp="Close_btn_MouseLeftButtonUp"/>
+        <Slider x:Name="transparent_slider" HorizontalAlignment="Left" Margin="83,24,0,0" VerticalAlignment="Top" Width="182" Foreground="#FFE7EBEE" Background="White" BorderBrush="#00000000" Maximum="1" Value="1" ValueChanged="Transparent_slider_ValueChanged" Minimum="0.1" LargeChange="0.1" SmallChange="0.01"/>
+
+        <Rectangle Fill="#FFE7EBEE" Margin="10,50,10,48" RadiusY="12.5" RadiusX="12.5" IsEnabled="False"/>
 
         <!-- COUNTER UI -->
         <Rectangle Fill="White" HorizontalAlignment="Left" Height="420" Margin="18,69,0,0" VerticalAlignment="Top" Width="220" Stroke="#E5ABADB3" StrokeThickness="2"/>
@@ -325,33 +349,9 @@
 
         <Button x:Name="allReset_btn" Content="전체 초기화" HorizontalAlignment="Left" Margin="867,965,0,0" VerticalAlignment="Top" Width="70" Height="55" RenderTransformOrigin="0.62,0.491" BorderBrush="#FFD65151" Background="#FFFD9191" BorderThickness="2" Foreground="White" Click="AllReset_btn_Click"/>
         <Button x:Name="valueReset_btn" Content="값 초기화" HorizontalAlignment="Left" Margin="792,965,0,0" VerticalAlignment="Top" Width="65" Height="55" RenderTransformOrigin="0.62,0.491" BorderBrush="#FFD65151" Background="#FFFD9191" BorderThickness="2" Foreground="White" Click="ValueReset_btn_Click"/>
-        <Button Content="결과 출력" HorizontalAlignment="Left" Margin="717,965,0,0" VerticalAlignment="Top" Width="65" Height="55" RenderTransformOrigin="0.62,0.491" BorderBrush="#E5ABADB3" Background="#FF79CFD9" BorderThickness="2" Foreground="White"/>
+        <Button x:Name="export_btn" Content="결과 출력" HorizontalAlignment="Left" Margin="717,965,0,0" VerticalAlignment="Top" Width="65" Height="55" RenderTransformOrigin="0.62,0.491" BorderBrush="#E5ABADB3" Background="#FF79CFD9" BorderThickness="2" Foreground="White" Click="Export_btn_Click"/>
 
 
-        <!-- TOP BAR -->
-
-        <Rectangle x:Name="topBar" Fill="White" Margin="10,10,10,1014" RadiusY="12.5" RadiusX="12.5" MouseDown="TopBar_MouseDown" />
-        <Rectangle Fill="#FFE7EBEE" Margin="10,52,10,1013" Height="15"/>
-        <TextBlock HorizontalAlignment="Left" Margin="26,18,0,0" TextWrapping="Wrap" Text="Total" VerticalAlignment="Top" FontWeight="Bold" Height="27" Width="47" FontSize="18" Foreground="#FF4B4B4B"/>
-
-        <Rectangle x:Name="help_panel" Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="42" Margin="846,10,0,0" StrokeThickness="2" VerticalAlignment="Top" Width="33" MouseEnter="Help_panel_MouseEnter" MouseLeave="Help_panel_MouseLeave" MouseLeftButtonUp="Help_panel_MouseLeftButtonUp"/>
-        <Rectangle x:Name="minimize_panel" Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="42" Margin="879,10,0,0" StrokeThickness="2" VerticalAlignment="Top" Width="35" MouseEnter="Minimize_panel_MouseEnter" MouseLeave="Minimize_panel_MouseLeave" MouseLeftButtonUp="Minimize_panel_MouseLeftButtonUp"/>
-        <Rectangle x:Name="close_panel1" Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="42" Margin="914,10,0,0" StrokeThickness="2" VerticalAlignment="Top" Width="23" MouseEnter="Close_panel1_MouseEnter" MouseLeave="Close_panel1_MouseLeave" MouseLeftButtonUp="Close_panel1_MouseLeftButtonUp"/>
-        <Rectangle x:Name="close_panel2" Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="42" Margin="925,10,0,0" StrokeThickness="2" VerticalAlignment="Top" Width="25" RadiusX="12.5" RadiusY="12.5" MouseEnter="Close_panel2_MouseEnter" MouseLeave="Close_panel2_MouseLeave"/>
-        <Rectangle x:Name="close_panel3" Fill="#FFFFFFFF" HorizontalAlignment="Left" Height="20" Margin="914,32,0,0" StrokeThickness="2" VerticalAlignment="Top" Width="36" MouseEnter="Close_panel3_MouseEnter" MouseLeave="Close_panel3_MouseLeave"/>
-        <Image x:Name="help_btn" Source="Resources/help_icon.png" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Left" Height="20" Margin="852,22,0,0" VerticalAlignment="Top" Width="20" MouseEnter="Help_btn_MouseEnter" MouseLeave="Help_btn_MouseLeave" MouseLeftButtonUp="Help_btn_MouseLeftButtonUp"/>
-        <Image x:Name="minimize_btn" Source="Resources/minimize_icon.png" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Left" Height="20" Margin="886,41,0,0" VerticalAlignment="Top" Width="20" RenderTransformOrigin="0.5,0.5" MouseEnter="Minimize_btn_MouseEnter" MouseLeave="Minimize_btn_MouseLeave" MouseLeftButtonUp="Minimize_btn_MouseLeftButtonUp">
-            <Image.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="180"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Image.RenderTransform>
-        </Image>
-        <Image x:Name="close_btn" Source="Resources/close_icon.png" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Left" Height="21" Margin="922,22,0,0" VerticalAlignment="Top" Width="20" MouseEnter="Close_btn_MouseEnter" MouseLeave="Close_btn_MouseLeave" MouseLeftButtonUp="Close_btn_MouseLeftButtonUp"/>
-        <Slider x:Name="transparent_slider" HorizontalAlignment="Left" Margin="83,24,0,0" VerticalAlignment="Top" Width="182" Foreground="#FFE7EBEE" Background="White" BorderBrush="#00000000" Maximum="1" Value="1" ValueChanged="Transparent_slider_ValueChanged" Minimum="0.1" LargeChange="0.1" SmallChange="0.01"/>
 
     </Grid>
 </Window>

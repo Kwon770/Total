@@ -6,7 +6,7 @@ namespace Total
     [Serializable]
     class Counter
     {
-        string name = "금고";
+        public string name = "금고";
 
         public Dictionary<string, string> amount = new Dictionary<string, string>()
         {

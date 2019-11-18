@@ -37,6 +37,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -57,8 +58,15 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Expenditure.cs" />
+    <Compile Include="ExportSettingWindow.xaml.cs">
+      <DependentUpon>ExportSettingWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Step1.cs" />
     <Compile Include="Step2.cs" />
+    <Page Include="ExportSettingWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
