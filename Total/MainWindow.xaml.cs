@@ -247,6 +247,10 @@ namespace Total
                     counter3_total_text1.Text = total;
                     counter3_total_text2.Text = total;
                     break;
+                case 3:
+                    counter4_total_text1.Text = total;
+                    counter4_total_text2.Text = total;
+                    break;
             }
 
             Update_result();
