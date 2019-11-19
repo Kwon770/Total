@@ -4169,7 +4169,7 @@ namespace Total
             dataString.AppendLine("");
             dataString.AppendLine("--------------------------------------------------------");
 
-            dataString.AppendLine(string.Format("카운터 인수인계 금액 : {0, -7}", Include_priceFormat(expenditure.Load_cardPrice().ToString())));
+            dataString.AppendLine(string.Format("카드 전표 금액 : {0, -7}", Include_priceFormat(expenditure.Load_cardPrice().ToString())));
             dataString.AppendLine("");
             dataString.AppendLine("--------------------------------------------------------");
 
