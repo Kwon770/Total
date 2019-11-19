@@ -29,7 +29,7 @@ namespace Total
 
             InitializeComponent();
 
-            Load_data();
+            //Load_data();
             //Save_countersData();
             //Save_expenditureData();
 
@@ -2918,16 +2918,26 @@ namespace Total
             cashPriceBox_8.Text = Include_priceFormat(expenditure.Load_price(8));
             cashPriceBox_9.Text = Include_priceFormat(expenditure.Load_price(9));
 
-            cashTypeBox_0.SelectedIndex = expenditure.Load_type(0);
-            cashTypeBox_1.SelectedIndex = expenditure.Load_type(1);
-            cashTypeBox_2.SelectedIndex = expenditure.Load_type(2);
-            cashTypeBox_3.SelectedIndex = expenditure.Load_type(3);
-            cashTypeBox_4.SelectedIndex = expenditure.Load_type(4);
-            cashTypeBox_5.SelectedIndex = expenditure.Load_type(5);
-            cashTypeBox_6.SelectedIndex = expenditure.Load_type(6);
-            cashTypeBox_7.SelectedIndex = expenditure.Load_type(7);
-            cashTypeBox_8.SelectedIndex = expenditure.Load_type(8);
-            cashTypeBox_9.SelectedIndex = expenditure.Load_type(9);
+            if (expenditure.Load_type(0) == true) cashIncomeBox_0.IsChecked = true;
+            else if (expenditure.Load_type(0) == false) cashExpenseBox_0.IsChecked = true;
+            if (expenditure.Load_type(1) == true) cashIncomeBox_1.IsChecked = true;
+            else if (expenditure.Load_type(1) == false) cashExpenseBox_1.IsChecked = true;
+            if (expenditure.Load_type(2) == true) cashIncomeBox_2.IsChecked = true;
+            else if (expenditure.Load_type(2) == false) cashExpenseBox_2.IsChecked = true;
+            if (expenditure.Load_type(3) == true) cashIncomeBox_3.IsChecked = true;
+            else if (expenditure.Load_type(3) == false) cashExpenseBox_3.IsChecked = true;
+            if (expenditure.Load_type(4) == true) cashIncomeBox_4.IsChecked = true;
+            else if (expenditure.Load_type(4) == false) cashExpenseBox_4.IsChecked = true;
+            if (expenditure.Load_type(5) == true) cashIncomeBox_5.IsChecked = true;
+            else if (expenditure.Load_type(5) == false) cashExpenseBox_5.IsChecked = true;
+            if (expenditure.Load_type(6) == true) cashIncomeBox_6.IsChecked = true;
+            else if (expenditure.Load_type(6) == false) cashExpenseBox_6.IsChecked = true;
+            if (expenditure.Load_type(7) == true) cashIncomeBox_7.IsChecked = true;
+            else if (expenditure.Load_type(7) == false) cashExpenseBox_7.IsChecked = true;
+            if (expenditure.Load_type(8) == true) cashIncomeBox_8.IsChecked = true;
+            else if (expenditure.Load_type(8) == false) cashExpenseBox_8.IsChecked = true;
+            if (expenditure.Load_type(9) == true) cashIncomeBox_9.IsChecked = true;
+            else if (expenditure.Load_type(9) == false) cashExpenseBox_9.IsChecked = true;
         }
 
 
@@ -3429,112 +3439,422 @@ namespace Total
             cashPriceBox_9.SelectAll();
         }
 
-        private void CashTypeBox_0_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void CashExpenseBox_0_Click(object sender, RoutedEventArgs e)
         {
-            expenditure.Save_type(0, cashTypeBox_0.SelectedIndex);     
+            if (cashExpenseBox_0.IsChecked == true)
+            {
+                // Uncheck other checkbox
+                cashIncomeBox_0.IsChecked = false;
 
-            // Get and Set total price
+                // Make type false, "Expense"
+                expenditure.Save_type(0, false);
+            }
+            else
+            {
+                // Delete type
+                expenditure.Save_type(0, null);
+            }
+
             Update_cash_total_textBlocks();
-            Update_result();
 
             Save_expenditureData();
         }
 
-        private void CashTypeBox_1_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void CashExpenseBox_1_Click(object sender, RoutedEventArgs e)
         {
-            expenditure.Save_type(1, cashTypeBox_1.SelectedIndex);           
+            if (cashExpenseBox_1.IsChecked == true)
+            {
+                // Uncheck other checkbox
+                cashIncomeBox_1.IsChecked = false;
 
-            // Get and Set total price
+                // Make type false, "Expense"
+                expenditure.Save_type(1, false);
+            }
+            else
+            {
+                // Delete type
+                expenditure.Save_type(1, null);
+            }
+
             Update_cash_total_textBlocks();
-            Update_result();
 
             Save_expenditureData();
         }
 
-        private void CashTypeBox_2_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void CashExpenseBox_2_Click(object sender, RoutedEventArgs e)
         {
-            expenditure.Save_type(2, cashTypeBox_2.SelectedIndex);       
+            if (cashExpenseBox_2.IsChecked == true)
+            {
+                // Uncheck other checkbox
+                cashIncomeBox_2.IsChecked = false;
 
-            // Get and Set total price
+                // Make type false, "Expense"
+                expenditure.Save_type(2, false);
+            }
+            else
+            {
+                // Delete type
+                expenditure.Save_type(2, null);
+            }
+
             Update_cash_total_textBlocks();
-            Update_result();
 
             Save_expenditureData();
         }
 
-        private void CashTypeBox_3_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void CashExpenseBox_3_Click(object sender, RoutedEventArgs e)
         {
-            expenditure.Save_type(3, cashTypeBox_3.SelectedIndex);
+            if (cashExpenseBox_3.IsChecked == true)
+            {
+                // Uncheck other checkbox
+                cashIncomeBox_3.IsChecked = false;
 
-            // Get and Set total price
+                // Make type false, "Expense"
+                expenditure.Save_type(3, false);
+            }
+            else
+            {
+                // Delete type
+                expenditure.Save_type(3, null);
+            }
+
             Update_cash_total_textBlocks();
-            Update_result();
 
             Save_expenditureData();
         }
 
-        private void CashTypeBox_4_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void CashExpenseBox_4_Click(object sender, RoutedEventArgs e)
         {
-            expenditure.Save_type(4, cashTypeBox_4.SelectedIndex);
+            if (cashExpenseBox_4.IsChecked == true)
+            {
+                // Uncheck other checkbox
+                cashIncomeBox_4.IsChecked = false;
 
-            // Get and Set total price
+                // Make type false, "Expense"
+                expenditure.Save_type(4, false);
+            }
+            else
+            {
+                // Delete type
+                expenditure.Save_type(4, null);
+            }
+
             Update_cash_total_textBlocks();
-            Update_result();
 
             Save_expenditureData();
         }
 
-        private void CashTypeBox_5_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void CashExpenseBox_5_Click(object sender, RoutedEventArgs e)
         {
-            expenditure.Save_type(5, cashTypeBox_5.SelectedIndex);
+            if (cashExpenseBox_5.IsChecked == true)
+            {
+                // Uncheck other checkbox
+                cashIncomeBox_5.IsChecked = false;
 
-            // Get and Set total price
+                // Make type false, "Expense"
+                expenditure.Save_type(5, false);
+            }
+            else
+            {
+                // Delete type
+                expenditure.Save_type(5, null);
+            }
+
             Update_cash_total_textBlocks();
-            Update_result();
 
             Save_expenditureData();
         }
 
-        private void CashTypeBox_6_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void CashExpenseBox_6_Click(object sender, RoutedEventArgs e)
         {
-            expenditure.Save_type(6, cashTypeBox_6.SelectedIndex);
+            if (cashExpenseBox_6.IsChecked == true)
+            {
+                // Uncheck other checkbox
+                cashIncomeBox_6.IsChecked = false;
 
-            // Get and Set total price
+                // Make type false, "Expense"
+                expenditure.Save_type(6, false);
+            }
+            else
+            {
+                // Delete type
+                expenditure.Save_type(6, null);
+            }
+
             Update_cash_total_textBlocks();
-            Update_result();
 
             Save_expenditureData();
         }
 
-        private void CashTypeBox_7_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void CashExpenseBox_7_Click(object sender, RoutedEventArgs e)
         {
-            expenditure.Save_type(7, cashTypeBox_7.SelectedIndex);
+            if (cashExpenseBox_7.IsChecked == true)
+            {
+                // Uncheck other checkbox
+                cashIncomeBox_7.IsChecked = false;
 
-            // Get and Set total price
+                // Make type false, "Expense"
+                expenditure.Save_type(7, false);
+            }
+            else
+            {
+                // Delete type
+                expenditure.Save_type(7, null);
+            }
+
             Update_cash_total_textBlocks();
-            Update_result();
 
             Save_expenditureData();
         }
 
-        private void CashTypeBox_8_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void CashExpenseBox_8_Click(object sender, RoutedEventArgs e)
         {
-            expenditure.Save_type(8, cashTypeBox_8.SelectedIndex);
+            if (cashExpenseBox_8.IsChecked == true)
+            {
+                // Uncheck other checkbox
+                cashIncomeBox_8.IsChecked = false;
 
-            // Get and Set total price
+                // Make type false, "Expense"
+                expenditure.Save_type(8, false);
+            }
+            else
+            {
+                // Delete type
+                expenditure.Save_type(8, null);
+            }
+
             Update_cash_total_textBlocks();
-            Update_result();
 
             Save_expenditureData();
         }
 
-        private void CashTypeBox_9_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void CashExpenseBox_9_Click(object sender, RoutedEventArgs e)
         {
-            expenditure.Save_type(9, cashTypeBox_9.SelectedIndex);
+            if (cashExpenseBox_9.IsChecked == true)
+            {
+                // Uncheck other checkbox
+                cashIncomeBox_9.IsChecked = false;
 
-            // Get and Set total price
+                // Make type false, "Expense"
+                expenditure.Save_type(9, false);
+            }
+            else
+            {
+                // Delete type
+                expenditure.Save_type(9, null);
+            }
+
             Update_cash_total_textBlocks();
-            Update_result();
+
+            Save_expenditureData();
+        }
+
+        private void CashIncomeBox_0_Click(object sender, RoutedEventArgs e)
+        {
+            if (cashIncomeBox_0.IsChecked == true)
+            {
+                // Uncheck other checkbox
+                cashExpenseBox_0.IsChecked = false;
+
+                // Make type true, "Income"
+                expenditure.Save_type(0, true);
+            }
+            else
+            {
+                // Delete type
+                expenditure.Save_type(0, null);
+            }
+
+            Update_cash_total_textBlocks();
+
+            Save_expenditureData();
+        }
+
+        private void CashIncomeBox_1_Click(object sender, RoutedEventArgs e)
+        {
+            if (cashIncomeBox_1.IsChecked == true)
+            {
+                // Uncheck other checkbox
+                cashExpenseBox_1.IsChecked = false;
+
+                // Make type true, "Income"
+                expenditure.Save_type(1, true);
+            }
+            else
+            {
+                // Delete type
+                expenditure.Save_type(1, null);
+            }
+
+            Update_cash_total_textBlocks();
+
+            Save_expenditureData();
+        }
+
+        private void CashIncomeBox_2_Click(object sender, RoutedEventArgs e)
+        {
+            if (cashIncomeBox_2.IsChecked == true)
+            {
+                // Uncheck other checkbox
+                cashExpenseBox_2.IsChecked = false;
+
+                // Make type true, "Income"
+                expenditure.Save_type(2, true);
+            }
+            else
+            {
+                // Delete type
+                expenditure.Save_type(2, null);
+            }
+
+            Update_cash_total_textBlocks();
+
+            Save_expenditureData();
+        }
+
+        private void CashIncomeBox_3_Click(object sender, RoutedEventArgs e)
+        {
+            if (cashIncomeBox_3.IsChecked == true)
+            {
+                // Uncheck other checkbox
+                cashExpenseBox_3.IsChecked = false;
+
+                // Make type true, "Income"
+                expenditure.Save_type(3, true);
+            }
+            else
+            {
+                // Delete type
+                expenditure.Save_type(3, null);
+            }
+
+            Update_cash_total_textBlocks();
+
+            Save_expenditureData();
+        }
+
+        private void CashIncomeBox_4_Click(object sender, RoutedEventArgs e)
+        {
+            if (cashIncomeBox_4.IsChecked == true)
+            {
+                // Uncheck other checkbox
+                cashExpenseBox_4.IsChecked = false;
+
+                // Make type true, "Income"
+                expenditure.Save_type(4, true);
+            }
+            else
+            {
+                // Delete type
+                expenditure.Save_type(4, null);
+            }
+
+            Update_cash_total_textBlocks();
+
+            Save_expenditureData();
+        }
+
+        private void CashIncomeBox_5_Click(object sender, RoutedEventArgs e)
+        {
+            if (cashIncomeBox_5.IsChecked == true)
+            {
+                // Uncheck other checkbox
+                cashExpenseBox_5.IsChecked = false;
+
+                // Make type true, "Income"
+                expenditure.Save_type(5, true);
+            }
+            else
+            {
+                // Delete type
+                expenditure.Save_type(5, null);
+            }
+
+            Update_cash_total_textBlocks();
+
+            Save_expenditureData();
+        }
+
+        private void CashIncomeBox_6_Click(object sender, RoutedEventArgs e)
+        {
+            if (cashIncomeBox_6.IsChecked == true)
+            {
+                // Uncheck other checkbox
+                cashExpenseBox_6.IsChecked = false;
+
+                // Make type true, "Income"
+                expenditure.Save_type(6, true);
+            }
+            else
+            {
+                // Delete type
+                expenditure.Save_type(6, null);
+            }
+
+            Update_cash_total_textBlocks();
+
+            Save_expenditureData();
+        }
+
+        private void CashIncomeBox_7_Click(object sender, RoutedEventArgs e)
+        {
+            if (cashIncomeBox_7.IsChecked == true)
+            {
+                // Uncheck other checkbox
+                cashExpenseBox_7.IsChecked = false;
+
+                // Make type true, "Income"
+                expenditure.Save_type(7, true);
+            }
+            else
+            {
+                // Delete type
+                expenditure.Save_type(7, null);
+            }
+
+            Update_cash_total_textBlocks();
+
+            Save_expenditureData();
+        }
+
+        private void CashIncomeBox_8_Click(object sender, RoutedEventArgs e)
+        {
+            if (cashIncomeBox_8.IsChecked == true)
+            {
+                // Uncheck other checkbox
+                cashExpenseBox_8.IsChecked = false;
+
+                // Make type true, "Income"
+                expenditure.Save_type(8, true);
+            }
+            else
+            {
+                // Delete type
+                expenditure.Save_type(8, null);
+            }
+
+            Update_cash_total_textBlocks();
+
+            Save_expenditureData();
+        }
+
+        private void CashIncomeBox_9_Click(object sender, RoutedEventArgs e)
+        {
+            if (cashIncomeBox_9.IsChecked == true)
+            {
+                // Uncheck other checkbox
+                cashExpenseBox_9.IsChecked = false;
+
+                // Make type true, "Income"
+                expenditure.Save_type(9, true);
+            }
+            else
+            {
+                // Delete type
+                expenditure.Save_type(9, null);
+            }
+
+            Update_cash_total_textBlocks();
 
             Save_expenditureData();
         }
@@ -3546,10 +3866,8 @@ namespace Total
 
         private void Update_result()
         {
-            if (originalPriceBox != null) originalPriceBox.Text = Include_priceFormat(expenditure.Load_originalPrice().ToString());
-
             int result = expenditure.Load_originalPrice() - counters[0].Get_totalPrice() - counters[1].Get_totalPrice() - counters[2].Get_totalPrice()
-                - counters[3].Get_totalPrice() - expenditure.Get_totalPrice();
+                - counters[3].Get_totalPrice() - expenditure.Get_totalPrice() - expenditure.Load_cardPrice();
 
             if (judge_text != null)
             {
@@ -3569,7 +3887,7 @@ namespace Total
 
         // EVENT
 
-        private void originalPriceBox_KeyDown(object sender, KeyEventArgs e)
+        private void OriginalPriceBox_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Return)
             {
@@ -3578,10 +3896,7 @@ namespace Total
 
                 // Check if calculation should be done
                 price = Step1.CheckCalculation(price);
-                originalPriceBox.Text = price;
-
-                // Move Cursor behind of text
-                originalPriceBox.Select(counter4_priceBox_100000.Text.Length, 0);
+                originalPriceBox.Text = Include_priceFormat(price);
 
                 // Set calculated price
                 expenditure.Save_originalPrice(int.Parse(price));
@@ -3590,7 +3905,42 @@ namespace Total
                 Update_result();
 
                 Save_expenditureData();
+
+                // Move focus to next box
+                cardPriceBox.Focus();
+                cardPriceBox.SelectAll();
             }
+        }
+
+        private void CardPriceBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return)
+            {
+                string price = Exclude_priceFormat(cardPriceBox.Text);
+                if (string.IsNullOrWhiteSpace(price)) price = "0";
+
+                // Check if calculation should be done
+                price = Step1.CheckCalculation(price);
+                cardPriceBox.Text = Include_priceFormat(price);
+
+                // Set calculated price
+                expenditure.Save_cardPrice(int.Parse(price));
+
+                // Update result
+                Update_result();
+
+                Save_expenditureData();
+            }
+        }
+
+        private void OriginalPriceBox_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            originalPriceBox.SelectAll();
+        }
+
+        private void CardPriceBox_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            cardPriceBox.SelectAll();
         }
 
         private void ValueReset_btn_Click(object sender, RoutedEventArgs e)
@@ -3817,6 +4167,10 @@ namespace Total
                 dataString.AppendLine(string.Format("{0, -20} : {1, -6}원", expenditure.Load_name(i), Include_priceFormat(expenditure.Load_price(i))));
             }
             dataString.AppendLine(string.Format("총합 : {0, -7}원", Include_priceFormat(expenditure.Get_totalPrice().ToString())));
+            dataString.AppendLine("");
+            dataString.AppendLine("--------------------------------------------------------");
+
+            dataString.AppendLine(string.Format("카운터 인수인계 금액 : {0, -7}", Include_priceFormat(expenditure.Load_cardPrice().ToString())));
             dataString.AppendLine("");
             dataString.AppendLine("--------------------------------------------------------");
 

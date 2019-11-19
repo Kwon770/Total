@@ -11,7 +11,7 @@
         <Border.Effect>
             <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="Gray"/>
         </Border.Effect>
-        
+
         <Grid x:Name="programGrid" Height="1080" Width="960">
             <Grid.RowDefinitions>
                 <RowDefinition/>
@@ -233,13 +233,12 @@
             <Rectangle Fill="#FFFAFBFA" HorizontalAlignment="Left" Height="26" Margin="26,511,0,0" StrokeThickness="2" VerticalAlignment="Top" Width="676"/>
             <Rectangle Fill="#4CB8B8B8" Height="1" Margin="20,537,256,0" VerticalAlignment="Top"/>
             <TextBlock HorizontalAlignment="Left" Margin="29,514,0,0" TextWrapping="Wrap" Text="현금 입출 내역" VerticalAlignment="Top" FontSize="15"/>
-            <TextBlock x:Name="cashExpenditure_total_text1" HorizontalAlignment="Left" Margin="89,988,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="20" Width="133" FontSize="15" Foreground="Black"/>
-            <TextBlock HorizontalAlignment="Left" Margin="74,988,0,0" TextWrapping="Wrap" Text="\" VerticalAlignment="Top" Height="20" Width="47" FontSize="15" Foreground="Black"/>
-            <Rectangle Fill="#4CB8B8B8" Height="1" Margin="30,977,270,0" VerticalAlignment="Top"/>
-            <TextBlock HorizontalAlignment="Left" Margin="258,542,0,0" TextWrapping="Wrap" Text="수량" VerticalAlignment="Top" Height="17" Width="27" FontSize="13" Foreground="Black" RenderTransformOrigin="0.481,0.529"/>
-            <TextBlock HorizontalAlignment="Left" Margin="560,542,0,0" TextWrapping="Wrap" Text="금액" VerticalAlignment="Top" Height="17" Width="27" FontSize="13" Foreground="Black" RenderTransformOrigin="0.481,0.529"/>
-            <TextBlock HorizontalAlignment="Left" Margin="646,542,0,0" TextWrapping="Wrap" Text="종류" VerticalAlignment="Top" Height="17" Width="27" FontSize="13" Foreground="Black" RenderTransformOrigin="0.481,0.529"/>
-            <Grid x:Name="cashGrid" HorizontalAlignment="Left" Height="413" Margin="21,564,0,0" VerticalAlignment="Top" Width="681">
+            <TextBlock x:Name="cashExpenditure_total_text1" HorizontalAlignment="Left" Margin="89,990,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="20" Width="133" FontSize="15" Foreground="Black"/>
+            <TextBlock HorizontalAlignment="Left" Margin="74,990,0,0" TextWrapping="Wrap" Text="\" VerticalAlignment="Top" Height="20" Width="47" FontSize="15" Foreground="Black"/>
+            <TextBlock HorizontalAlignment="Left" Margin="233,545,0,0" TextWrapping="Wrap" Text="내역" VerticalAlignment="Top" Height="17" Width="27" FontSize="13" Foreground="Black" RenderTransformOrigin="0.481,0.529"/>
+            <TextBlock HorizontalAlignment="Left" Margin="509,545,0,0" TextWrapping="Wrap" Text="금액" VerticalAlignment="Top" Height="17" Width="27" FontSize="13" Foreground="Black" RenderTransformOrigin="0.481,0.529"/>
+            <TextBlock HorizontalAlignment="Left" Margin="624,545,0,0" TextWrapping="Wrap" Text="종류" VerticalAlignment="Top" Height="17" Width="27" FontSize="13" Foreground="Black" RenderTransformOrigin="0.481,0.529"/>
+            <Grid x:Name="cashGrid" HorizontalAlignment="Left" Height="413" Margin="21,571,0,0" VerticalAlignment="Top" Width="681">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="40"/>
                     <RowDefinition Height="40"/>
@@ -253,108 +252,143 @@
                     <RowDefinition Height="40"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="500"/>
+                    <ColumnDefinition Width="5"/>
+                    <ColumnDefinition Width="15"/>
+                    <ColumnDefinition Width="430"/>
                     <ColumnDefinition Width="100"/>
-                    <ColumnDefinition Width="70"/>
+                    <ColumnDefinition Width="65"/>
+                    <ColumnDefinition Width="65"/>
                 </Grid.ColumnDefinitions>
-                <TextBox x:Name="cashNameBox_0" Grid.Row="0" Grid.Column="0" Height="24" Width="480" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="지출" KeyDown="CashNameBox_0_KeyDown" PreviewMouseLeftButtonUp="CashNameBox_0_PreviewMouseLeftButtonUp" />
-                <TextBox x:Name="cashNameBox_1" Grid.Row="1" Grid.Column="0" Height="24" Width="480" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="지출" KeyDown="CashNameBox_1_KeyDown" PreviewMouseLeftButtonUp="CashNameBox_1_PreviewMouseLeftButtonUp" />
-                <TextBox x:Name="cashNameBox_2" Grid.Row="2" Grid.Column="0" Height="24" Width="480" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="지출" KeyDown="CashNameBox_2_KeyDown" PreviewMouseLeftButtonUp="CashNameBox_2_PreviewMouseLeftButtonUp" />
-                <TextBox x:Name="cashNameBox_3" Grid.Row="3" Grid.Column="0" Height="24" Width="480" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="지출" KeyDown="CashNameBox_3_KeyDown" PreviewMouseLeftButtonUp="CashNameBox_3_PreviewMouseLeftButtonUp" />
-                <TextBox x:Name="cashNameBox_4" Grid.Row="4" Grid.Column="0" Height="24" Width="480" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="지출" KeyDown="CashNameBox_4_KeyDown" PreviewMouseLeftButtonUp="CashNameBox_4_PreviewMouseLeftButtonUp" />
-                <TextBox x:Name="cashNameBox_5" Grid.Row="5" Grid.Column="0" Height="24" Width="480" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="지출" KeyDown="CashNameBox_5_KeyDown" PreviewMouseLeftButtonUp="CashNameBox_5_PreviewMouseLeftButtonUp" />
-                <TextBox x:Name="cashNameBox_6" Grid.Row="6" Grid.Column="0" Height="24" Width="480" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="지출" KeyDown="CashNameBox_6_KeyDown" PreviewMouseLeftButtonUp="CashNameBox_6_PreviewMouseLeftButtonUp" />
-                <TextBox x:Name="cashNameBox_7" Grid.Row="7" Grid.Column="0" Height="24" Width="480" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="지출" KeyDown="CashNameBox_7_KeyDown" PreviewMouseLeftButtonUp="CashNameBox_7_PreviewMouseLeftButtonUp" />
-                <TextBox x:Name="cashNameBox_8" Grid.Row="8" Grid.Column="0" Height="24" Width="480" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="지출" KeyDown="CashNameBox_8_KeyDown" PreviewMouseLeftButtonUp="CashNameBox_8_PreviewMouseLeftButtonUp" />
-                <TextBox x:Name="cashNameBox_9" Grid.Row="9" Grid.Column="0" Height="24" Width="480" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="지출" KeyDown="CashNameBox_9_KeyDown" PreviewMouseLeftButtonUp="CashNameBox_9_PreviewMouseLeftButtonUp" />
-                <TextBox x:Name="cashPriceBox_0" Grid.Row="0" Grid.Column="1" Height="24" Width="80" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="0" KeyDown="CashPriceBox_0_KeyDown" PreviewMouseLeftButtonUp="CashPriceBox_0_PreviewMouseLeftButtonUp"/>
-                <TextBox x:Name="cashPriceBox_1" Grid.Row="1" Grid.Column="1" Height="24" Width="80" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="0" KeyDown="CashPriceBox_1_KeyDown" PreviewMouseLeftButtonUp="CashPriceBox_1_PreviewMouseLeftButtonUp"/>
-                <TextBox x:Name="cashPriceBox_2" Grid.Row="2" Grid.Column="1" Height="24" Width="80" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="0" KeyDown="CashPriceBox_2_KeyDown" PreviewMouseLeftButtonUp="CashPriceBox_2_PreviewMouseLeftButtonUp"/>
-                <TextBox x:Name="cashPriceBox_3" Grid.Row="3" Grid.Column="1" Height="24" Width="80" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="0" KeyDown="CashPriceBox_3_KeyDown" PreviewMouseLeftButtonUp="CashPriceBox_3_PreviewMouseLeftButtonUp"/>
-                <TextBox x:Name="cashPriceBox_4" Grid.Row="4" Grid.Column="1" Height="24" Width="80" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="0" KeyDown="CashPriceBox_4_KeyDown" PreviewMouseLeftButtonUp="CashPriceBox_4_PreviewMouseLeftButtonUp"/>
-                <TextBox x:Name="cashPriceBox_5" Grid.Row="5" Grid.Column="1" Height="24" Width="80" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="0" KeyDown="CashPriceBox_5_KeyDown" PreviewMouseLeftButtonUp="CashPriceBox_5_PreviewMouseLeftButtonUp"/>
-                <TextBox x:Name="cashPriceBox_6" Grid.Row="6" Grid.Column="1" Height="24" Width="80" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="0" KeyDown="CashPriceBox_6_KeyDown" PreviewMouseLeftButtonUp="CashPriceBox_6_PreviewMouseLeftButtonUp"/>
-                <TextBox x:Name="cashPriceBox_7" Grid.Row="7" Grid.Column="1" Height="24" Width="80" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="0" KeyDown="CashPriceBox_7_KeyDown" PreviewMouseLeftButtonUp="CashPriceBox_7_PreviewMouseLeftButtonUp"/>
-                <TextBox x:Name="cashPriceBox_8" Grid.Row="8" Grid.Column="1" Height="24" Width="80" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="0" KeyDown="CashPriceBox_8_KeyDown" PreviewMouseLeftButtonUp="CashPriceBox_8_PreviewMouseLeftButtonUp"/>
-                <TextBox x:Name="cashPriceBox_9" Grid.Row="9" Grid.Column="1" Height="24" Width="80" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="0" KeyDown="CashPriceBox_9_KeyDown" PreviewMouseLeftButtonUp="CashPriceBox_9_PreviewMouseLeftButtonUp"/>
-                <ComboBox x:Name="cashTypeBox_0" Grid.Row="0" Grid.Column="2" Height="24" Width="55" Background="White" BorderBrush="#FFABADB3" SelectedIndex="0" SelectionChanged="CashTypeBox_0_SelectionChanged">
-                    <ComboBoxItem Content="지출" Background="White" />
-                    <ComboBoxItem Content="수입" Background="White" />
-                </ComboBox>
-                <ComboBox x:Name="cashTypeBox_1" Grid.Row="1" Grid.Column="2" Height="24" Width="55" Background="White" BorderBrush="#FFABADB3" SelectedIndex="0" SelectionChanged="CashTypeBox_1_SelectionChanged">
-                    <ComboBoxItem Content="지출" Background="White" />
-                    <ComboBoxItem Content="수입" Background="White" />
-                </ComboBox>
-                <ComboBox x:Name="cashTypeBox_2" Grid.Row="2" Grid.Column="2" Height="24" Width="55" Background="White" BorderBrush="#FFABADB3" SelectedIndex="0" SelectionChanged="CashTypeBox_2_SelectionChanged">
-                    <ComboBoxItem Content="지출" Background="White" />
-                    <ComboBoxItem Content="수입" Background="White" />
-                </ComboBox>
-                <ComboBox x:Name="cashTypeBox_3" Grid.Row="3" Grid.Column="2" Height="24" Width="55" Background="White" BorderBrush="#FFABADB3" SelectedIndex="0" SelectionChanged="CashTypeBox_3_SelectionChanged">
-                    <ComboBoxItem Content="지출" Background="White" />
-                    <ComboBoxItem Content="수입" Background="White" />
-                </ComboBox>
-                <ComboBox x:Name="cashTypeBox_4" Grid.Row="4" Grid.Column="2" Height="24" Width="55" Background="White" BorderBrush="#FFABADB3" SelectedIndex="0" SelectionChanged="CashTypeBox_4_SelectionChanged">
-                    <ComboBoxItem Content="지출" Background="White" />
-                    <ComboBoxItem Content="수입" Background="White" />
-                </ComboBox>
-                <ComboBox x:Name="cashTypeBox_5" Grid.Row="5" Grid.Column="2" Height="24" Width="55" Background="White" BorderBrush="#FFABADB3" SelectedIndex="0" SelectionChanged="CashTypeBox_5_SelectionChanged">
-                    <ComboBoxItem Content="지출" Background="White" />
-                    <ComboBoxItem Content="수입" Background="White" />
-                </ComboBox>
-                <ComboBox x:Name="cashTypeBox_6" Grid.Row="6" Grid.Column="2" Height="24" Width="55" Background="White" BorderBrush="#FFABADB3" SelectedIndex="0" SelectionChanged="CashTypeBox_6_SelectionChanged">
-                    <ComboBoxItem Content="지출" Background="White" />
-                    <ComboBoxItem Content="수입" Background="White" />
-                </ComboBox>
-                <ComboBox x:Name="cashTypeBox_7" Grid.Row="7" Grid.Column="2" Height="24" Width="55" Background="White" BorderBrush="#FFABADB3" SelectedIndex="0" SelectionChanged="CashTypeBox_7_SelectionChanged">
-                    <ComboBoxItem Content="지출" Background="White" />
-                    <ComboBoxItem Content="수입" Background="White" />
-                </ComboBox>
-                <ComboBox x:Name="cashTypeBox_8" Grid.Row="8" Grid.Column="2" Height="24" Width="55" Background="White" BorderBrush="#FFABADB3" SelectedIndex="0" SelectionChanged="CashTypeBox_8_SelectionChanged">
-                    <ComboBoxItem Content="지출" Background="White" />
-                    <ComboBoxItem Content="수입" Background="White" />
-                </ComboBox>
-                <ComboBox x:Name="cashTypeBox_9" Grid.Row="9" Grid.Column="2" Height="24" Width="55" Background="White" BorderBrush="#FFABADB3" SelectedIndex="0" SelectionChanged="CashTypeBox_9_SelectionChanged">
-                    <ComboBoxItem Content="지출" Background="White" />
-                    <ComboBoxItem Content="수입" Background="White" />
-                </ComboBox>
-
+                <TextBlock Grid.Row="0" Grid.Column="1" TextWrapping="Wrap" Text="1" VerticalAlignment="Center" Height="40" Width="15" FontSize="15" Foreground="Black" HorizontalAlignment="Center" Margin="0" Padding="1,9,0,0"/>
+                <TextBlock Grid.Row="1" Grid.Column="1" TextWrapping="Wrap" Text="2" VerticalAlignment="Center" Height="40" Width="15" FontSize="15" Foreground="Black" HorizontalAlignment="Center" Margin="0" Padding="1,9,0,0"/>
+                <TextBlock Grid.Row="2" Grid.Column="1" TextWrapping="Wrap" Text="3" VerticalAlignment="Center" Height="40" Width="15" FontSize="15" Foreground="Black" HorizontalAlignment="Center" Margin="0" Padding="1,9,0,0"/>
+                <TextBlock Grid.Row="3" Grid.Column="1" TextWrapping="Wrap" Text="4" VerticalAlignment="Center" Height="40" Width="15" FontSize="15" Foreground="Black" HorizontalAlignment="Center" Margin="0" Padding="1,9,0,0"/>
+                <TextBlock Grid.Row="4" Grid.Column="1" TextWrapping="Wrap" Text="5" VerticalAlignment="Center" Height="40" Width="15" FontSize="15" Foreground="Black" HorizontalAlignment="Center" Margin="0" Padding="1,9,0,0"/>
+                <TextBlock Grid.Row="5" Grid.Column="1" TextWrapping="Wrap" Text="6" VerticalAlignment="Center" Height="40" Width="15" FontSize="15" Foreground="Black" HorizontalAlignment="Center" Margin="0" Padding="1,9,0,0"/>
+                <TextBlock Grid.Row="6" Grid.Column="1" TextWrapping="Wrap" Text="7" VerticalAlignment="Center" Height="40" Width="15" FontSize="15" Foreground="Black" HorizontalAlignment="Center" Margin="0" Padding="1,9,0,0"/>
+                <TextBlock Grid.Row="7" Grid.Column="1" TextWrapping="Wrap" Text="8" VerticalAlignment="Center" Height="40" Width="15" FontSize="15" Foreground="Black" HorizontalAlignment="Center" Margin="0" Padding="1,9,0,0"/>
+                <TextBlock Grid.Row="8" Grid.Column="1" TextWrapping="Wrap" Text="9" VerticalAlignment="Center" Height="40" Width="15" FontSize="15" Foreground="Black" HorizontalAlignment="Center" Margin="0" Padding="1,9,0,0"/>
+                <TextBlock Grid.Row="9" Grid.Column="1" TextWrapping="Wrap" Text="10" VerticalAlignment="Center" Height="40" Width="15" FontSize="15" Foreground="Black" HorizontalAlignment="Center" Margin="0" Padding="1,9,0,0"/>
+                <TextBox x:Name="cashNameBox_0" Grid.Row="0" Grid.Column="2" Height="24" Width="430" VerticalContentAlignment="Center" KeyDown="CashNameBox_0_KeyDown" PreviewMouseLeftButtonUp="CashNameBox_0_PreviewMouseLeftButtonUp" />
+                <TextBox x:Name="cashNameBox_1" Grid.Row="1" Grid.Column="2" Height="24" Width="430" VerticalContentAlignment="Center" KeyDown="CashNameBox_1_KeyDown" PreviewMouseLeftButtonUp="CashNameBox_1_PreviewMouseLeftButtonUp" />
+                <TextBox x:Name="cashNameBox_2" Grid.Row="2" Grid.Column="2" Height="24" Width="430" VerticalContentAlignment="Center" KeyDown="CashNameBox_2_KeyDown" PreviewMouseLeftButtonUp="CashNameBox_2_PreviewMouseLeftButtonUp" />
+                <TextBox x:Name="cashNameBox_3" Grid.Row="3" Grid.Column="2" Height="24" Width="430" VerticalContentAlignment="Center" KeyDown="CashNameBox_3_KeyDown" PreviewMouseLeftButtonUp="CashNameBox_3_PreviewMouseLeftButtonUp" />
+                <TextBox x:Name="cashNameBox_4" Grid.Row="4" Grid.Column="2" Height="24" Width="430" VerticalContentAlignment="Center" KeyDown="CashNameBox_4_KeyDown" PreviewMouseLeftButtonUp="CashNameBox_4_PreviewMouseLeftButtonUp" />
+                <TextBox x:Name="cashNameBox_5" Grid.Row="5" Grid.Column="2" Height="24" Width="430" VerticalContentAlignment="Center" KeyDown="CashNameBox_5_KeyDown" PreviewMouseLeftButtonUp="CashNameBox_5_PreviewMouseLeftButtonUp" />
+                <TextBox x:Name="cashNameBox_6" Grid.Row="6" Grid.Column="2" Height="24" Width="430" VerticalContentAlignment="Center" KeyDown="CashNameBox_6_KeyDown" PreviewMouseLeftButtonUp="CashNameBox_6_PreviewMouseLeftButtonUp" />
+                <TextBox x:Name="cashNameBox_7" Grid.Row="7" Grid.Column="2" Height="24" Width="430" VerticalContentAlignment="Center" KeyDown="CashNameBox_7_KeyDown" PreviewMouseLeftButtonUp="CashNameBox_7_PreviewMouseLeftButtonUp" />
+                <TextBox x:Name="cashNameBox_8" Grid.Row="8" Grid.Column="2" Height="24" Width="430" VerticalContentAlignment="Center" KeyDown="CashNameBox_8_KeyDown" PreviewMouseLeftButtonUp="CashNameBox_8_PreviewMouseLeftButtonUp" />
+                <TextBox x:Name="cashNameBox_9" Grid.Row="9" Grid.Column="2" Height="24" Width="430" VerticalContentAlignment="Center" KeyDown="CashNameBox_9_KeyDown" PreviewMouseLeftButtonUp="CashNameBox_9_PreviewMouseLeftButtonUp" />
+                <TextBox x:Name="cashPriceBox_0" Grid.Row="0" Grid.Column="3" Height="24" Width="80" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="0" KeyDown="CashPriceBox_0_KeyDown" PreviewMouseLeftButtonUp="CashPriceBox_0_PreviewMouseLeftButtonUp"/>
+                <TextBox x:Name="cashPriceBox_1" Grid.Row="1" Grid.Column="3" Height="24" Width="80" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="0" KeyDown="CashPriceBox_1_KeyDown" PreviewMouseLeftButtonUp="CashPriceBox_1_PreviewMouseLeftButtonUp"/>
+                <TextBox x:Name="cashPriceBox_2" Grid.Row="2" Grid.Column="3" Height="24" Width="80" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="0" KeyDown="CashPriceBox_2_KeyDown" PreviewMouseLeftButtonUp="CashPriceBox_2_PreviewMouseLeftButtonUp"/>
+                <TextBox x:Name="cashPriceBox_3" Grid.Row="3" Grid.Column="3" Height="24" Width="80" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="0" KeyDown="CashPriceBox_3_KeyDown" PreviewMouseLeftButtonUp="CashPriceBox_3_PreviewMouseLeftButtonUp"/>
+                <TextBox x:Name="cashPriceBox_4" Grid.Row="4" Grid.Column="3" Height="24" Width="80" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="0" KeyDown="CashPriceBox_4_KeyDown" PreviewMouseLeftButtonUp="CashPriceBox_4_PreviewMouseLeftButtonUp"/>
+                <TextBox x:Name="cashPriceBox_5" Grid.Row="5" Grid.Column="3" Height="24" Width="80" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="0" KeyDown="CashPriceBox_5_KeyDown" PreviewMouseLeftButtonUp="CashPriceBox_5_PreviewMouseLeftButtonUp"/>
+                <TextBox x:Name="cashPriceBox_6" Grid.Row="6" Grid.Column="3" Height="24" Width="80" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="0" KeyDown="CashPriceBox_6_KeyDown" PreviewMouseLeftButtonUp="CashPriceBox_6_PreviewMouseLeftButtonUp"/>
+                <TextBox x:Name="cashPriceBox_7" Grid.Row="7" Grid.Column="3" Height="24" Width="80" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="0" KeyDown="CashPriceBox_7_KeyDown" PreviewMouseLeftButtonUp="CashPriceBox_7_PreviewMouseLeftButtonUp"/>
+                <TextBox x:Name="cashPriceBox_8" Grid.Row="8" Grid.Column="3" Height="24" Width="80" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="0" KeyDown="CashPriceBox_8_KeyDown" PreviewMouseLeftButtonUp="CashPriceBox_8_PreviewMouseLeftButtonUp"/>
+                <TextBox x:Name="cashPriceBox_9" Grid.Row="9" Grid.Column="3" Height="24" Width="80" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="0" KeyDown="CashPriceBox_9_KeyDown" PreviewMouseLeftButtonUp="CashPriceBox_9_PreviewMouseLeftButtonUp"/>
+                <CheckBox x:Name="cashExpenseBox_0" Content="지출" Grid.Row="0" Grid.Column="4" Margin="0" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="CashExpenseBox_0_Click"/>
+                <CheckBox x:Name="cashExpenseBox_1" Content="지출" Grid.Row="1" Grid.Column="4" Margin="0" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="CashExpenseBox_1_Click"/>
+                <CheckBox x:Name="cashExpenseBox_2" Content="지출" Grid.Row="2" Grid.Column="4" Margin="0" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="CashExpenseBox_2_Click"/>
+                <CheckBox x:Name="cashExpenseBox_3" Content="지출" Grid.Row="3" Grid.Column="4" Margin="0" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="CashExpenseBox_3_Click"/>
+                <CheckBox x:Name="cashExpenseBox_4" Content="지출" Grid.Row="4" Grid.Column="4" Margin="0" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="CashExpenseBox_4_Click"/>
+                <CheckBox x:Name="cashExpenseBox_5" Content="지출" Grid.Row="5" Grid.Column="4" Margin="0" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="CashExpenseBox_5_Click"/>
+                <CheckBox x:Name="cashExpenseBox_6" Content="지출" Grid.Row="6" Grid.Column="4" Margin="0" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="CashExpenseBox_6_Click"/>
+                <CheckBox x:Name="cashExpenseBox_7" Content="지출" Grid.Row="7" Grid.Column="4" Margin="0" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="CashExpenseBox_7_Click"/>
+                <CheckBox x:Name="cashExpenseBox_8" Content="지출" Grid.Row="8" Grid.Column="4" Margin="0" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="CashExpenseBox_8_Click"/>
+                <CheckBox x:Name="cashExpenseBox_9" Content="지출" Grid.Row="9" Grid.Column="4" Margin="0" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="CashExpenseBox_9_Click"/>
+                <CheckBox x:Name="cashIncomeBox_0" Content="수입" Grid.Row="0" Grid.Column="5" Margin="0" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="CashIncomeBox_0_Click"/>
+                <CheckBox x:Name="cashIncomeBox_1" Content="수입" Grid.Row="1" Grid.Column="5" Margin="0" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="CashIncomeBox_1_Click"/>
+                <CheckBox x:Name="cashIncomeBox_2" Content="수입" Grid.Row="2" Grid.Column="5" Margin="0" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="CashIncomeBox_2_Click"/>
+                <CheckBox x:Name="cashIncomeBox_3" Content="수입" Grid.Row="3" Grid.Column="5" Margin="0" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="CashIncomeBox_3_Click"/>
+                <CheckBox x:Name="cashIncomeBox_4" Content="수입" Grid.Row="4" Grid.Column="5" Margin="0" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="CashIncomeBox_4_Click"/>
+                <CheckBox x:Name="cashIncomeBox_5" Content="수입" Grid.Row="5" Grid.Column="5" Margin="0" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="CashIncomeBox_5_Click"/>
+                <CheckBox x:Name="cashIncomeBox_6" Content="수입" Grid.Row="6" Grid.Column="5" Margin="0" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="CashIncomeBox_6_Click"/>
+                <CheckBox x:Name="cashIncomeBox_7" Content="수입" Grid.Row="7" Grid.Column="5" Margin="0" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="CashIncomeBox_7_Click"/>
+                <CheckBox x:Name="cashIncomeBox_8" Content="수입" Grid.Row="8" Grid.Column="5" Margin="0" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="CashIncomeBox_8_Click"/>
+                <CheckBox x:Name="cashIncomeBox_9" Content="수입" Grid.Row="9" Grid.Column="5" Margin="0" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="CashIncomeBox_9_Click"/>
+                <Border Grid.Row="0" Grid.Column="0" BorderThickness="0 1" BorderBrush="#4CB8B8B8"/>
+                <Border Grid.Row="0" Grid.Column="1" BorderThickness="0 1" BorderBrush="#4CB8B8B8"/>
+                <Border Grid.Row="0" Grid.Column="2" BorderThickness="0 1" BorderBrush="#4CB8B8B8"/>
+                <Border Grid.Row="0" Grid.Column="3" BorderThickness="0 1" BorderBrush="#4CB8B8B8"/>
+                <Border Grid.Row="1" Grid.Column="0" BorderThickness="0 0 0 1" BorderBrush="#4CB8B8B8"/>
+                <Border Grid.Row="1" Grid.Column="1" BorderThickness="0 0 0 1" BorderBrush="#4CB8B8B8"/>
+                <Border Grid.Row="1" Grid.Column="2" BorderThickness="0 0 0 1" BorderBrush="#4CB8B8B8"/>
+                <Border Grid.Row="1" Grid.Column="3" BorderThickness="0 0 0 1" BorderBrush="#4CB8B8B8"/>
+                <Border Grid.Row="2" Grid.Column="0" BorderThickness="0 0 0 1" BorderBrush="#4CB8B8B8"/>
+                <Border Grid.Row="2" Grid.Column="1" BorderThickness="0 0 0 1" BorderBrush="#4CB8B8B8"/>
+                <Border Grid.Row="2" Grid.Column="2" BorderThickness="0 0 0 1" BorderBrush="#4CB8B8B8"/>
+                <Border Grid.Row="2" Grid.Column="3" BorderThickness="0 0 0 1" BorderBrush="#4CB8B8B8"/>
+                <Border Grid.Row="3" Grid.Column="0" BorderThickness="0 0 0 1" BorderBrush="#4CB8B8B8"/>
+                <Border Grid.Row="3" Grid.Column="1" BorderThickness="0 0 0 1" BorderBrush="#4CB8B8B8"/>
+                <Border Grid.Row="3" Grid.Column="2" BorderThickness="0 0 0 1" BorderBrush="#4CB8B8B8"/>
+                <Border Grid.Row="3" Grid.Column="3" BorderThickness="0 0 0 1" BorderBrush="#4CB8B8B8"/>
+                <Border Grid.Row="4" Grid.Column="0" BorderThickness="0 0 0 1" BorderBrush="#4CB8B8B8"/>
+                <Border Grid.Row="4" Grid.Column="1" BorderThickness="0 0 0 1" BorderBrush="#4CB8B8B8"/>
+                <Border Grid.Row="4" Grid.Column="2" BorderThickness="0 0 0 1" BorderBrush="#4CB8B8B8"/>
+                <Border Grid.Row="4" Grid.Column="3" BorderThickness="0 0 0 1" BorderBrush="#4CB8B8B8"/>
+                <Border Grid.Row="5" Grid.Column="0" BorderThickness="0 0 0 1" BorderBrush="#4CB8B8B8"/>
+                <Border Grid.Row="5" Grid.Column="1" BorderThickness="0 0 0 1" BorderBrush="#4CB8B8B8"/>
+                <Border Grid.Row="5" Grid.Column="2" BorderThickness="0 0 0 1" BorderBrush="#4CB8B8B8"/>
+                <Border Grid.Row="5" Grid.Column="3" BorderThickness="0 0 0 1" BorderBrush="#4CB8B8B8"/>
+                <Border Grid.Row="6" Grid.Column="0" BorderThickness="0 0 0 1" BorderBrush="#4CB8B8B8"/>
+                <Border Grid.Row="6" Grid.Column="1" BorderThickness="0 0 0 1" BorderBrush="#4CB8B8B8"/>
+                <Border Grid.Row="6" Grid.Column="2" BorderThickness="0 0 0 1" BorderBrush="#4CB8B8B8"/>
+                <Border Grid.Row="6" Grid.Column="3" BorderThickness="0 0 0 1" BorderBrush="#4CB8B8B8"/>
+                <Border Grid.Row="7" Grid.Column="0" BorderThickness="0 0 0 1" BorderBrush="#4CB8B8B8"/>
+                <Border Grid.Row="7" Grid.Column="1" BorderThickness="0 0 0 1" BorderBrush="#4CB8B8B8"/>
+                <Border Grid.Row="7" Grid.Column="2" BorderThickness="0 0 0 1" BorderBrush="#4CB8B8B8"/>
+                <Border Grid.Row="7" Grid.Column="3" BorderThickness="0 0 0 1" BorderBrush="#4CB8B8B8"/>
+                <Border Grid.Row="8" Grid.Column="0" BorderThickness="0 0 0 1" BorderBrush="#4CB8B8B8"/>
+                <Border Grid.Row="8" Grid.Column="1" BorderThickness="0 0 0 1" BorderBrush="#4CB8B8B8"/>
+                <Border Grid.Row="8" Grid.Column="2" BorderThickness="0 0 0 1" BorderBrush="#4CB8B8B8"/>
+                <Border Grid.Row="8" Grid.Column="3" BorderThickness="0 0 0 1" BorderBrush="#4CB8B8B8"/>
+                <Border Grid.Row="9" Grid.Column="0" BorderThickness="0 0 0 1" BorderBrush="#4CB8B8B8"/>
+                <Border Grid.Row="9" Grid.Column="1" BorderThickness="0 0 0 1" BorderBrush="#4CB8B8B8"/>
+                <Border Grid.Row="9" Grid.Column="2" BorderThickness="0 0 0 1" BorderBrush="#4CB8B8B8"/>
+                <Border Grid.Row="9" Grid.Column="3" BorderThickness="0 0 0 1" BorderBrush="#4CB8B8B8"/>
             </Grid>
 
 
             <!-- RESULT UI -->
 
-            <Rectangle Fill="#FF79CFD9" HorizontalAlignment="Left" Height="448" Margin="717,510,0,0" VerticalAlignment="Top" Width="220" Stroke="#FF5FACB4" StrokeThickness="2"/>
-            <Rectangle Fill="#4CF3F3F3" Height="1" Margin="719,537,25,0" VerticalAlignment="Top"/>
+            <Rectangle Fill="#FF25BFD1" HorizontalAlignment="Left" Height="480" Margin="717,510,0,0" VerticalAlignment="Top" Width="220" Stroke="#FF5FACB4" StrokeThickness="2"/>
+            <Rectangle Fill="#7FF7F7F7" Height="1" Margin="719,537,25,0" VerticalAlignment="Top"/>
             <TextBlock HorizontalAlignment="Left" Margin="729,549,0,0" TextWrapping="Wrap" Text="카운터 인수인계 금액" VerticalAlignment="Top" FontSize="14" Foreground="White"/>
             <TextBlock HorizontalAlignment="Left" Margin="729,514,0,0" TextWrapping="Wrap" Text="정산 내역" VerticalAlignment="Top" FontSize="15" Foreground="White"/>
-            <TextBox x:Name="originalPriceBox" HorizontalAlignment="Left" Height="24" Margin="729,575,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="191" Background="#FF79CFD9" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Text="0" KeyDown="originalPriceBox_KeyDown" Foreground="White" BorderBrush="#FF5FACB4"/>
-            <TextBlock x:Name="counter1_text2" HorizontalAlignment="Left" Margin="729,617,0,0" TextWrapping="Wrap" Text="금고" VerticalAlignment="Top" Height="20" Width="70" FontSize="14" Foreground="White"/>
-            <TextBlock x:Name="counter1_total_text2" HorizontalAlignment="Left" Margin="744,642,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="20" Width="176" FontSize="15" Foreground="White"/>
-            <TextBlock HorizontalAlignment="Left" Margin="729,642,0,0" TextWrapping="Wrap" Text="\" VerticalAlignment="Top" Height="20" Width="26" FontSize="15" Foreground="White"/>
-            <TextBlock x:Name="counter2_text2" HorizontalAlignment="Left" Margin="729,667,0,0" TextWrapping="Wrap" Text="금고" VerticalAlignment="Top" Height="20" Width="70" FontSize="14" Foreground="White"/>
-            <TextBlock x:Name="counter2_total_text2" HorizontalAlignment="Left" Margin="744,692,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="20" Width="176" FontSize="15" Foreground="White"/>
-            <TextBlock HorizontalAlignment="Left" Margin="729,692,0,0" TextWrapping="Wrap" Text="\" VerticalAlignment="Top" Height="20" Width="26" FontSize="15" Foreground="White"/>
-            <TextBlock x:Name="counter3_text2" HorizontalAlignment="Left" Margin="729,720,0,0" TextWrapping="Wrap" Text="금고" VerticalAlignment="Top" Height="20" Width="70" FontSize="14" Foreground="White"/>
-            <TextBlock x:Name="counter3_total_text2" HorizontalAlignment="Left" Margin="744,745,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="20" Width="176" FontSize="15" Foreground="White"/>
-            <TextBlock HorizontalAlignment="Left" Margin="729,745,0,0" TextWrapping="Wrap" Text="\" VerticalAlignment="Top" Height="20" Width="26" FontSize="15" Foreground="White"/>
-            <TextBlock x:Name="counter4_text2" HorizontalAlignment="Left" Margin="729,769,0,0" TextWrapping="Wrap" Text="금고" VerticalAlignment="Top" Height="20" Width="70" FontSize="14" Foreground="White"/>
-            <TextBlock x:Name="counter4_total_text2" HorizontalAlignment="Left" Margin="744,794,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="20" Width="176" FontSize="15" Foreground="White"/>
-            <TextBlock HorizontalAlignment="Left" Margin="729,794,0,0" TextWrapping="Wrap" Text="\" VerticalAlignment="Top" Height="20" Width="26" FontSize="15" Foreground="White"/>
-            <TextBlock HorizontalAlignment="Left" Margin="729,825,0,0" TextWrapping="Wrap" Text="현금 지출" VerticalAlignment="Top" Height="20" Width="70" FontSize="14" Foreground="White"/>
-            <TextBlock x:Name="cashExpenditure_total_text2" HorizontalAlignment="Left" Margin="744,850,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="20" Width="176" FontSize="15" Foreground="White"/>
-            <TextBlock HorizontalAlignment="Left" Margin="729,850,0,0" TextWrapping="Wrap" Text="\" VerticalAlignment="Top" Height="20" Width="26" FontSize="15" Foreground="White"/>
-            <Rectangle Fill="#4CF3F3F3" Height="1" Margin="728,876,36,0" VerticalAlignment="Top"/>
-            <Rectangle Fill="#4CF3F3F3" Height="1" Margin="728,820,36,0" VerticalAlignment="Top"/>
-            <Rectangle Fill="#4CF3F3F3" Height="1" Margin="728,608,36,0" VerticalAlignment="Top"/>
-            <TextBlock HorizontalAlignment="Left" Margin="760,884,0,0" TextWrapping="Wrap" Text="현금이 카운터에 비해" VerticalAlignment="Top" Height="20" Width="137" FontSize="14" Foreground="White"/>
-            <TextBlock x:Name="resultPrice_text" HorizontalAlignment="Left" Margin="744,907,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="20" Width="159" FontSize="15" Foreground="White" FontWeight="Bold"/>
-            <TextBlock x:Name="judge_text" HorizontalAlignment="Left" Margin="795,930,0,0" TextWrapping="Wrap" Text="모자랍니다." VerticalAlignment="Top" Height="20" Width="76" FontSize="14" Foreground="White"/>
-            <TextBlock HorizontalAlignment="Left" Margin="729,907,0,0" TextWrapping="Wrap" Text="\" VerticalAlignment="Top" Height="20" Width="26" FontSize="15" Foreground="White" FontWeight="Bold"/>
-            <TextBlock HorizontalAlignment="Left" Margin="31,988,0,0" TextWrapping="Wrap" Text="총액" VerticalAlignment="Top" Height="20" Width="43" FontSize="15" Foreground="Black"/>
+            <TextBox x:Name="originalPriceBox" HorizontalAlignment="Left" Height="24" Margin="729,575,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="191" Background="#FF25BFD1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Text="0" KeyDown="OriginalPriceBox_KeyDown" Foreground="White" BorderBrush="#FF0C8593" PreviewMouseLeftButtonUp="OriginalPriceBox_PreviewMouseLeftButtonUp"/>
+            <TextBlock x:Name="counter1_text2" HorizontalAlignment="Left" Margin="729,702,0,0" TextWrapping="Wrap" Text="금고" VerticalAlignment="Top" Height="20" Width="70" FontSize="14" Foreground="White"/>
+            <TextBlock x:Name="counter1_total_text2" HorizontalAlignment="Left" Margin="744,727,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="20" Width="75" FontSize="15" Foreground="White"/>
+            <TextBlock HorizontalAlignment="Left" Margin="729,727,0,0" TextWrapping="Wrap" Text="\" VerticalAlignment="Top" Height="20" Width="26" FontSize="15" Foreground="White"/>
+            <TextBlock x:Name="counter2_text2" HorizontalAlignment="Left" Margin="729,773,0,0" TextWrapping="Wrap" Text="금고" VerticalAlignment="Top" Height="20" Width="70" FontSize="14" Foreground="White"/>
+            <TextBlock x:Name="counter2_total_text2" HorizontalAlignment="Left" Margin="744,798,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="20" Width="75" FontSize="15" Foreground="White"/>
+            <TextBlock HorizontalAlignment="Left" Margin="729,798,0,0" TextWrapping="Wrap" Text="\" VerticalAlignment="Top" Height="20" Width="26" FontSize="15" Foreground="White"/>
+            <TextBlock x:Name="counter3_text2" HorizontalAlignment="Left" Margin="837,702,0,0" TextWrapping="Wrap" Text="금고" VerticalAlignment="Top" Height="20" Width="70" FontSize="14" Foreground="White"/>
+            <TextBlock x:Name="counter3_total_text2" HorizontalAlignment="Left" Margin="852,727,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="20" Width="75" FontSize="15" Foreground="White"/>
+            <TextBlock HorizontalAlignment="Left" Margin="837,727,0,0" TextWrapping="Wrap" Text="\" VerticalAlignment="Top" Height="20" Width="26" FontSize="15" Foreground="White"/>
+            <TextBlock x:Name="counter4_text2" HorizontalAlignment="Left" Margin="837,772,0,0" TextWrapping="Wrap" Text="금고" VerticalAlignment="Top" Height="20" Width="70" FontSize="14" Foreground="White"/>
+            <TextBlock x:Name="counter4_total_text2" HorizontalAlignment="Left" Margin="852,797,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="20" Width="75" FontSize="15" Foreground="White"/>
+            <TextBlock HorizontalAlignment="Left" Margin="837,797,0,0" TextWrapping="Wrap" Text="\" VerticalAlignment="Top" Height="20" Width="26" FontSize="15" Foreground="White"/>
+            <TextBlock HorizontalAlignment="Left" Margin="729,859,0,0" TextWrapping="Wrap" Text="현금 지출" VerticalAlignment="Top" Height="20" Width="70" FontSize="14" Foreground="White"/>
+            <TextBlock x:Name="cashExpenditure_total_text2" HorizontalAlignment="Left" Margin="744,884,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="20" Width="176" FontSize="15" Foreground="White"/>
+            <TextBlock HorizontalAlignment="Left" Margin="729,884,0,0" TextWrapping="Wrap" Text="\" VerticalAlignment="Top" Height="20" Width="26" FontSize="15" Foreground="White"/>
+            <Rectangle Fill="#7FF7F7F7" Height="1" Margin="728,910,36,0" VerticalAlignment="Top"/>
+            <Rectangle Fill="#7FF7F7F7" Height="1" Margin="728,854,36,0" VerticalAlignment="Top"/>
+            <Rectangle Fill="#7FF7F7F7" Height="1" Margin="728,608,36,0" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Left" Margin="760,918,0,0" TextWrapping="Wrap" Text="현금이 카운터에 비해" VerticalAlignment="Top" Height="20" Width="137" FontSize="14" Foreground="White"/>
+            <TextBlock x:Name="resultPrice_text" HorizontalAlignment="Left" Margin="744,941,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="20" Width="159" FontSize="15" Foreground="White" FontWeight="Bold"/>
+            <TextBlock x:Name="judge_text" HorizontalAlignment="Left" Margin="795,964,0,0" TextWrapping="Wrap" Text="모자랍니다." VerticalAlignment="Top" Height="20" Width="76" FontSize="14" Foreground="White"/>
+            <TextBlock HorizontalAlignment="Left" Margin="729,941,0,0" TextWrapping="Wrap" Text="\" VerticalAlignment="Top" Height="20" Width="26" FontSize="15" Foreground="White" FontWeight="Bold"/>
+            <TextBlock HorizontalAlignment="Left" Margin="31,990,0,0" TextWrapping="Wrap" Text="총액" VerticalAlignment="Top" Height="20" Width="43" FontSize="15" Foreground="Black"/>
 
-            <Button x:Name="allReset_btn" Content="전체 초기화" HorizontalAlignment="Left" Margin="867,965,0,0" VerticalAlignment="Top" Width="70" Height="55" RenderTransformOrigin="0.62,0.491" BorderBrush="#FFD65151" Background="#FFFD9191" BorderThickness="2" Foreground="White" Click="AllReset_btn_Click"/>
-            <Button x:Name="valueReset_btn" Content="값 초기화" HorizontalAlignment="Left" Margin="792,965,0,0" VerticalAlignment="Top" Width="65" Height="55" RenderTransformOrigin="0.62,0.491" BorderBrush="#FFD65151" Background="#FFFD9191" BorderThickness="2" Foreground="White" Click="ValueReset_btn_Click"/>
-            <Button x:Name="export_btn" Content="결과 출력" HorizontalAlignment="Left" Margin="717,965,0,0" VerticalAlignment="Top" Width="65" Height="55" RenderTransformOrigin="0.62,0.491" BorderBrush="#E5ABADB3" Background="#FF79CFD9" BorderThickness="2" Foreground="White" Click="Export_btn_Click"/>
+            <Button x:Name="allReset_btn" Content="전체 초기화" HorizontalAlignment="Left" Margin="867,995,0,0" VerticalAlignment="Top" Width="70" Height="25" RenderTransformOrigin="0.62,0.491" BorderBrush="#FFD65151" Background="#FFFD9191" BorderThickness="2" Foreground="White" Click="AllReset_btn_Click"/>
+            <Button x:Name="valueReset_btn" Content="값 초기화" HorizontalAlignment="Left" Margin="792,995,0,0" VerticalAlignment="Top" Width="65" Height="25" RenderTransformOrigin="0.62,0.491" BorderBrush="#FFD65151" Background="#FFFD9191" BorderThickness="2" Foreground="White" Click="ValueReset_btn_Click"/>
+            <Button x:Name="export_btn" Content="결과 출력" HorizontalAlignment="Left" Margin="717,995,0,0" VerticalAlignment="Top" Width="65" Height="25" RenderTransformOrigin="0.62,0.491" BorderBrush="#E5ABADB3" Background="#FF79CFD9" BorderThickness="2" Foreground="White" Click="Export_btn_Click"/>
+            <TextBlock HorizontalAlignment="Left" Margin="729,616,0,0" TextWrapping="Wrap" Text="카드전표 금액" VerticalAlignment="Top" FontSize="14" Foreground="White"/>
+            <TextBox x:Name="cardPriceBox" HorizontalAlignment="Left" Height="24" Margin="729,644,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="191" Background="#FF25BFD1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Text="0" KeyDown="CardPriceBox_KeyDown" Foreground="White" BorderBrush="#FF0C8593" PreviewMouseLeftButtonUp="CardPriceBox_PreviewMouseLeftButtonUp"/>
+            <Rectangle Fill="#7FF7F7F7" Height="1" Margin="728,675,36,0" VerticalAlignment="Top"/>
 
 
 
