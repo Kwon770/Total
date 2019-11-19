@@ -19,7 +19,6 @@ namespace Total
         Expenditure expenditure = new Expenditure();
 
         Step1 Step1 = new Step1();
-        Step2 Step2 = new Step2();
 
         bool init = false;
 
@@ -29,7 +28,7 @@ namespace Total
 
             InitializeComponent();
 
-            //Load_data();
+            Load_data();
             //Save_countersData();
             //Save_expenditureData();
 

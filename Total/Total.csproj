@@ -68,7 +68,6 @@
       <DependentUpon>HelpWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Step1.cs" />
-    <Compile Include="Step2.cs" />
     <Page Include="ExportSettingWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
