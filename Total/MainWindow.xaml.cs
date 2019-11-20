@@ -103,7 +103,12 @@ namespace Total
             return price.Replace(",", "");
         }
 
-        
+        private void TextBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            Refresh_ui();
+        }
+
+
         /// COUNTER
         /// METHOD
 
@@ -1595,6 +1600,7 @@ namespace Total
 
 
 
+
         /// COUNTER 3
 
         private void counter3_amountBox_100000_KeyDown(object sender, KeyEventArgs e)
@@ -2236,7 +2242,8 @@ namespace Total
         {
             counter3_priceBox_10.SelectAll();
         }
-        
+
+
 
 
         /// COUNTER 4
