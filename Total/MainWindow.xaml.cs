@@ -40,8 +40,7 @@ namespace Total
         }
 
 
-        /// 
-
+        /// METHOD
 
         private void Save_countersData()
         {
@@ -103,9 +102,16 @@ namespace Total
             return price.Replace(",", "");
         }
 
+        /// EVENT
+
         private void TextBox_LostFocus(object sender, RoutedEventArgs e)
         {
             Refresh_ui();
+        }
+
+        private void TextBox_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            ((TextBox)sender).SelectAll();
         }
 
 
@@ -587,51 +593,6 @@ namespace Total
             }
         }
 
-        private void Counter1_amountBox_100000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter1_amountBox_100000.SelectAll();
-        }
-
-        private void Counter1_amountBox_50000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter1_amountBox_50000.SelectAll();
-        }
-
-        private void Counter1_amountBox_10000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter1_amountBox_10000.SelectAll();
-        }
-
-        private void Counter1_amountBox_5000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter1_amountBox_5000.SelectAll();
-        }
-
-        private void Counter1_amountBox_1000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter1_amountBox_1000.SelectAll();
-        }
-
-        private void Counter1_amountBox_500_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter1_amountBox_500.SelectAll();
-        }
-
-        private void Counter1_amountBox_100_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter1_amountBox_100.SelectAll();
-        }
-
-        private void Counter1_amountBox_50_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter1_amountBox_50.SelectAll();
-        }
-
-        private void Counter1_amountBox_10_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter1_amountBox_10.SelectAll();
-        }
-
         private void counter1_priceBox_100000_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Return)
@@ -905,51 +866,6 @@ namespace Total
                 // Get and Set total price
                 Update_counter_total_textBlocks(0);
             }
-        }
-
-        private void Counter1_priceBox_100000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter1_priceBox_100000.SelectAll();
-        }
-
-        private void Counter1_priceBox_50000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter1_priceBox_50000.SelectAll();
-        }
-
-        private void Counter1_priceBox_10000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter1_priceBox_10000.SelectAll();
-        }
-
-        private void Counter1_priceBox_5000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter1_priceBox_5000.SelectAll();
-        }
-
-        private void Counter1_priceBox_1000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter1_priceBox_1000.SelectAll();
-        }
-
-        private void Counter1_priceBox_500_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter1_priceBox_500.SelectAll();
-        }
-
-        private void Counter1_priceBox_100_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter1_priceBox_100.SelectAll();
-        }
-
-        private void Counter1_priceBox_50_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter1_priceBox_50.SelectAll();
-        }
-
-        private void Counter1_priceBox_10_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter1_priceBox_10.SelectAll();
         }
 
 
@@ -1233,51 +1149,6 @@ namespace Total
             }
         }
 
-        private void Counter2_amountBox_100000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter2_amountBox_100000.SelectAll();
-        }
-
-        private void Counter2_amountBox_50000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter2_amountBox_50000.SelectAll();
-        }
-
-        private void Counter2_amountBox_10000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter2_amountBox_10000.SelectAll();
-        }
-
-        private void Counter2_amountBox_5000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter2_amountBox_5000.SelectAll();
-        }
-
-        private void Counter2_amountBox_1000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter2_amountBox_1000.SelectAll();
-        }
-
-        private void Counter2_amountBox_500_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter2_amountBox_500.SelectAll();
-        }
-
-        private void Counter2_amountBox_100_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter2_amountBox_100.SelectAll();
-        }
-
-        private void Counter2_amountBox_50_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter2_amountBox_50.SelectAll();
-        }
-
-        private void Counter2_amountBox_10_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter2_amountBox_10.SelectAll();
-        }
-
         private void counter2_priceBox_100000_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Return)
@@ -1551,51 +1422,6 @@ namespace Total
                 // Get and Set total price
                 Update_counter_total_textBlocks(1);
             }
-        }
-
-        private void Counter2_priceBox_100000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter2_priceBox_100000.SelectAll();
-        }
-
-        private void Counter2_priceBox_50000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter2_priceBox_50000.SelectAll();
-        }
-
-        private void Counter2_priceBox_10000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter2_priceBox_10000.SelectAll();
-        }
-
-        private void Counter2_priceBox_5000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter2_priceBox_5000.SelectAll();
-        }
-
-        private void Counter2_priceBox_1000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter2_priceBox_1000.SelectAll();
-        }
-
-        private void Counter2_priceBox_500_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter2_priceBox_500.SelectAll();
-        }
-
-        private void Counter2_priceBox_100_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter2_priceBox_100.SelectAll();
-        }
-
-        private void Counter2_priceBox_50_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter2_priceBox_50.SelectAll();
-        }
-
-        private void Counter2_priceBox_10_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter2_priceBox_10.SelectAll();
         }
 
 
@@ -1878,51 +1704,6 @@ namespace Total
             }
         }
 
-        private void Counter3_amountBox_100000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter3_amountBox_100000.SelectAll();
-        }
-
-        private void Counter3_amountBox_50000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter3_amountBox_50000.SelectAll();
-        }
-
-        private void Counter3_amountBox_10000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter3_amountBox_10000.SelectAll();
-        }
-
-        private void Counter3_amountBox_5000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter3_amountBox_5000.SelectAll();
-        }
-
-        private void Counter3_amountBox_1000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter3_amountBox_1000.SelectAll();
-        }
-
-        private void Counter3_amountBox_500_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter3_amountBox_500.SelectAll();
-        }
-
-        private void Counter3_amountBox_100_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter3_amountBox_100.SelectAll();
-        }
-
-        private void Counter3_amountBox_50_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter3_amountBox_50.SelectAll();
-        }
-
-        private void Counter3_amountBox_10_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter3_amountBox_10.SelectAll();
-        }
-
         private void counter3_priceBox_100000_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Return)
@@ -2196,51 +1977,6 @@ namespace Total
                 // Get and Set total price
                 Update_counter_total_textBlocks(2);
             }
-        }
-
-        private void Counter3_priceBox_100000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter3_priceBox_100000.SelectAll();
-        }
-
-        private void Counter3_priceBox_50000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter3_priceBox_50000.SelectAll();
-        }
-
-        private void Counter3_priceBox_10000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter3_priceBox_10000.SelectAll();
-        }
-
-        private void Counter3_priceBox_5000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter3_priceBox_5000.SelectAll();
-        }
-
-        private void Counter3_priceBox_1000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter3_priceBox_1000.SelectAll();
-        }
-
-        private void Counter3_priceBox_500_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter3_priceBox_500.SelectAll();
-        }
-
-        private void Counter3_priceBox_100_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter3_priceBox_100.SelectAll();
-        }
-
-        private void Counter3_priceBox_50_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter3_priceBox_50.SelectAll();
-        }
-
-        private void Counter3_priceBox_10_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter3_priceBox_10.SelectAll();
         }
 
 
@@ -2523,51 +2259,6 @@ namespace Total
             }
         }
 
-        private void Counter4_amountBox_100000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter4_amountBox_100000.SelectAll();
-        }
-
-        private void Counter4_amountBox_50000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter4_amountBox_50000.SelectAll();
-        }
-
-        private void Counter4_amountBox_10000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter4_amountBox_10000.SelectAll();
-        }
-
-        private void Counter4_amountBox_5000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter4_amountBox_5000.SelectAll();
-        }
-
-        private void Counter4_amountBox_1000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter4_amountBox_1000.SelectAll();
-        }
-
-        private void Counter4_amountBox_500_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter4_amountBox_500.SelectAll();
-        }
-
-        private void Counter4_amountBox_100_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter4_amountBox_100.SelectAll();
-        }
-
-        private void Counter4_amountBox_50_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter4_amountBox_50.SelectAll();
-        }
-
-        private void Counter4_amountBox_10_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter4_amountBox_10.SelectAll();
-        }
-
         private void counter4_priceBox_100000_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Return)
@@ -2844,51 +2535,6 @@ namespace Total
             }
         }
 
-        private void Counter4_priceBox_100000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter4_priceBox_100000.SelectAll();
-        }
-
-        private void Counter4_priceBox_50000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter4_priceBox_50000.SelectAll();
-        }
-
-        private void Counter4_priceBox_10000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter4_priceBox_10000.SelectAll();
-        }
-
-        private void Counter4_priceBox_5000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter4_priceBox_5000.SelectAll();
-        }
-
-        private void Counter4_priceBox_1000_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter4_priceBox_1000.SelectAll();
-        }
-
-        private void Counter4_priceBox_500_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter4_priceBox_500.SelectAll();
-        }
-
-        private void Counter4_priceBox_100_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter4_priceBox_100.SelectAll();
-        }
-
-        private void Counter4_priceBox_50_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter4_priceBox_50.SelectAll();
-        }
-
-        private void Counter4_priceBox_10_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            counter4_priceBox_10.SelectAll();
-        }
-
 
 
         /// CASH EXPENDITURE
@@ -3084,56 +2730,6 @@ namespace Total
 
                 Save_expenditureData();
             }
-        }
-
-        private void CashNameBox_0_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            cashNameBox_0.SelectAll();
-        }
-
-        private void CashNameBox_1_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            cashNameBox_1.SelectAll();
-        }
-
-        private void CashNameBox_2_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            cashNameBox_2.SelectAll();
-        }
-
-        private void CashNameBox_3_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            cashNameBox_3.SelectAll();
-        }
-
-        private void CashNameBox_4_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            cashNameBox_4.SelectAll();
-        }
-
-        private void CashNameBox_5_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            cashNameBox_5.SelectAll();
-        }
-
-        private void CashNameBox_6_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            cashNameBox_6.SelectAll();
-        }
-
-        private void CashNameBox_7_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            cashNameBox_7.SelectAll();
-        }
-
-        private void CashNameBox_8_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            cashNameBox_8.SelectAll();
-        }
-
-        private void CashNameBox_9_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            cashNameBox_9.SelectAll();
         }
 
         private void CashPriceBox_0_KeyDown(object sender, KeyEventArgs e)
@@ -3393,56 +2989,6 @@ namespace Total
 
                 Save_expenditureData();
             }
-        }
-
-        private void CashPriceBox_0_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            cashPriceBox_0.SelectAll();
-        }
-
-        private void CashPriceBox_1_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            cashPriceBox_1.SelectAll();
-        }
-
-        private void CashPriceBox_2_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            cashPriceBox_2.SelectAll();
-        }
-
-        private void CashPriceBox_3_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            cashPriceBox_3.SelectAll();
-        }
-
-        private void CashPriceBox_4_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            cashPriceBox_4.SelectAll();
-        }
-
-        private void CashPriceBox_5_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            cashPriceBox_5.SelectAll();
-        }
-
-        private void CashPriceBox_6_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            cashPriceBox_6.SelectAll();
-        }
-
-        private void CashPriceBox_7_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            cashPriceBox_7.SelectAll();
-        }
-
-        private void CashPriceBox_8_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            cashPriceBox_8.SelectAll();
-        }
-
-        private void CashPriceBox_9_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            cashPriceBox_9.SelectAll();
         }
 
         private void CashExpenseBox_0_Click(object sender, RoutedEventArgs e)
@@ -3939,16 +3485,6 @@ namespace Total
             }
         }
 
-        private void OriginalPriceBox_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            originalPriceBox.SelectAll();
-        }
-
-        private void CardPriceBox_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            cardPriceBox.SelectAll();
-        }
-
         private void ValueReset_btn_Click(object sender, RoutedEventArgs e)
         {
             // Confirm whether to initalize
@@ -4025,22 +3561,6 @@ namespace Total
             programGrid.Opacity = transparent_slider.Value;
         }
 
-        private void Help_panel_MouseEnter(object sender, MouseEventArgs e)
-        {
-            help_panel.Fill = new SolidColorBrush(Color.FromRgb(222, 222, 222));
-        }
-
-        private void Help_panel_MouseLeave(object sender, MouseEventArgs e)
-        {
-            help_panel.Fill = new SolidColorBrush(Colors.White);
-        }
-
-        private void Help_panel_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            HelpWindow helpWindow = new HelpWindow();
-            helpWindow.Show();
-        }
-
         private void Help_btn_MouseEnter(object sender, MouseEventArgs e)
         {
             help_panel.Fill = new SolidColorBrush(Color.FromRgb(222, 222, 222));
@@ -4057,22 +3577,6 @@ namespace Total
             helpWindow.Show();
         }
 
-
-        private void Minimize_panel_MouseEnter(object sender, MouseEventArgs e)
-        {
-            minimize_panel.Fill = new SolidColorBrush(Color.FromRgb(222, 222, 222));
-        }
-
-        private void Minimize_panel_MouseLeave(object sender, MouseEventArgs e)
-        {
-            minimize_panel.Fill = new SolidColorBrush(Colors.White);
-        }
-
-        private void Minimize_panel_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            WindowState = WindowState.Minimized;
-        }
-
         private void Minimize_btn_MouseEnter(object sender, MouseEventArgs e)
         {
             minimize_panel.Fill = new SolidColorBrush(Color.FromRgb(222, 222, 222));
@@ -4086,41 +3590,6 @@ namespace Total
         private void Minimize_btn_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             WindowState = WindowState.Minimized;
-        }
-
-        private void Close_panel1_MouseEnter(object sender, MouseEventArgs e)
-        {
-            Enter_closePanel();
-        }
-
-        private void Close_panel1_MouseLeave(object sender, MouseEventArgs e)
-        {
-            Leave_closePanel();
-        }
-
-        private void Close_panel1_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            System.Windows.Application.Current.Shutdown(110);
-        }
-
-        private void Close_panel2_MouseEnter(object sender, MouseEventArgs e)
-        {
-            Enter_closePanel();
-        }
-
-        private void Close_panel2_MouseLeave(object sender, MouseEventArgs e)
-        {
-            Leave_closePanel();
-        }
-
-        private void Close_panel3_MouseEnter(object sender, MouseEventArgs e)
-        {
-            Enter_closePanel();
-        }
-
-        private void Close_panel3_MouseLeave(object sender, MouseEventArgs e)
-        {
-            Leave_closePanel();
         }
 
         private void Close_btn_MouseEnter(object sender, MouseEventArgs e)
