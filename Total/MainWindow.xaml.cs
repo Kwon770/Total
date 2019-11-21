@@ -3032,6 +3032,8 @@ namespace Total
 
             Update_cash_total_textBlocks();
 
+            Update_result();
+
             Save_expenditureData();
         }
 
@@ -3052,6 +3054,8 @@ namespace Total
             }
 
             Update_cash_total_textBlocks();
+
+            Update_result();
 
             Save_expenditureData();
         }
@@ -3074,6 +3078,8 @@ namespace Total
 
             Update_cash_total_textBlocks();
 
+            Update_result();
+
             Save_expenditureData();
         }
 
@@ -3094,6 +3100,8 @@ namespace Total
             }
 
             Update_cash_total_textBlocks();
+
+            Update_result();
 
             Save_expenditureData();
         }
@@ -3116,6 +3124,8 @@ namespace Total
 
             Update_cash_total_textBlocks();
 
+            Update_result();
+
             Save_expenditureData();
         }
 
@@ -3136,6 +3146,8 @@ namespace Total
             }
 
             Update_cash_total_textBlocks();
+
+            Update_result();
 
             Save_expenditureData();
         }
@@ -3158,6 +3170,8 @@ namespace Total
 
             Update_cash_total_textBlocks();
 
+            Update_result();
+
             Save_expenditureData();
         }
 
@@ -3178,6 +3192,8 @@ namespace Total
             }
 
             Update_cash_total_textBlocks();
+
+            Update_result();
 
             Save_expenditureData();
         }
@@ -3200,6 +3216,8 @@ namespace Total
 
             Update_cash_total_textBlocks();
 
+            Update_result();
+
             Save_expenditureData();
         }
 
@@ -3220,6 +3238,8 @@ namespace Total
             }
 
             Update_cash_total_textBlocks();
+
+            Update_result();
 
             Save_expenditureData();
         }
@@ -3242,6 +3262,8 @@ namespace Total
 
             Update_cash_total_textBlocks();
 
+            Update_result();
+
             Save_expenditureData();
         }
 
@@ -3262,6 +3284,8 @@ namespace Total
             }
 
             Update_cash_total_textBlocks();
+
+            Update_result();
 
             Save_expenditureData();
         }
@@ -3284,6 +3308,8 @@ namespace Total
 
             Update_cash_total_textBlocks();
 
+            Update_result();
+
             Save_expenditureData();
         }
 
@@ -3304,6 +3330,8 @@ namespace Total
             }
 
             Update_cash_total_textBlocks();
+
+            Update_result();
 
             Save_expenditureData();
         }
@@ -3326,6 +3354,8 @@ namespace Total
 
             Update_cash_total_textBlocks();
 
+            Update_result();
+
             Save_expenditureData();
         }
 
@@ -3346,6 +3376,8 @@ namespace Total
             }
 
             Update_cash_total_textBlocks();
+
+            Update_result();
 
             Save_expenditureData();
         }
@@ -3368,6 +3400,8 @@ namespace Total
 
             Update_cash_total_textBlocks();
 
+            Update_result();
+
             Save_expenditureData();
         }
 
@@ -3389,6 +3423,8 @@ namespace Total
 
             Update_cash_total_textBlocks();
 
+            Update_result();
+
             Save_expenditureData();
         }
 
@@ -3409,6 +3445,8 @@ namespace Total
             }
 
             Update_cash_total_textBlocks();
+
+            Update_result();
 
             Save_expenditureData();
         }

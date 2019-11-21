@@ -253,8 +253,8 @@
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="1"/>
-                    <ColumnDefinition Width="19"/>
-                    <ColumnDefinition Width="430"/>
+                    <ColumnDefinition Width="29"/>
+                    <ColumnDefinition Width="420"/>
                     <ColumnDefinition Width="100"/>
                     <ColumnDefinition Width="65"/>
                     <ColumnDefinition Width="65"/>
@@ -269,16 +269,16 @@
                 <TextBlock Grid.Row="7" Grid.Column="1" TextWrapping="Wrap" Text="8" VerticalAlignment="Center" Height="40" Width="15" FontSize="15" Foreground="Black" HorizontalAlignment="Center" Margin="0" Padding="1,9,0,0"/>
                 <TextBlock Grid.Row="8" Grid.Column="1" TextWrapping="Wrap" Text="9" VerticalAlignment="Center" Height="40" Width="15" FontSize="15" Foreground="Black" HorizontalAlignment="Center" Margin="0" Padding="1,9,0,0"/>
                 <TextBlock Grid.Row="9" Grid.Column="1" TextWrapping="Wrap" Text="10" VerticalAlignment="Center" Height="40" Width="17" FontSize="14" Foreground="Black" HorizontalAlignment="Center" Margin="0" Padding="1,9,0,0"/>
-                <TextBox x:Name="cashNameBox_0" Grid.Row="0" Grid.Column="2" Height="24" Width="430" VerticalContentAlignment="Center" KeyDown="CashNameBox_0_KeyDown" PreviewMouseLeftButtonUp="TextBox_PreviewMouseLeftButtonUp" LostFocus="TextBox_LostFocus"/>
-                <TextBox x:Name="cashNameBox_1" Grid.Row="1" Grid.Column="2" Height="24" Width="430" VerticalContentAlignment="Center" KeyDown="CashNameBox_1_KeyDown" PreviewMouseLeftButtonUp="TextBox_PreviewMouseLeftButtonUp" LostFocus="TextBox_LostFocus"/>
-                <TextBox x:Name="cashNameBox_2" Grid.Row="2" Grid.Column="2" Height="24" Width="430" VerticalContentAlignment="Center" KeyDown="CashNameBox_2_KeyDown" PreviewMouseLeftButtonUp="TextBox_PreviewMouseLeftButtonUp" LostFocus="TextBox_LostFocus"/>
-                <TextBox x:Name="cashNameBox_3" Grid.Row="3" Grid.Column="2" Height="24" Width="430" VerticalContentAlignment="Center" KeyDown="CashNameBox_3_KeyDown" PreviewMouseLeftButtonUp="TextBox_PreviewMouseLeftButtonUp" LostFocus="TextBox_LostFocus"/>
-                <TextBox x:Name="cashNameBox_4" Grid.Row="4" Grid.Column="2" Height="24" Width="430" VerticalContentAlignment="Center" KeyDown="CashNameBox_4_KeyDown" PreviewMouseLeftButtonUp="TextBox_PreviewMouseLeftButtonUp" LostFocus="TextBox_LostFocus"/>
-                <TextBox x:Name="cashNameBox_5" Grid.Row="5" Grid.Column="2" Height="24" Width="430" VerticalContentAlignment="Center" KeyDown="CashNameBox_5_KeyDown" PreviewMouseLeftButtonUp="TextBox_PreviewMouseLeftButtonUp" LostFocus="TextBox_LostFocus"/>
-                <TextBox x:Name="cashNameBox_6" Grid.Row="6" Grid.Column="2" Height="24" Width="430" VerticalContentAlignment="Center" KeyDown="CashNameBox_6_KeyDown" PreviewMouseLeftButtonUp="TextBox_PreviewMouseLeftButtonUp" LostFocus="TextBox_LostFocus"/>
-                <TextBox x:Name="cashNameBox_7" Grid.Row="7" Grid.Column="2" Height="24" Width="430" VerticalContentAlignment="Center" KeyDown="CashNameBox_7_KeyDown" PreviewMouseLeftButtonUp="TextBox_PreviewMouseLeftButtonUp" LostFocus="TextBox_LostFocus"/>
-                <TextBox x:Name="cashNameBox_8" Grid.Row="8" Grid.Column="2" Height="24" Width="430" VerticalContentAlignment="Center" KeyDown="CashNameBox_8_KeyDown" PreviewMouseLeftButtonUp="TextBox_PreviewMouseLeftButtonUp" LostFocus="TextBox_LostFocus"/>
-                <TextBox x:Name="cashNameBox_9" Grid.Row="9" Grid.Column="2" Height="24" Width="430" VerticalContentAlignment="Center" KeyDown="CashNameBox_9_KeyDown" PreviewMouseLeftButtonUp="TextBox_PreviewMouseLeftButtonUp" LostFocus="TextBox_LostFocus"/>
+                <TextBox x:Name="cashNameBox_0" Grid.Row="0" Grid.Column="2" Height="24" Width="400" VerticalContentAlignment="Center" KeyDown="CashNameBox_0_KeyDown" PreviewMouseLeftButtonUp="TextBox_PreviewMouseLeftButtonUp" LostFocus="TextBox_LostFocus"/>
+                <TextBox x:Name="cashNameBox_1" Grid.Row="1" Grid.Column="2" Height="24" Width="400" VerticalContentAlignment="Center" KeyDown="CashNameBox_1_KeyDown" PreviewMouseLeftButtonUp="TextBox_PreviewMouseLeftButtonUp" LostFocus="TextBox_LostFocus"/>
+                <TextBox x:Name="cashNameBox_2" Grid.Row="2" Grid.Column="2" Height="24" Width="400" VerticalContentAlignment="Center" KeyDown="CashNameBox_2_KeyDown" PreviewMouseLeftButtonUp="TextBox_PreviewMouseLeftButtonUp" LostFocus="TextBox_LostFocus"/>
+                <TextBox x:Name="cashNameBox_3" Grid.Row="3" Grid.Column="2" Height="24" Width="400" VerticalContentAlignment="Center" KeyDown="CashNameBox_3_KeyDown" PreviewMouseLeftButtonUp="TextBox_PreviewMouseLeftButtonUp" LostFocus="TextBox_LostFocus"/>
+                <TextBox x:Name="cashNameBox_4" Grid.Row="4" Grid.Column="2" Height="24" Width="400" VerticalContentAlignment="Center" KeyDown="CashNameBox_4_KeyDown" PreviewMouseLeftButtonUp="TextBox_PreviewMouseLeftButtonUp" LostFocus="TextBox_LostFocus"/>
+                <TextBox x:Name="cashNameBox_5" Grid.Row="5" Grid.Column="2" Height="24" Width="400" VerticalContentAlignment="Center" KeyDown="CashNameBox_5_KeyDown" PreviewMouseLeftButtonUp="TextBox_PreviewMouseLeftButtonUp" LostFocus="TextBox_LostFocus"/>
+                <TextBox x:Name="cashNameBox_6" Grid.Row="6" Grid.Column="2" Height="24" Width="400" VerticalContentAlignment="Center" KeyDown="CashNameBox_6_KeyDown" PreviewMouseLeftButtonUp="TextBox_PreviewMouseLeftButtonUp" LostFocus="TextBox_LostFocus"/>
+                <TextBox x:Name="cashNameBox_7" Grid.Row="7" Grid.Column="2" Height="24" Width="400" VerticalContentAlignment="Center" KeyDown="CashNameBox_7_KeyDown" PreviewMouseLeftButtonUp="TextBox_PreviewMouseLeftButtonUp" LostFocus="TextBox_LostFocus"/>
+                <TextBox x:Name="cashNameBox_8" Grid.Row="8" Grid.Column="2" Height="24" Width="400" VerticalContentAlignment="Center" KeyDown="CashNameBox_8_KeyDown" PreviewMouseLeftButtonUp="TextBox_PreviewMouseLeftButtonUp" LostFocus="TextBox_LostFocus"/>
+                <TextBox x:Name="cashNameBox_9" Grid.Row="9" Grid.Column="2" Height="24" Width="400" VerticalContentAlignment="Center" KeyDown="CashNameBox_9_KeyDown" PreviewMouseLeftButtonUp="TextBox_PreviewMouseLeftButtonUp" LostFocus="TextBox_LostFocus"/>
                 <TextBox x:Name="cashPriceBox_0" Grid.Row="0" Grid.Column="3" Height="24" Width="80" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="0" KeyDown="CashPriceBox_0_KeyDown" PreviewMouseLeftButtonUp="TextBox_PreviewMouseLeftButtonUp" LostFocus="TextBox_LostFocus"/>
                 <TextBox x:Name="cashPriceBox_1" Grid.Row="1" Grid.Column="3" Height="24" Width="80" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="0" KeyDown="CashPriceBox_1_KeyDown" PreviewMouseLeftButtonUp="TextBox_PreviewMouseLeftButtonUp" LostFocus="TextBox_LostFocus"/>
                 <TextBox x:Name="cashPriceBox_2" Grid.Row="2" Grid.Column="3" Height="24" Width="80" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="0" KeyDown="CashPriceBox_2_KeyDown" PreviewMouseLeftButtonUp="TextBox_PreviewMouseLeftButtonUp" LostFocus="TextBox_LostFocus"/>
