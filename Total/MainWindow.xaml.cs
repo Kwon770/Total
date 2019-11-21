@@ -2572,24 +2572,74 @@ namespace Total
 
             if (expenditure.Load_type(0) == true) cashIncomeBox_0.IsChecked = true;
             else if (expenditure.Load_type(0) == false) cashExpenseBox_0.IsChecked = true;
+            else
+            {
+                cashIncomeBox_0.IsChecked = false;
+                cashExpenseBox_0.IsChecked = false;
+            }
             if (expenditure.Load_type(1) == true) cashIncomeBox_1.IsChecked = true;
             else if (expenditure.Load_type(1) == false) cashExpenseBox_1.IsChecked = true;
+            else
+            {
+                cashIncomeBox_1.IsChecked = false;
+                cashExpenseBox_1.IsChecked = false;
+            }
             if (expenditure.Load_type(2) == true) cashIncomeBox_2.IsChecked = true;
             else if (expenditure.Load_type(2) == false) cashExpenseBox_2.IsChecked = true;
+            else
+            {
+                cashIncomeBox_2.IsChecked = false;
+                cashExpenseBox_2.IsChecked = false;
+            }
             if (expenditure.Load_type(3) == true) cashIncomeBox_3.IsChecked = true;
             else if (expenditure.Load_type(3) == false) cashExpenseBox_3.IsChecked = true;
+            else
+            {
+                cashIncomeBox_3.IsChecked = false;
+                cashExpenseBox_3.IsChecked = false;
+            }
             if (expenditure.Load_type(4) == true) cashIncomeBox_4.IsChecked = true;
             else if (expenditure.Load_type(4) == false) cashExpenseBox_4.IsChecked = true;
+            else
+            {
+                cashIncomeBox_4.IsChecked = false;
+                cashExpenseBox_4.IsChecked = false;
+            }
             if (expenditure.Load_type(5) == true) cashIncomeBox_5.IsChecked = true;
             else if (expenditure.Load_type(5) == false) cashExpenseBox_5.IsChecked = true;
+            else
+            {
+                cashIncomeBox_5.IsChecked = false;
+                cashExpenseBox_5.IsChecked = false;
+            }
             if (expenditure.Load_type(6) == true) cashIncomeBox_6.IsChecked = true;
             else if (expenditure.Load_type(6) == false) cashExpenseBox_6.IsChecked = true;
+            else
+            {
+                cashIncomeBox_6.IsChecked = false;
+                cashExpenseBox_6.IsChecked = false;
+            }
             if (expenditure.Load_type(7) == true) cashIncomeBox_7.IsChecked = true;
             else if (expenditure.Load_type(7) == false) cashExpenseBox_7.IsChecked = true;
+            else
+            {
+                cashIncomeBox_7.IsChecked = false;
+                cashExpenseBox_7.IsChecked = false;
+            }
             if (expenditure.Load_type(8) == true) cashIncomeBox_8.IsChecked = true;
             else if (expenditure.Load_type(8) == false) cashExpenseBox_8.IsChecked = true;
+            else
+            {
+                cashIncomeBox_8.IsChecked = false;
+                cashExpenseBox_8.IsChecked = false;
+            }
             if (expenditure.Load_type(9) == true) cashIncomeBox_9.IsChecked = true;
             else if (expenditure.Load_type(9) == false) cashExpenseBox_9.IsChecked = true;
+            else
+            {
+                cashIncomeBox_9.IsChecked = false;
+                cashExpenseBox_9.IsChecked = false;
+            }
         }
 
 

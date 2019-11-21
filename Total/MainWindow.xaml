@@ -356,38 +356,38 @@
 
             <Rectangle Fill="#FF25BFD1" HorizontalAlignment="Left" Height="480" Margin="717,510,0,0" VerticalAlignment="Top" Width="220" Stroke="#FF5FACB4" StrokeThickness="2"/>
             <Rectangle Fill="#7FF7F7F7" Height="1" Margin="719,537,25,0" VerticalAlignment="Top"/>
-            <TextBlock HorizontalAlignment="Left" Margin="729,549,0,0" TextWrapping="Wrap" Text="카운터 인수인계 금액" VerticalAlignment="Top" FontSize="14" Foreground="White"/>
-            <TextBlock HorizontalAlignment="Left" Margin="729,514,0,0" TextWrapping="Wrap" Text="정산 내역" VerticalAlignment="Top" FontSize="15" Foreground="White"/>
-            <TextBox x:Name="originalPriceBox" HorizontalAlignment="Left" Height="24" Margin="729,575,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="191" Background="#FF25BFD1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Text="0" KeyDown="OriginalPriceBox_KeyDown" Foreground="White" BorderBrush="#FF0C8593" PreviewMouseLeftButtonUp="TextBox_PreviewMouseLeftButtonUp" LostFocus="TextBox_LostFocus"/>
-            <TextBlock x:Name="counter1_text2" HorizontalAlignment="Left" Margin="729,702,0,0" TextWrapping="Wrap" Text="금고" VerticalAlignment="Top" Height="20" Width="90" FontSize="14" Foreground="White"/>
-            <TextBlock x:Name="counter1_total_text2" HorizontalAlignment="Left" Margin="744,727,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="20" Width="75" FontSize="15" Foreground="White"/>
-            <TextBlock HorizontalAlignment="Left" Margin="729,727,0,0" TextWrapping="Wrap" Text="\" VerticalAlignment="Top" Height="20" Width="26" FontSize="15" Foreground="White"/>
-            <TextBlock x:Name="counter2_text2" HorizontalAlignment="Left" Margin="729,773,0,0" TextWrapping="Wrap" Text="금고" VerticalAlignment="Top" Height="20" Width="90" FontSize="14" Foreground="White"/>
-            <TextBlock x:Name="counter2_total_text2" HorizontalAlignment="Left" Margin="744,798,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="20" Width="75" FontSize="15" Foreground="White"/>
-            <TextBlock HorizontalAlignment="Left" Margin="729,798,0,0" TextWrapping="Wrap" Text="\" VerticalAlignment="Top" Height="20" Width="26" FontSize="15" Foreground="White"/>
-            <TextBlock x:Name="counter3_text2" HorizontalAlignment="Left" Margin="837,702,0,0" TextWrapping="Wrap" Text="금고" VerticalAlignment="Top" Height="20" Width="90" FontSize="14" Foreground="White"/>
-            <TextBlock x:Name="counter3_total_text2" HorizontalAlignment="Left" Margin="852,727,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="20" Width="75" FontSize="15" Foreground="White"/>
-            <TextBlock HorizontalAlignment="Left" Margin="837,727,0,0" TextWrapping="Wrap" Text="\" VerticalAlignment="Top" Height="20" Width="26" FontSize="15" Foreground="White"/>
-            <TextBlock x:Name="counter4_text2" HorizontalAlignment="Left" Margin="837,772,0,0" TextWrapping="Wrap" Text="금고" VerticalAlignment="Top" Height="20" Width="90" FontSize="14" Foreground="White"/>
-            <TextBlock x:Name="counter4_total_text2" HorizontalAlignment="Left" Margin="852,797,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="20" Width="75" FontSize="15" Foreground="White"/>
-            <TextBlock HorizontalAlignment="Left" Margin="837,797,0,0" TextWrapping="Wrap" Text="\" VerticalAlignment="Top" Height="20" Width="26" FontSize="15" Foreground="White"/>
-            <TextBlock HorizontalAlignment="Left" Margin="729,859,0,0" TextWrapping="Wrap" Text="현금 지출" VerticalAlignment="Top" Height="20" Width="90" FontSize="14" Foreground="White"/>
-            <TextBlock x:Name="cashExpenditure_total_text2" HorizontalAlignment="Left" Margin="744,884,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="20" Width="176" FontSize="15" Foreground="White"/>
-            <TextBlock HorizontalAlignment="Left" Margin="729,884,0,0" TextWrapping="Wrap" Text="\" VerticalAlignment="Top" Height="20" Width="26" FontSize="15" Foreground="White"/>
+            <TextBlock HorizontalAlignment="Left" Margin="729,549,0,0" TextWrapping="Wrap" Text="카운터 인수인계 금액" VerticalAlignment="Top" FontSize="14" Foreground="Black"/>
+            <TextBlock HorizontalAlignment="Left" Margin="729,514,0,0" TextWrapping="Wrap" Text="정산 내역" VerticalAlignment="Top" FontSize="15" Foreground="Black"/>
+            <TextBox x:Name="originalPriceBox" HorizontalAlignment="Left" Height="24" Margin="729,575,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="191" Background="#FF25BFD1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Text="0" KeyDown="OriginalPriceBox_KeyDown" Foreground="Black" BorderBrush="#FF0C8593" PreviewMouseLeftButtonUp="TextBox_PreviewMouseLeftButtonUp" LostFocus="TextBox_LostFocus"/>
+            <TextBlock x:Name="counter1_text2" HorizontalAlignment="Left" Margin="729,702,0,0" TextWrapping="Wrap" Text="금고" VerticalAlignment="Top" Height="20" Width="90" FontSize="14" Foreground="Black"/>
+            <TextBlock x:Name="counter1_total_text2" HorizontalAlignment="Left" Margin="744,727,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="20" Width="75" FontSize="15" Foreground="Black"/>
+            <TextBlock HorizontalAlignment="Left" Margin="729,727,0,0" TextWrapping="Wrap" Text="\" VerticalAlignment="Top" Height="20" Width="26" FontSize="15" Foreground="Black"/>
+            <TextBlock x:Name="counter2_text2" HorizontalAlignment="Left" Margin="729,773,0,0" TextWrapping="Wrap" Text="금고" VerticalAlignment="Top" Height="20" Width="90" FontSize="14" Foreground="Black"/>
+            <TextBlock x:Name="counter2_total_text2" HorizontalAlignment="Left" Margin="744,798,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="20" Width="75" FontSize="15" Foreground="Black"/>
+            <TextBlock HorizontalAlignment="Left" Margin="729,798,0,0" TextWrapping="Wrap" Text="\" VerticalAlignment="Top" Height="20" Width="26" FontSize="15" Foreground="Black"/>
+            <TextBlock x:Name="counter3_text2" HorizontalAlignment="Left" Margin="837,702,0,0" TextWrapping="Wrap" Text="금고" VerticalAlignment="Top" Height="20" Width="90" FontSize="14" Foreground="Black"/>
+            <TextBlock x:Name="counter3_total_text2" HorizontalAlignment="Left" Margin="852,727,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="20" Width="75" FontSize="15" Foreground="Black"/>
+            <TextBlock HorizontalAlignment="Left" Margin="837,727,0,0" TextWrapping="Wrap" Text="\" VerticalAlignment="Top" Height="20" Width="26" FontSize="15" Foreground="Black"/>
+            <TextBlock x:Name="counter4_text2" HorizontalAlignment="Left" Margin="837,772,0,0" TextWrapping="Wrap" Text="금고" VerticalAlignment="Top" Height="20" Width="90" FontSize="14" Foreground="Black"/>
+            <TextBlock x:Name="counter4_total_text2" HorizontalAlignment="Left" Margin="852,797,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="20" Width="75" FontSize="15" Foreground="Black"/>
+            <TextBlock HorizontalAlignment="Left" Margin="837,797,0,0" TextWrapping="Wrap" Text="\" VerticalAlignment="Top" Height="20" Width="26" FontSize="15" Foreground="Black"/>
+            <TextBlock HorizontalAlignment="Left" Margin="729,859,0,0" TextWrapping="Wrap" Text="현금 지출" VerticalAlignment="Top" Height="20" Width="90" FontSize="14" Foreground="Black"/>
+            <TextBlock x:Name="cashExpenditure_total_text2" HorizontalAlignment="Left" Margin="744,884,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="20" Width="176" FontSize="15" Foreground="Black"/>
+            <TextBlock HorizontalAlignment="Left" Margin="729,884,0,0" TextWrapping="Wrap" Text="\" VerticalAlignment="Top" Height="20" Width="26" FontSize="15" Foreground="Black"/>
             <Rectangle Fill="#7FF7F7F7" Height="1" Margin="728,910,36,0" VerticalAlignment="Top"/>
             <Rectangle Fill="#7FF7F7F7" Height="1" Margin="728,854,36,0" VerticalAlignment="Top"/>
             <Rectangle Fill="#7FF7F7F7" Height="1" Margin="728,608,36,0" VerticalAlignment="Top"/>
             <TextBlock HorizontalAlignment="Left" Margin="760,918,0,0" TextWrapping="Wrap" Text="현금이 카운터에 비해" VerticalAlignment="Top" Height="20" Width="137" FontSize="14" Foreground="Black"/>
-            <TextBlock x:Name="resultPrice_text" HorizontalAlignment="Left" Margin="744,941,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="20" Width="159" FontSize="15" Foreground="White" FontWeight="Bold"/>
-            <TextBlock x:Name="judge_text" HorizontalAlignment="Left" Margin="795,964,0,0" TextWrapping="Wrap" Text="모자랍니다." VerticalAlignment="Top" Height="20" Width="76" FontSize="14" Foreground="White"/>
-            <TextBlock HorizontalAlignment="Left" Margin="729,941,0,0" TextWrapping="Wrap" Text="\" VerticalAlignment="Top" Height="20" Width="26" FontSize="15" Foreground="White" FontWeight="Bold"/>
+            <TextBlock x:Name="resultPrice_text" HorizontalAlignment="Left" Margin="744,941,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="20" Width="159" FontSize="15" Foreground="Black" FontWeight="Bold"/>
+            <TextBlock x:Name="judge_text" HorizontalAlignment="Left" Margin="795,964,0,0" TextWrapping="Wrap" Text="모자랍니다." VerticalAlignment="Top" Height="20" Width="76" FontSize="14" Foreground="Black"/>
+            <TextBlock HorizontalAlignment="Left" Margin="729,941,0,0" TextWrapping="Wrap" Text="\" VerticalAlignment="Top" Height="20" Width="26" FontSize="15" Foreground="Black" FontWeight="Bold"/>
             <TextBlock HorizontalAlignment="Left" Margin="31,990,0,0" TextWrapping="Wrap" Text="총액" VerticalAlignment="Top" Height="20" Width="43" FontSize="15" Foreground="Black"/>
 
-            <Button x:Name="allReset_btn" Content="전체 초기화" HorizontalAlignment="Left" Margin="867,995,0,0" VerticalAlignment="Top" Width="70" Height="25" RenderTransformOrigin="0.62,0.491" BorderBrush="#FFD65151" Background="#FFFD9191" BorderThickness="2" Foreground="White" Click="AllReset_btn_Click"/>
-            <Button x:Name="valueReset_btn" Content="값 초기화" HorizontalAlignment="Left" Margin="792,995,0,0" VerticalAlignment="Top" Width="65" Height="25" RenderTransformOrigin="0.62,0.491" BorderBrush="#FFD65151" Background="#FFFD9191" BorderThickness="2" Foreground="White" Click="ValueReset_btn_Click"/>
-            <Button x:Name="export_btn" Content="결과 출력" HorizontalAlignment="Left" Margin="717,995,0,0" VerticalAlignment="Top" Width="65" Height="25" RenderTransformOrigin="0.62,0.491" BorderBrush="#E5ABADB3" Background="#FF79CFD9" BorderThickness="2" Foreground="White" Click="Export_btn_Click"/>
-            <TextBlock HorizontalAlignment="Left" Margin="729,616,0,0" TextWrapping="Wrap" Text="카드전표 금액" VerticalAlignment="Top" FontSize="14" Foreground="White"/>
-            <TextBox x:Name="cardPriceBox" HorizontalAlignment="Left" Height="24" Margin="729,644,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="191" Background="#FF25BFD1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Text="0" KeyDown="CardPriceBox_KeyDown" Foreground="White" BorderBrush="#FF0C8593" PreviewMouseLeftButtonUp="TextBox_PreviewMouseLeftButtonUp" LostFocus="TextBox_LostFocus"/>
+            <Button x:Name="allReset_btn" Content="전체 초기화" HorizontalAlignment="Left" Margin="867,995,0,0" VerticalAlignment="Top" Width="70" Height="25" RenderTransformOrigin="0.62,0.491" BorderBrush="#FFD65151" Background="#FFFD9191" BorderThickness="2" Foreground="Black" Click="AllReset_btn_Click"/>
+            <Button x:Name="valueReset_btn" Content="값 초기화" HorizontalAlignment="Left" Margin="792,995,0,0" VerticalAlignment="Top" Width="65" Height="25" RenderTransformOrigin="0.62,0.491" BorderBrush="#FFD65151" Background="#FFFD9191" BorderThickness="2" Foreground="Black" Click="ValueReset_btn_Click"/>
+            <Button x:Name="export_btn" Content="결과 출력" HorizontalAlignment="Left" Margin="717,995,0,0" VerticalAlignment="Top" Width="65" Height="25" RenderTransformOrigin="0.62,0.491" BorderBrush="#E5ABADB3" Background="#FF79CFD9" BorderThickness="2" Foreground="Black" Click="Export_btn_Click"/>
+            <TextBlock HorizontalAlignment="Left" Margin="729,616,0,0" TextWrapping="Wrap" Text="카드전표 금액" VerticalAlignment="Top" FontSize="14" Foreground="Black"/>
+            <TextBox x:Name="cardPriceBox" HorizontalAlignment="Left" Height="24" Margin="729,644,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="191" Background="#FF25BFD1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Text="0" KeyDown="CardPriceBox_KeyDown" Foreground="Black" BorderBrush="#FF0C8593" PreviewMouseLeftButtonUp="TextBox_PreviewMouseLeftButtonUp" LostFocus="TextBox_LostFocus"/>
             <Rectangle Fill="#7FF7F7F7" Height="1" Margin="728,675,36,0" VerticalAlignment="Top"/>
         </Grid>
     </Border>
