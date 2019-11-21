@@ -16,7 +16,7 @@
             <TextBlock Margin="172,50,172,0" TextWrapping="Wrap" Text="도움말" VerticalAlignment="Top" FontWeight="Bold" Height="22" FontSize="15" Foreground="#FF4B4B4B"/>
             <TextBlock HorizontalAlignment="Left" Margin="24,13,0,0" TextWrapping="Wrap" Text="Total" VerticalAlignment="Top" FontWeight="Bold" Height="27" Width="47" FontSize="17" Foreground="#FF4B4B4B"/>
             <Button x:Name="close_btn" Content="확인" Margin="120,340,120,0" VerticalAlignment="Top" Height="27" RenderTransformOrigin="0.495,0.519" BorderBrush="#E5ABADB3" Background="#FFE7EBEE" BorderThickness="1" Foreground="Black" Click="Close_btn_Click" Width="150"/>
-            <TextBlock Margin="71,21,163,0" TextWrapping="Wrap" Text="Ver 0.2.0" VerticalAlignment="Top" FontWeight="Bold" Height="15" FontSize="10" Foreground="#FF4B4B4B"/>
+            <TextBlock Margin="71,21,163,0" TextWrapping="Wrap" Text="Ver 0.3.0" VerticalAlignment="Top" FontWeight="Bold" Height="15" FontSize="10" Foreground="#FF4B4B4B"/>
             <Image Source="Resources/HelpWindowPanel.png" HorizontalAlignment="Left" Height="238" Margin="10,84,0,0" VerticalAlignment="Top" Width="370" Stretch="Fill"/>
         </Grid>
     </Border>
