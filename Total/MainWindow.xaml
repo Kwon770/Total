@@ -377,7 +377,7 @@
             <Rectangle Fill="#7FF7F7F7" Height="1" Margin="728,910,36,0" VerticalAlignment="Top"/>
             <Rectangle Fill="#7FF7F7F7" Height="1" Margin="728,854,36,0" VerticalAlignment="Top"/>
             <Rectangle Fill="#7FF7F7F7" Height="1" Margin="728,608,36,0" VerticalAlignment="Top"/>
-            <TextBlock HorizontalAlignment="Left" Margin="760,918,0,0" TextWrapping="Wrap" Text="현금이 카운터에 비해" VerticalAlignment="Top" Height="20" Width="137" FontSize="14" Foreground="White"/>
+            <TextBlock HorizontalAlignment="Left" Margin="760,918,0,0" TextWrapping="Wrap" Text="현금이 카운터에 비해" VerticalAlignment="Top" Height="20" Width="137" FontSize="14" Foreground="Black"/>
             <TextBlock x:Name="resultPrice_text" HorizontalAlignment="Left" Margin="744,941,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="20" Width="159" FontSize="15" Foreground="White" FontWeight="Bold"/>
             <TextBlock x:Name="judge_text" HorizontalAlignment="Left" Margin="795,964,0,0" TextWrapping="Wrap" Text="모자랍니다." VerticalAlignment="Top" Height="20" Width="76" FontSize="14" Foreground="White"/>
             <TextBlock HorizontalAlignment="Left" Margin="729,941,0,0" TextWrapping="Wrap" Text="\" VerticalAlignment="Top" Height="20" Width="26" FontSize="15" Foreground="White" FontWeight="Bold"/>
